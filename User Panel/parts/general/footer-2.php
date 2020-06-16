@@ -3,9 +3,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-4">
-					<div class="footer-logo">
-						<img src="assets/images/footer-logo.png" class="img-responsive" alt="Bewear">
-					</div>
 					<div class="contact-info">
 						<address>
 							<span class="address-title">Madrid</span>
@@ -100,7 +97,7 @@
 	</div><!-- /.contact-and-links -->
 	<div class="copyright-bar">
         <div class="container clearfix">
-        	<span class="pull-left">Copyright <a href="index.php?page=home">Bewear</a>. 2015. Designed By: <a href="http://themeforest.net/user/bcube/" target="_blank">bcube</a></span>
+        	<span class="pull-left">Copyright 2020. Designed By: <a href="#" target="_blank">Zaib</a></span>
         	<ul class="payment-methods pull-right list-unstyled">
         		<li><img src="assets/images/payments/p1.png" alt=""></li>
                 <li><img src="assets/images/payments/p2.png" alt=""></li>

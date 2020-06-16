@@ -12,7 +12,7 @@
 			<div class="col-md-4 col-xs-12 col-sm-6">
 				<div class="contact-info middle">
 					<i class="icon icon-mailicon"></i>
-					<span class="contact-info-title">info@bewear.com</span><br/>
+					<span class="contact-info-title">info@domain.com</span><br/>
 					<span class="contact-info-subtitle">Write us Email</span>
 				</div><!-- /.contact-info -->
 			</div>
@@ -60,7 +60,6 @@
 
 <section class="map contact-2 wow fadeIn">
 	<address class="text-center light-bg">
-		<span class="address-title">Bewear Co.</span>
 		3100 West Cary Street Richmond, Virginia 23221<br>
 		Phone: +48 548 499 999
 	</address>
