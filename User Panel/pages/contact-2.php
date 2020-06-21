@@ -31,28 +31,28 @@
 		<h2 class="section-title">Contact Us</h2>
 		<span class="section-subtitle">What can we help you with? Please use the form below</span>
 	</header>
-	<form class="row">
+	<form class="row" action="" method="post" name="">
 		<div class="col-md-6">
 			<div class="form-group">
 				<label for="name">Name</label>
-				<input type="text" class="form-control" id="name">
+				<input type="text" class="form-control" id="name" name="name">
 			</div>
 			<div class="form-group">
 				<label for="email">Email Address</label>
-				<input type="email" class="form-control" id="email">
+				<input type="email" class="form-control" id="email" name="email">
 			</div>
 			<div class="form-group">
 				<label for="subject">Subject</label>
-				<input type="text" class="form-control" id="subject">
+				<input type="text" class="form-control" id="subject" name="subject">
 			</div>
 		</div>
 		<div class="col-md-6">
 			<div class="form-group">
 				<label for="message">Message</label>
-				<textarea rows="10" cols="10" class="form-control" id="message"></textarea>
+				<textarea rows="10" cols="10" class="form-control" id="message" name="message"></textarea>
 			</div>
 			<div class="form-actions">
-				<button type="submit" class="btn btn-primary btn-send-message-2">Send your message</button>	
+				<button type="submit" naame="sendbtn" class="btn btn-primary btn-send-message-2">Send your message</button>	
 			</div>
 		</div>
 	</form>
@@ -67,3 +67,24 @@
 </section>
 
 <?php require ROOT . '/parts/general/newsletter-block.php'; ?>
+
+<?php
+
+		$con = mysqli_connect('localhost', 'root', '', 'beweardb') or die("Bad connect: " . mysqli_connect_error());
+
+		if (isset($_POST['sendbtn'])) {
+			$name = $_POST['name'];
+			$email = $_POST['email'];
+			$subject = $_POST['subject'];
+			$message = $_POST['message'];
+			
+			$insert_query = "insert into contactus(Name, Email, Subject, Message)
+			values ('$name', '$email', '$subject', '$message')";
+
+			$execute = mysqli_query($con, $insert_query);
+
+			header('location:index.php');
+
+
+		}
+?>
