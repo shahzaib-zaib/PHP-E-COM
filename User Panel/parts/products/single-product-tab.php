@@ -9,7 +9,7 @@
 		<div class="tab-content">
 			<div role="tabpanel" class="tab-pane" id="wear-with">
 				<div class="single-product-wear-it wow fadeInUp">
-					
+				<?php include ROOT.'/parts/products/wear-product-carousel-item.php'; ?>
 				</div>
 			</div><!-- /.tab-pane -->
 			<div role="tabpanel" class="tab-pane active" id="related-products">
