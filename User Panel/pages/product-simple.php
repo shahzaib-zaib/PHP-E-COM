@@ -15,4 +15,5 @@
 		</div><!--container-->
 	</div><!--breadcrumb-holder-->
 	<?php require_once ROOT.'/parts/product-simple/primary-block.php'; ?>
+	<?php require_once ROOT.'/parts/products/single-product-tab.php'; ?>
 </main><!--single-page-->
