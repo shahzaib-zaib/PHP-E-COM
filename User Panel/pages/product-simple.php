@@ -14,5 +14,5 @@
 			</div><!--nav-links-->
 		</div><!--container-->
 	</div><!--breadcrumb-holder-->
-	 
+	<?php require_once ROOT.'/parts/product-simple/primary-block.php'; ?>
 </main><!--single-page-->
