@@ -47,3 +47,258 @@
 		<li><a href="#" data-filter=".cat-you">You</a></li>
 	</ul>
 </div>
+<section class="blog-grid inner-xs">
+	<div class="container">
+		<div class="posts row">
+			<div class="col-md-4 col-sm-6 isotope-item cat-design cat-art cat-you wow fadeIn">
+				<article class="post">
+
+					<a href="index.php?page=blog-post" aria-hidden="true">
+						<img width="370" height="220" src="assets/images/blank.gif" data-echo="assets/images/blog/1.jpg" class="img-responsive attachment-post-thumbnail wp-post-image lazy-load" alt="Blog Post">
+					</a>
+					
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="cat-links">
+								<span class="sr-only">Categories </span>
+								<a href="index.php?page=blog" rel="category tag">Design</a>
+							</span>
+							<span class="posted-on">
+								<span class="sr-only">Posted on </span>
+								<a href="index.php?page=blog" rel="bookmark">
+									<time class="entry-date published" datetime="2015-01-22T20:37:21+00:00">Jan 22, 2015</time>
+									<time class="updated" datetime="2015-01-25T20:43:06+00:00">Jan 25, 2014</time>
+								</a>
+							</span>
+						</div><!-- /.entry-meta -->
+						<h2 class="entry-title"><a href="index.php?page=blog-post" rel="bookmark">Now Available: The Knit Dressing Collection</a></h2>
+					</header><!-- .entry-header -->
+
+				</article><!-- /.post -->
+			</div><!-- /.col -->
+
+			<div class="col-md-4 col-sm-6 isotope-item cat-travel cat-denim cat-video wow fadeIn">
+				<article class="post">
+
+					<a href="index.php?page=blog-post" aria-hidden="true">
+						<img width="370" height="220" src="assets/images/blank.gif" data-echo="assets/images/blog/2.jpg" class="img-responsive attachment-post-thumbnail wp-post-image lazy-load" alt="Blog Post">
+					</a>
+					
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="cat-links">
+								<span class="sr-only">Categories </span>
+								<a href="index.php?page=blog" rel="category tag">Travel</a>
+							</span>
+							<span class="posted-on">
+								<span class="sr-only">Posted on </span>
+								<a href="index.php?page=blog" rel="bookmark">
+									<time class="entry-date published" datetime="2015-01-22T20:37:21+00:00">Jan 22, 2015</time>
+									<time class="updated" datetime="2015-01-25T20:43:06+00:00">Jan 25, 2014</time>
+								</a>
+							</span>
+						</div><!-- /.entry-meta -->
+						<h2 class="entry-title"><a href="index.php?page=blog-post" rel="bookmark">BEWEAR Outdoor Fitness: Widen your horizons &amp; explore the California coastline with WESTCOAST's </a></h2>
+					</header><!-- .entry-header -->
+
+				</article><!-- /.post -->
+			</div><!-- .col -->
+
+			<div class="col-md-4 col-sm-6 isotope-item cat-product cat-fun cat-inside wow fadeIn">
+				<article class="post">
+
+					<a href="index.php?page=blog-post" aria-hidden="true">
+						<img width="370" height="220" src="assets/images/blank.gif" data-echo="assets/images/blog/3.jpg" class="img-responsive attachment-post-thumbnail wp-post-image lazy-load" alt="Blog Post">
+					</a>
+					
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="cat-links">
+								<span class="sr-only">Categories </span>
+								<a href="index.php?page=blog" rel="category tag">Product</a>
+							</span>
+							<span class="posted-on">
+								<span class="sr-only">Posted on </span>
+								<a href="index.php?page=blog" rel="bookmark">
+									<time class="entry-date published" datetime="2015-01-22T20:37:21+00:00">Jan 22, 2015</time>
+									<time class="updated" datetime="2015-01-25T20:43:06+00:00">Jan 25, 2014</time>
+								</a>
+							</span>
+						</div><!-- /.entry-meta -->
+						<h2 class="entry-title"><a href="index.php?page=blog-post" rel="bookmark">Go outside the beach and don't worry anymore about your stuff</a></h2>
+					</header><!-- .entry-header -->
+
+				</article><!-- /.post -->
+			</div><!-- /.col -->
+
+			<div class="clearfix"></div>
+
+			<div class="col-md-4 col-sm-6 isotope-item cat-travel cat-industry cat-interview wow fadeIn">
+				<article class="post">
+
+					<a href="index.php?page=blog-post" aria-hidden="true">
+						<img width="370" height="220" src="assets/images/blank.gif" data-echo="assets/images/blog/4.jpg" class="img-responsive attachment-post-thumbnail wp-post-image lazy-load" alt="Blog Post">
+					</a>
+					
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="cat-links">
+								<span class="sr-only">Categories </span>
+								<a href="index.php?page=blog" rel="category tag">Travel</a>
+							</span>
+							<span class="posted-on">
+								<span class="sr-only">Posted on </span>
+								<a href="index.php?page=blog" rel="bookmark">
+									<time class="entry-date published" datetime="2015-01-22T20:37:21+00:00">Jan 22, 2015</time>
+									<time class="updated" datetime="2015-01-25T20:43:06+00:00">Jan 25, 2014</time>
+								</a>
+							</span>
+						</div><!-- /.entry-meta -->
+						<h2 class="entry-title"><a href="index.php?page=blog-post" rel="bookmark">Now Available: The Knit Dressing Collection</a></h2>
+					</header><!-- .entry-header -->
+
+				</article><!-- /.post -->
+			</div><!-- .col -->
+
+			<div class="col-md-4 col-sm-6 isotope-item cat-design cat-interview cat-quest wow fadeIn">
+				<article class="post">
+
+					<a href="index.php?page=blog-post" aria-hidden="true">
+						<img width="370" height="220" src="assets/images/blank.gif" data-echo="assets/images/blog/5.jpg" class="img-responsive attachment-post-thumbnail wp-post-image lazy-load" alt="Blog Post">
+					</a>
+					
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="cat-links">
+								<span class="sr-only">Categories </span>
+								<a href="index.php?page=blog" rel="category tag">Design</a>
+							</span>
+							<span class="posted-on">
+								<span class="sr-only">Posted on </span>
+								<a href="index.php?page=blog" rel="bookmark">
+									<time class="entry-date published" datetime="2015-01-22T20:37:21+00:00">Jan 22, 2015</time>
+									<time class="updated" datetime="2015-01-25T20:43:06+00:00">Jan 25, 2014</time>
+								</a>
+							</span>
+						</div><!-- /.entry-meta -->
+						<h2 class="entry-title"><a href="index.php?page=blog-post" rel="bookmark">BEWEAR Outdoor Fitness: Widen your horizons &amp; explore the California coastline with WESTCOAST's</a></h2>
+					</header><!-- .entry-header -->
+
+				</article><!-- /.post -->
+			</div><!-- /.col -->
+
+			<div class="col-md-4 col-sm-6 isotope-item cat-product cat-quest cat-industry wow fadeIn">
+				<article class="post">
+
+					<a href="index.php?page=blog-post" aria-hidden="true">
+						<img width="370" height="220" src="assets/images/blank.gif" data-echo="assets/images/blog/6.jpg" class="img-responsive attachment-post-thumbnail wp-post-image lazy-load" alt="Blog Post">
+					</a>
+					
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="cat-links">
+								<span class="sr-only">Categories </span>
+								<a href="index.php?page=blog" rel="category tag">Product</a>
+							</span>
+							<span class="posted-on">
+								<span class="sr-only">Posted on </span>
+								<a href="index.php?page=blog" rel="bookmark">
+									<time class="entry-date published" datetime="2015-01-22T20:37:21+00:00">Jan 22, 2015</time>
+									<time class="updated" datetime="2015-01-25T20:43:06+00:00">Jan 25, 2014</time>
+								</a>
+							</span>
+						</div><!-- /.entry-meta -->
+						<h2 class="entry-title"><a href="index.php?page=blog-post" rel="bookmark">Go outside the beach and don't worry anymore about your stuff</a></h2>
+					</header><!-- .entry-header -->
+
+				</article><!-- /.post -->
+			</div><!-- /.col -->
+
+			<div class="clearfix"></div>
+
+			<div class="col-md-4 col-sm-6 isotope-item cat-design cat-inside cat-fun wow fadeIn">
+				<article class="post">
+
+					<a href="index.php?page=blog-post" aria-hidden="true">
+						<img width="370" height="220" src="assets/images/blank.gif" data-echo="assets/images/blog/7.jpg" class="img-responsive attachment-post-thumbnail wp-post-image lazy-load" alt="Blog Post">
+					</a>
+					
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="cat-links">
+								<span class="sr-only">Categories </span>
+								<a href="index.php?page=blog" rel="category tag">Design</a>
+							</span>
+							<span class="posted-on">
+								<span class="sr-only">Posted on </span>
+								<a href="index.php?page=blog" rel="bookmark">
+									<time class="entry-date published" datetime="2015-01-22T20:37:21+00:00">Jan 22, 2015</time>
+									<time class="updated" datetime="2015-01-25T20:43:06+00:00">Jan 25, 2014</time>
+								</a>
+							</span>
+						</div><!-- /.entry-meta -->
+						<h2 class="entry-title"><a href="index.php?page=blog-post" rel="bookmark">Now Available: The Knit Dressing Collection</a></h2>
+					</header><!-- .entry-header -->
+
+				</article><!-- /.post -->
+			</div><!-- /.col -->
+
+			<div class="col-md-4 col-sm-6 isotope-item cat-travel cat-video cat-denim wow fadeIn">
+				<article class="post">
+
+					<a href="index.php?page=blog-post" aria-hidden="true">
+						<img width="370" height="220" src="assets/images/blank.gif" data-echo="assets/images/blog/8.jpg" class="img-responsive attachment-post-thumbnail wp-post-image lazy-load" alt="Blog Post">
+					</a>
+					
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="cat-links">
+								<span class="sr-only">Categories </span>
+								<a href="index.php?page=blog" rel="category tag">Travel</a>
+							</span>
+							<span class="posted-on">
+								<span class="sr-only">Posted on </span>
+								<a href="index.php?page=blog" rel="bookmark">
+									<time class="entry-date published" datetime="2015-01-22T20:37:21+00:00">Jan 22, 2015</time>
+									<time class="updated" datetime="2015-01-25T20:43:06+00:00">Jan 25, 2014</time>
+								</a>
+							</span>
+						</div><!-- /.entry-meta -->
+						<h2 class="entry-title"><a href="index.php?page=blog-post" rel="bookmark">BEWEAR Outdoor Fitness: Widen your horizons &amp; explore the California coastline with WESTCOAST's </a></h2>
+					</header><!-- .entry-header -->
+
+				</article><!-- /.post -->
+			</div><!-- .col -->
+
+			<div class="col-md-4 col-sm-6 isotope-item cat-product cat-you cat-art wow fadeIn">
+				<article class="post">
+
+					<a href="index.php?page=blog-post" aria-hidden="true">
+						<img width="370" height="220" src="assets/images/blank.gif" data-echo="assets/images/blog/9.jpg" class="img-responsive attachment-post-thumbnail wp-post-image lazy-load" alt="Blog Post">
+					</a>
+					
+					<header class="entry-header">
+						<div class="entry-meta">
+							<span class="cat-links">
+								<span class="sr-only">Categories </span>
+								<a href="index.php?page=blog" rel="category tag">Product</a>
+							</span>
+							<span class="posted-on">
+								<span class="sr-only">Posted on </span>
+								<a href="index.php?page=blog" rel="bookmark">
+									<time class="entry-date published" datetime="2015-01-22T20:37:21+00:00">Jan 22, 2015</time>
+									<time class="updated" datetime="2015-01-25T20:43:06+00:00">Jan 25, 2014</time>
+								</a>
+							</span>
+						</div><!-- /.entry-meta -->
+						<h2 class="entry-title"><a href="index.php?page=blog-post" rel="bookmark">Go outside the beach and don't worry anymore about your stuff</a></h2>
+					</header><!-- .entry-header -->
+
+				</article><!-- /.post -->
+			</div><!-- /.col -->
+		</div><!-- /.posts -->		
+	</div><!-- /.container -->
+</section><!-- /.blog-grid -->
+
+
+<?php require ROOT . '/parts/general/pagination.php';?>
