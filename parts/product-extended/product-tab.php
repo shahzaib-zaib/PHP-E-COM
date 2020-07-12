@@ -104,6 +104,63 @@
 			    	</ul>
 			    </div>
 		    </div><!-- /.tab-pane -->
+            <div role="tabpanel" class="tab-pane" id="reviews">
+		    	<div class="container wow fadeInUp">
+		    		<article class="review">
+		    			<header>
+		    				<div class="star-rating gray" title="Rated 5.00 out of 5">
+		    					<span style="width:80%">
+		    						<strong class="rating">5.00</strong>
+		    						out of 5
+		    					</span>
+		    				</div>
+		    				<h4 class="author">Richard Doe</h4>
+		    				<span class="date">Aug 7, 2013</span>
+		    			</header>
+		    			<p class="text">
+		    				Choupette Mulberry dark red lipstick crop button up chunky sole chambray shirt
+		    				maxi skirt vintage Levi shorts. Loafers 90s collar indigo denim silver collar
+		    				round sunglasses. Cashmere skirt peach Miu Miu Bag 'N' Noun leather shorts
+		    				oversized printed clashing patterns. Tulle printed jacket sheer Prada Saffiano
+		    				white Converse.
+		    			</p>
+		    		</article><!-- /.review -->
+		    		<article class="review">
+		    			<header>
+		    				<div class="star-rating gray" title="Rated 5.00 out of 5">
+		    					<span style="width:80%">
+		    						<strong class="rating">5.00</strong>
+		    						out of 5
+		    					</span>
+		    				</div>
+		    				<h4 class="author">Richard Doe</h4>
+		    				<span class="date">Aug 3, 2013</span>
+		    			</header>
+		    			<p class="text">
+		    				Leather jacket pastels backpack neutral green white. Strong eyebrows washed out
+		    				Chanel. leggings skinny jeans Missoni capsule clutch cotton.
+		    			</p>
+		    		</article><!-- /.review -->
+		    		<form class="review-form">
+		    			<label class="raty-label">
+		    				Your rating for this item
+		    			</label>
+	    				<div class="star-rating gray" title="Rated 5.00 out of 5">
+	    					<span style="width:80%">
+	    						<strong class="rating">5.00</strong>
+	    						out of 5
+	    					</span>
+	    				</div>
+		    			
+
+		    			<div class="form-group">
+		    				<label for="review">Your review</label>
+		    				<textarea rows="6" name="review" id="review" class="form-control"></textarea>
+		    			</div>
+		    			<button class="btn btn-primary" type="submit">Submit review</button>
+		    		</form><!-- /.review-form -->
+		    	</div><!-- /.container -->
+		    </div><!-- /.tab-pane -->
 		</div><!-- /.tab-content -->
 		
 	</div><!-- /.tabpanel -->
