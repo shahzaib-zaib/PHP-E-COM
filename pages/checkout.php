@@ -57,5 +57,26 @@
 				</form>
 			</div>
 		</section>
+        <div class="col-md-3">
+			<section class="shipping-method">
+				<header>
+					<h3 class="section-title"><span class="step-no">2.</span> Shipping Method</h3>
+				</header>
+				<ul class="shipping-methods list-unstyled">
+					<li class="radio"><label><input type="radio" name="shipping-method"> Standard $8.99 <small>(3-7 business days)</small></label></li>
+					<li class="radio"><label><input type="radio" name="shipping-method"> Two Days $12.99 <small>(2 business days)</small></label></li>
+					<li class="radio"><label><input type="radio" name="shipping-method"> Next Day $15.99 <small>(2 business day)</small></label></li>
+				</ul>
+			</section>
+			<section class="shipping-method">
+				<header>
+					<h3 class="section-title"><span class="step-no">3.</span> Payment Method</h3>
+				</header>
+				<ul class="payment-methods list-unstyled">
+					<li class="radio"><label><input type="radio" name="payment-method"> PayPal Express</label></li>
+					<li class="radio"><label><input type="radio" name="payment-method"> Credit Card</label></li>
+				</ul>
+			</section>
+		</div>
 	</div>
 </section>
