@@ -88,6 +88,16 @@
 						</div>
 
 					</div>
+                    <div class="qnt-holder">
+						<form class="cart">
+							<div class="quantity-holder">
+								<span class="key">Qty:</span>
+								<input type="number" class="txt txt-qty" title="Qty" value="1" name="quantity" min="1" step="1">
+							</div>
+                            <button type="submit" class="btn btn-primary single-add-cart-button">Add to bag</button>
+						    <a href="index.php?page=checkout" title="Wishlist" class="btn add-to-wishlist">add to wishlist</a>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
