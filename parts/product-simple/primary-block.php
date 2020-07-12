@@ -25,6 +25,15 @@
 					<div class="product-price">
 						<ins><span class="amount">$492.00</span></ins>
 					</div>
+                    <div class="social-icons-holder">
+						<ul class="social-icon-list clearfix">
+							<li><a class="icon icon-facebook31" title="Facebook" href="http://www.facebook.com/transvelo"></a></li>
+							<li><a class="icon icon-twitter21" title="Twitter" href="#"></a></li>
+							<li><a class="icon icon-linkedin11" title="Pinterest" href="#"></a></li>
+							<li><a class="icon icon-google29" title="Instagram" href="#"></a></li>
+
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
