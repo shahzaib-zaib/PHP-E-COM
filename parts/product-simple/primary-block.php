@@ -98,6 +98,107 @@
 						    <a href="index.php?page=checkout" title="Wishlist" class="btn add-to-wishlist">add to wishlist</a>
 						</form>
 					</div>
+                    <div id="product-simple-tab">
+						<div class="tabs">
+							<ul class="nav nav-tabs nav-tab-cells">
+								<li class="active"><a data-toggle="tab" href="#description">Description</a></li>
+								<li><a data-toggle="tab" href="#info">Sizing</a></li>
+								<li><a data-toggle="tab" href="#reviews">Reviews (4)</a></li>
+							</ul>
+
+							<div class="tab-content bewear-tab-content">
+								<div id="description" class="tab-pane in active">
+									<p class="text">
+										Sed quis nunc efficitur, gravida orci sed, gravida felis. Quisque non euismod felis. Suspendisse consectetur, tellus in condimentum fringilla, turpis massa facilisis augue, eget tempor nibh dui in dolor. Donec sagittis scelerisque est.</p>
+										<ul>
+											<li>- 98% Cotton, 2% Elastane</li>
+											<li>- Zip fly and button fastening</li>
+											<li>- Five pocket model</li>
+											<li>- Belt loops</li>
+											<li>- Leather badge at back</li>
+										</ul>
+								</div>
+								<div id="info" class="tab-pane">
+									<ul class="tabled-data">
+				                        <li>
+				                            <label>weight</label>
+				                            <div class="value">7.25 kg</div>
+				                        </li>
+				                        <li>
+				                            <label>dimensions</label>
+				                            <div class="value">90x60x90 cm</div>
+				                        </li>
+				                        <li>
+				                            <label>size</label>
+				                            <div class="value">one size fits all</div>
+				                        </li>
+				                        <li>
+				                            <label>color</label>
+				                            <div class="value">white</div>
+				                        </li>
+				                        <li>
+				                            <label>guarantee</label>
+				                            <div class="value">5 years</div>
+				                        </li>
+				                    </ul>
+								</div>
+								<div id="reviews" class="tab-pane">
+									<article class="review">
+										<div class="header">
+											<div class="star-rating gray" title="Rated 5.00 out of 5">
+												<span style="width:80%">
+													<strong class="rating">5.00</strong>
+													out of 5
+												</span>
+											</div>
+											<h4 class="author">Richard Doe</h4>
+											<span class="date">Aug 7, 2013</span>
+										</div>
+										<p class="text">
+											Choupette Mulberry dark red lipstick crop button up chunky sole chambray shirt
+											maxi skirt vintage Levi shorts. Loafers 90s collar indigo denim silver collar
+											round sunglasses. Cashmere skirt peach Miu Miu Bag 'N' Noun leather shorts
+											oversized printed clashing patterns. Tulle printed jacket sheer Prada Saffiano
+											white Converse.
+										</p>
+									</article>
+									<article class="review">
+										<div class="header">
+											<div class="star-rating gray" title="Rated 5.00 out of 5">
+												<span style="width:80%">
+													<strong class="rating">5.00</strong>
+													out of 5
+												</span>
+											</div>
+											<h4 class="author">Richard Doe</h4>
+											<span class="date">Aug 3, 2013</span>
+										</div>
+										<p class="text">
+											Leather jacket pastels backpack neutral green white. Strong eyebrows washed out
+											Chanel. leggings skinny jeans Missoni capsule clutch cotton.
+										</p>
+									</article>
+									<form class="review-form">
+										<label class="raty-label">
+											Your rating for this item
+										</label>
+										<div class="star-rating gray" title="Rated 5.00 out of 5">
+											<span style="width:80%">
+												<strong class="rating">5.00</strong>
+												out of 5
+											</span>
+										</div>
+										
+										<div class="form-group">
+											<label for="review">Your review</label>
+											<textarea rows="6" name="review" id="review" class="form-control"></textarea>
+										</div>
+										<button class="btn btn-primary" type="submit">Submit review</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
