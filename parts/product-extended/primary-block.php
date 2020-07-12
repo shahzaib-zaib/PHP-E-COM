@@ -94,6 +94,14 @@
 
 				</div>
 			</div>
+            <div class="col-md-1 col-lg-1 hidden-xs hidden-sm hidden-md related-products-holder">
+				<h5 class="related-title">Related</h5>
+				<ul class="related-products">
+					<li><a href="#"><img src="assets/images/blank.gif" data-echo="assets/images/products/relate.jpg" alt="" ></a></li>
+					<li><a href="#"><img src="assets/images/blank.gif" data-echo="assets/images/products/relate1.jpg" alt="" ></a></li>
+					<li><a href="#"><img src="assets/images/blank.gif" data-echo="assets/images/products/relate2.jpg" alt="" ></a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
