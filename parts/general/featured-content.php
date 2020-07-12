@@ -117,4 +117,32 @@ $sliders = array(
 			</div><!-- .content -->
 		</div><!-- .featured-product -->
 	</div>
+    <div class="col-md-4 col-sm-12">
+		<div class="featured-bottom-left">
+			<?php foreach($sliders as $id => $slide): ?>
+				<div class="featured-product text-center featured-image-<?php echo $id; ?>">
+					<div class="image lazy-load">
+						<a href="index.php?page=product-simple"><img class="img-responsive" src="assets/images/blank.gif" data-echo="<?php echo $slide['bottom_left']['image']; ?>" alt=""></a>
+					</div><!-- .image -->
+					<div class="product-body">
+						<h3 class="product-title"><a href="index.php?page=product-simple"><?php echo $slide['bottom_left']['title']; ?></a></h3>
+						<p class="product-amount"><?php echo $slide['bottom_left']['price']; ?></p>
+					</div><!-- .content -->
+				</div><!-- .featured-product -->
+			<?php endforeach; ?>
+		</div>
+		<div class="featured-bottom-right">
+			<?php foreach($sliders as $id => $slide): ?>
+				<div class="featured-product text-center featured-image-<?php echo $id; ?>">
+					<div class="image lazy-load">
+						<a href="index.php?page=product-simple"><img class="img-responsive" src="assets/images/blank.gif" data-echo="<?php echo $slide['bottom_right']['image']; ?>" alt=""></a>
+					</div><!-- .image -->
+					<div class="product-body">
+						<h3 class="product-title"><a href="index.php?page=product-simple"><?php echo $slide['bottom_right']['title']; ?></a></h3>
+						<p class="product-amount"><?php echo $slide['bottom_right']['price']; ?></p>
+					</div><!-- .content -->
+				</div><!-- .featured-product -->
+			<?php endforeach; ?>
+		</div>
+	</div>
 </div>
