@@ -34,5 +34,19 @@
 				</li>
 			</ul>
 		</div>
+        <div class="col-md-2 col-xs-2">
+			<ul id="product-thumbnails" class="vertical">
+				<li><img src="assets/images/blank.gif" data-echo="assets/images/products/s1.jpg" class="lazy-load" alt="" /></li>
+				<li><img src="assets/images/blank.gif" data-echo="assets/images/products/s2.jpg" class="lazy-load" alt="" /></li>
+				<li><img src="assets/images/blank.gif" data-echo="assets/images/products/s3.jpg" class="lazy-load" alt="" /></li>
+				<li><img src="assets/images/blank.gif" data-echo="assets/images/products/s2.jpg" class="lazy-load" alt="" /></li>
+				<li><img src="assets/images/blank.gif" data-echo="assets/images/products/s1.jpg" class="lazy-load" alt="" /></li>
+				<li><img src="assets/images/blank.gif" data-echo="assets/images/products/s1.jpg" class="lazy-load" alt="" /></li>
+				<li><img src="assets/images/blank.gif" data-echo="assets/images/products/s2.jpg" class="lazy-load" alt="" /></li>
+				<li><img src="assets/images/blank.gif" data-echo="assets/images/products/s3.jpg" class="lazy-load" alt="" /></li>
+				<li><img src="assets/images/blank.gif" data-echo="assets/images/products/s2.jpg" class="lazy-load" alt="" /></li>
+				<li><img src="assets/images/blank.gif" data-echo="assets/images/products/s1.jpg" class="lazy-load" alt="" /></li>
+			</ul>
+		</div>
 	</div>
 </section>
