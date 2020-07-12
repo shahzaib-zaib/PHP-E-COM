@@ -78,5 +78,79 @@
 				</ul>
 			</section>
 		</div>
+        <section class="col-md-5">
+			<header>
+				<h3 class="section-title"><span class="step-no">4.</span> Review of Your Order</h3>
+			</header>
+			<table class="table order-review-table">
+				<thead>
+					<tr>
+						<th>Product</th>
+						<th>Subtotal</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>Subtotal</th>
+						<td>$424.99</td>
+					</tr>
+					<tr>
+						<th>Shipping &amp; Handling</th>
+						<td>$8.99</td>
+					</tr>
+					<tr>
+						<th>Grand Total</th>
+						<td><div class="prices">$432.99</div></td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>
+							<div class="product media">
+								<div class="media-left">
+									<img src="assets/images/blank.gif" data-echo="assets/images/checkout1.jpg" alt="Product Name" class="media-object">	
+								</div>
+								<div class="media-body media-middle">
+									<h3 class="product-title"><span class="product-quantity">2 x</span> Contrast Shoulder Path</h3>
+									<ul class="product-attributes">
+										<li>Color : Verdigris Red</li>
+										<li>Size : L</li>
+									</ul>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="prices">
+								$140.99
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="product media">
+								<div class="media-left">
+									<img src="assets/images/blank.gif" data-echo="assets/images/checkout2.jpg" alt="Product Name" class="media-object">	
+								</div>
+								<div class="media-body media-middle">
+									<h3 class="product-title"><span class="product-quantity">2 x</span> Simply Flocked Print Sweatshirt</h3>
+									<ul class="product-attributes">
+										<li>Color : Verdigris Red</li>
+										<li>Size : XL</li>
+									</ul>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="prices">
+								$284.00
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="checkout-action text-right">
+				<button class="btn btn-primary">Place Order Now</button>
+			</div>
+		</section>
 	</div>
 </section>
