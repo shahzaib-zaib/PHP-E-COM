@@ -78,6 +78,32 @@
 		    		</div><!-- /.pocket-style -->
 		    	</div><!-- /.banner -->
 		    </div><!-- .tab-pane -->
+            <div role="tabpanel" class="tab-pane" id="sizing">
+		    	<div class="container wow fadeInUp">
+			    	<ul class="tabled-data">
+			    		<li>
+			    			<label>weight</label>
+			    			<div class="value">7.25 kg</div>
+			    		</li>
+			    		<li>
+			    			<label>dimensions</label>
+			    			<div class="value">90x60x90 cm</div>
+			    		</li>
+			    		<li>
+			    			<label>size</label>
+			    			<div class="value">one size fits all</div>
+			    		</li>
+			    		<li>
+			    			<label>color</label>
+			    			<div class="value">white</div>
+			    		</li>
+			    		<li>
+			    			<label>guarantee</label>
+			    			<div class="value">5 years</div>
+			    		</li>
+			    	</ul>
+			    </div>
+		    </div><!-- /.tab-pane -->
 		</div><!-- /.tab-content -->
 		
 	</div><!-- /.tabpanel -->
