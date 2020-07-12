@@ -30,3 +30,20 @@
 		</div><!-- /.row -->
 	</div><!-- /.container -->
 </div><!-- /.feature-blog-post -->
+<div class="container wow fadeInUp">
+	<ul class="blog-filter category-filter list-unstyled">
+		<li><a href="#" data-filter="*">All</a></li>
+		<li><a href="#" data-filter=".cat-art">Art</a></li>
+		<li><a href="#" data-filter=".cat-design">Design</a></li>
+		<li><a href="#" data-filter=".cat-denim">Denim</a></li>
+		<li><a href="#" data-filter=".cat-fun">Fun</a></li>
+		<li><a href="#" data-filter=".cat-industry">Industry</a></li>
+		<li><a href="#" data-filter=".cat-quest">Quest</a></li>
+		<li><a href="#" data-filter=".cat-interview">Interview</a></li>
+		<li><a href="#" data-filter=".cat-product">Product</a></li>
+		<li><a href="#" data-filter=".cat-travel">Travel</a></li>
+		<li><a href="#" data-filter=".cat-inside">Inside </a></li>
+		<li><a href="#" data-filter=".cat-video">Video</a></li>
+		<li><a href="#" data-filter=".cat-you">You</a></li>
+	</ul>
+</div>
