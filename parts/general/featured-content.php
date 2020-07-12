@@ -100,4 +100,21 @@ $sliders = array(
 			<?php endforeach; ?>
 		</div>
 	</div><!-- .col -->
+    <div class="col-md-4 col-sm-12">
+		<div class="collection-style-holder thumbnail">
+			<div class="featured-carousel-product">
+				<?php foreach($sliders as $id => $slide): ?>
+					<div class="item">
+						<img src="assets/images/blank.gif" data-id="<?php echo $id; ?>" data-echo="<?php echo $slide['full_image']; ?>" alt="">
+					</div>
+				<?php endforeach; ?>
+			</div><!-- .featured-carousel-product -->
+			<div class="product-body text-center">
+				<h2 class="exclusive-subtitle">spring 2015</h2>
+				<h1 class="exclusive-title"><a href="index.php?page=product-simple">exclusive style</a></h1>
+				<p class="info ">LOREM IPSUM DOLOR ETET USTED COLOREM IPSUM DOLOR UTET USTED LOREM UPSUM.</p>
+				<button type="button" class="btn btn-default discover-look-button">Discover all looks</button>
+			</div><!-- .content -->
+		</div><!-- .featured-product -->
+	</div>
 </div>
