@@ -4,7 +4,7 @@
 			<div class="container">
 				<!-- ============================================================= LOGO MOBILE ============================================================= -->
 						
-				
+					<a class="navbar-brand" href="index.php?page=home"><img src="assets/images/logo2.png" class="logo" alt=""></a>
 						
 				<!-- ============================================================= LOGO MOBILE : END ============================================================= -->
 						
@@ -20,7 +20,7 @@
 			<div class="navbar-collapse collapse animate-dropdown">
 
 				<div class="container">
-					
+					<a href="index.php" class="navbar-brand"><img src="assets/images/logo2.png" class="logo" alt=""></a>
 					
 					<ul class="nav navbar-nav">
 						<li class="dropdown bewear-dropdown yamm-fw">
