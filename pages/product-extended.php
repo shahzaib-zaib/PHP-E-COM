@@ -14,4 +14,7 @@
 			</div><!--nav-links-->
 		</div><!--container-->
 	</div><!--breadcrumb-holder-->
+    <?php require_once ROOT.'/parts/product-extended/primary-block.php'; ?>
+	<?php require_once ROOT.'/parts/product-extended/product-tab.php'; ?>
+	<?php require_once ROOT.'/parts/products/single-product-tab.php'; ?>
 </main>
