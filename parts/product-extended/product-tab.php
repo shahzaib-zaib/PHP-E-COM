@@ -12,7 +12,72 @@
 		</div>
 
 		<div class="tab-content bewear-tab-content">
-			
+            <div role="tabpanel" class="tab-pane active" id="description">
+				<div class="express-yourself-block wow fadeInUp">
+		    		<div class="image">
+						<img data-echo="assets/images/products/des1.jpg" src="assets/images/blank.gif" class="lazy-load img-responsive" alt="">
+		    			<div class="caption">
+		    				<div class="container">
+		    					<div class="row">
+		    						<div class="col-md-5 col-sm-7 col-xs-12">
+				    					<div class="section text-center uppercase">
+				    						<h3 class="express-yourself">express your</h3>
+				    						<h2 class="owl-style">own style</h2>
+				    					</div><!-- /.section -->
+				    				</div><!-- /.col -->
+			    				</div><!-- /.row -->
+		    				</div><!-- /.container -->
+		    			</div><!-- /.caption -->
+		    		</div><!-- /.image -->
+		    	</div><!-- /.express-yourself-block -->
+
+		    	<div class="big-image-block wow fadeInUp">
+		    		<div class="image">
+		    			<img class="img-responsive lazy-load" data-echo="assets/images/products/des2.jpg" src="assets/images/blank.gif" alt="">
+		    		</div>
+		    	</div><!-- /.big-image-block -->
+
+		    	<div class="beautifully-crafted-block wow fadeInUp">			    				
+    				<div class="caption">
+	    				<div class="container">
+	    					<div class="row">
+	    						<div class="col-md-6 col-sm-6">
+	    							<div class="right-content">
+	    								<div class="header">
+	    									<h2 class="beautiful-text uppercase">beautifully<br>crafted.</h2>
+	    									<p class="tagline">Moleskine quality-handmade for Women</p>
+	    								</div>
+
+	    								<div class="section">
+	    									<h5 class="title">one by one</h5>
+	    									<p class="text">Sed quis nunc efficitur, gravida orci sed, gravida felis. Quisque non euismod felis. Suspendisse consectetur, tellus in condimentum fringilla, turpis massa facilisis augue, eget tempor nibh dui in dolor.</p>
+                                            <p class="text">Duis sed ornare ipsum, non ullamcorper lacus. Pellentesque imperdiet semper lectus vitae hen- drerit. Aenean ipsum nisi, pulvinar vel fringilla nec, varius facilisis lectus.</p> 
+	    								</div>
+	    							</div><!-- /.right-content -->
+	    						</div>
+								
+								<div class="col-md-6 col-sm-6"></div>
+	    					</div><!-- /.row -->
+	    				</div><!-- /.container -->
+	    			</div><!-- /.caption -->
+		    	</div>
+
+		    	<div class="banner wow fadeInUp">
+		    		<div class="dolman-style">
+		    			<div class="banner-text">
+		    				<h5 class="title">Dolman Style</h5>
+		    				<p class="text hidden-xs">Sed quis nunc efficitur, gravida orci sed, gravida felis. Quisque non euismod felis. Suspendisse consectetur, tellus in condimentum fringilla, turpis massa facilisis augue, eget tempor nibh dui in dolor.</p>
+		    			</div>
+		    		</div><!-- /.dolman-style -->
+
+		    		<div class="pocket-style">
+		    			<div class="banner-text">
+		    				<h5 class="title">Pouch Pockets</h5>
+		    				<p class="text hidden-xs">Sed quis nunc efficitur, gravida orci sed, gravida felis. Quisque non euismod felis. Suspendisse consectetur, tellus in condimentum fringilla, turpis massa facilisis augue, eget tempor nibh dui in dolor.</p>
+		    			</div>
+		    		</div><!-- /.pocket-style -->
+		    	</div><!-- /.banner -->
+		    </div><!-- .tab-pane -->
 		</div><!-- /.tab-content -->
 		
 	</div><!-- /.tabpanel -->
