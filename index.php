@@ -21,8 +21,22 @@ $footer = ROOT . '/parts/general/' . $footer;
 
 $pages = array(
     'about-us'          => 'About Us',
+    'blog'              => 'Blog',
+    'catalog'           => 'Catalog',
+    'categories-grid'   => 'Categories',
+    'checkout'          => 'Checkout',
     'contact-2'         => 'Contact v2',
+    'contact'           => 'Contact v1',
+    'home'              => 'Home v1',
     'home-2'            => 'Home v2',
+    'blog-post'         => 'Blog Post',
+    'bewear-icons'      => 'Icons',
+    'lookbook-2'        => 'Lookbook v2',
+    'lookbook'          => 'Lookbook v1',
+    'product-extended'  => 'Product Extended',
+    'product-simple'    => 'Product Simple',
+    'single-look-2'     => 'Single Look v2',
+    'single-look'       => 'Single Look v1',
 );
 ?>
 <!DOCTYPE html>
