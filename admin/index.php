@@ -19,6 +19,8 @@
     $pages = array(
         'home'              => 'Home',
         'accounts'          => 'Accounts',
+        'add-product'       => 'Add Product',
+
 
     );
 ?>
