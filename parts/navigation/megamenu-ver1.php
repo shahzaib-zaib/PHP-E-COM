@@ -15,44 +15,44 @@
 
 	<div class="col-xs-12 col-lg-3 col-sm-3 col-md-4">
 		<ul class="sub-menu">
-			<li class="highlight"><a href="index.php?page=categories-grid">just arrived</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">new season</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">trends</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">holiday shop</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">clothing</a></li>
-			<li><a href="index.php?page=categories-grid">Dresses</a></li>
-			<li><a href="index.php?page=categories-grid">Tshirts</a></li>
-			<li><a href="index.php?page=categories-grid">Tops</a></li>
-			<li><a href="index.php?page=categories-grid">Shirts</a></li>
-			<li><a href="index.php?page=categories-grid">Shorts</a></li>
-			<li><a href="index.php?page=categories-grid">Suits</a></li>
-			<li><a href="index.php?page=categories-grid">Hoodies/Sweatshirts</a></li>
-			<li><a href="index.php?page=categories-grid">Swimwear</a></li>
-			<li><a href="index.php?page=categories-grid">Cardigans</a></li>
-			<li><a href="index.php?page=categories-grid">Jeans</a></li>
-			<li><a href="index.php?page=categories-grid">Leggins</a></li>
-			<li><a href="index.php?page=categories-grid">Underwear</a></li>
-			<li><a href="index.php?page=categories-grid">Waist Coast</a></li>
+			<li class="highlight"><a href="index.php?page=shop">just arrived</a></li>
+			<li class="highlight"><a href="index.php?page=shop">new season</a></li>
+			<li class="highlight"><a href="index.php?page=shop">trends</a></li>
+			<li class="highlight"><a href="index.php?page=shop">holiday shop</a></li>
+			<li class="highlight"><a href="index.php?page=shop">clothing</a></li>
+			<li><a href="index.php?page=shop">Dresses</a></li>
+			<li><a href="index.php?page=shop">Tshirts</a></li>
+			<li><a href="index.php?page=shop">Tops</a></li>
+			<li><a href="index.php?page=shop">Shirts</a></li>
+			<li><a href="index.php?page=shop">Shorts</a></li>
+			<li><a href="index.php?page=shop">Suits</a></li>
+			<li><a href="index.php?page=shop">Hoodies/Sweatshirts</a></li>
+			<li><a href="index.php?page=shop">Swimwear</a></li>
+			<li><a href="index.php?page=shop">Cardigans</a></li>
+			<li><a href="index.php?page=shop">Jeans</a></li>
+			<li><a href="index.php?page=shop">Leggins</a></li>
+			<li><a href="index.php?page=shop">Underwear</a></li>
+			<li><a href="index.php?page=shop">Waist Coast</a></li>
 		</ul>
 
 	</div>
 	<div class="col-xs-12 col-lg-3 col-sm-3 col-md-4">
 		<ul class="sub-menu">
-			<li class="highlight"><a href="index.php?page=categories-grid">accessories</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">bags</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">gifts</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">jewellery</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">sunglasses</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">watches</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">shoes</a></li>
-			<li><a href="index.php?page=categories-grid">Formal Shoes</a></li>
-			<li><a href="index.php?page=categories-grid">Trainers</a></li>
-			<li><a href="index.php?page=categories-grid">Boots</a></li>
-			<li><a href="index.php?page=categories-grid">Plimsolls</a></li>
-			<li><a href="index.php?page=categories-grid">Desert Boots</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">Seasonal offers</a></li>
-			<li class="highlight red"><a href="index.php?page=categories-grid">sale</a></li>
-			<li class="highlight"><a href="index.php?page=categories-grid">teen boys</a></li>
+			<li class="highlight"><a href="index.php?page=shop">accessories</a></li>
+			<li class="highlight"><a href="index.php?page=shop">bags</a></li>
+			<li class="highlight"><a href="index.php?page=shop">gifts</a></li>
+			<li class="highlight"><a href="index.php?page=shop">jewellery</a></li>
+			<li class="highlight"><a href="index.php?page=shop">sunglasses</a></li>
+			<li class="highlight"><a href="index.php?page=shop">watches</a></li>
+			<li class="highlight"><a href="index.php?page=shop">shoes</a></li>
+			<li><a href="index.php?page=shop">Formal Shoes</a></li>
+			<li><a href="index.php?page=shop">Trainers</a></li>
+			<li><a href="index.php?page=shop">Boots</a></li>
+			<li><a href="index.php?page=shop">Plimsolls</a></li>
+			<li><a href="index.php?page=shop">Desert Boots</a></li>
+			<li class="highlight"><a href="index.php?page=shop">Seasonal offers</a></li>
+			<li class="highlight red"><a href="index.php?page=shop">sale</a></li>
+			<li class="highlight"><a href="index.php?page=shop">teen boys</a></li>
 			
 		</ul>
 	</div>
