@@ -39,10 +39,10 @@
 
 						<li class="dropdown bewear-dropdown"><a href="index.php?page=home" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>Look Book</span></a>
 							<ul class="dropdown-menu bewear-dropdown-menu">
-								<li><a href="index.php?page=lookbook">Look Book 1</a></li>
-								<li><a href="index.php?page=single-look">Look Book 2</a></li>
-								<li><a href="index.php?page=lookbook-2">Look Book 3</a></li>
-								<li><a href="index.php?page=single-look-2">Look Book 4</a></li>
+								<li><a href="#">Look Book 1</a></li>
+								<li><a href="#">Look Book 2</a></li>
+								<li><a href="#">Look Book 3</a></li>
+								<li><a href="#">Look Book 4</a></li>
 							</ul>
 						</li>
 						
