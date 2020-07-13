@@ -10,14 +10,14 @@
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
     />
     <!-- https://fonts.google.com/specimen/Open+Sans -->
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
     <!-- https://fontawesome.com/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="assets/css/templatemo-style.css">
   </head>
 <body>
-    <div class="container tm-mt-big tm-mb-big">
+    <div class="container tm-mt-big">
       <div class="row">
         <div class="col-12 mx-auto tm-login-col">
           <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
@@ -70,9 +70,9 @@
       </div>
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
 </body>
 </html>
