@@ -8,9 +8,6 @@
     if( $page_name == 'home' ) {
         $header = 'header.php';
         $footer = 'footer.php';
-    } else {
-        $header = ( isset($_GET['header'] ) && $_GET['header'] == 'dark' ) ? 'header-2.php' : 'header.php' ;
-        $footer = ( isset( $_GET['footer'] ) && $_GET['footer'] == '1' ) ? 'footer-2.php' : 'footer.php' ;
     }
 
     $header = ROOT . '/parts/' . $header;
@@ -44,11 +41,11 @@
     <title>Product Admin - Dashboard HTML Template</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <!-- https://fonts.google.com/specimen/Roboto -->
-    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <!-- https://fontawesome.com/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="assets/css/templatemo-style.css">
 </head>
 <body id="reportsPage">
     <div class="" id="home">
@@ -70,15 +67,15 @@
     </div><!-- /.wrapper -->
     
 
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="js/moment.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
     <!-- https://momentjs.com/ -->
-    <script src="js/Chart.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
     <!-- http://www.chartjs.org/docs/latest/ -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
-    <script src="js/tooplate-scripts.js"></script>
+    <script src="assets/js/tooplate-scripts.js"></script>
     <script>
         Chart.defaults.global.defaultFontColor = 'white';
         let ctxLine,
