@@ -20,6 +20,9 @@
         'home'              => 'Home',
         'accounts'          => 'Accounts',
         'add-product'       => 'Add Product',
+        'edit-product'      => 'Edit Product',
+        'products'          => 'Products',
+
 
 
     );
