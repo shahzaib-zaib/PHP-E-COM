@@ -8,27 +8,17 @@
     if( $page_name == 'home' ) {
         $header = 'header.php';
         $footer = 'footer.php';
+    } else {
+        $header = ( isset($_GET['header'] ) && $_GET['header'] == 'dark' ) ? 'header-2.php' : 'header.php' ;
+        $footer = ( isset( $_GET['footer'] ) && $_GET['footer'] == '1' ) ? 'footer-2.php' : 'footer.php' ;
     }
 
     $header = ROOT . '/parts/' . $header;
     $footer = ROOT . '/parts/' . $footer;
 
     $pages = array(
-        'about'             => 'About Us',
-        'adult-services'    => 'Adult Services',
-        'blog'              => 'Blog',
-        'child-refuses'     => 'Child Refuses',
-        'child-services'    => 'child Services',
-        'consultation'      => 'consultation',
-        'contact'           => 'Contact',
-        'corporate-services'=> 'Corporate Services',
-        'family-and-friend' => 'Family and Friend',
-        'family-services'   => 'Family Services',
-        'faqs'              => 'FAQs',
         'home'              => 'Home',
-        'medico-legal'      => 'Medico Legal',
-        'save-data'         => 'Save Data',
-        'index'             => 'index',
+        'accounts'          => 'Accounts',
 
     );
 ?>
@@ -38,7 +28,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Product Admin - Dashboard HTML Template</title>
+    <title><?php echo $pages[$page_name];?> | Shahzaib Online Shopping</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
     <!-- https://fonts.google.com/specimen/Roboto -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -49,10 +39,6 @@
 </head>
 <body id="reportsPage">
     <div class="" id="home">
-        
-        <?php if($page_name == 'home'): ?>
-            
-        <?php endif; ?>
 
         <?php
             if (isset ($_GET['parts'] ) ) {
