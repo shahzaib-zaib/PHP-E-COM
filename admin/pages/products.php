@@ -8,11 +8,11 @@
                         <tr>
                             <th scope="col">&nbsp;</th>
                             <th scope="col">PRODUCT NAME</th>
-                            <th scope="col">UNIT SOLD</th>
+                            <th scope="col">CATEGORY</th>
                             <th scope="col">IN STOCK</th>
-                            <th scope="col">EXPIRE DATE</th>
-                            <th scope="col">Edit</th>
-                            <th scope="col">Delete</th>
+                            <th scope="col">CREATION DATE</th>
+                            <th scope="col">EDIT</th>
+                            <th scope="col">DELETE</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,8 +23,8 @@
                             <td>550</td>
                             <td>28 March 2019</td>
                             <td>
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-edit-icon"></i>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
                                 </a>
                             </td>
                             <td>
@@ -40,6 +40,11 @@
                             <td>750</td>
                             <td>21 March 2019</td>
                             <td>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
+                                </a>
+                            </td>
+                            <td>
                             <a href="#" class="tm-product-delete-link">
                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
                             </a>
@@ -51,6 +56,11 @@
                             <td>1,100</td>
                             <td>900</td>
                             <td>18 Feb 2019</td>
+                            <td>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
+                                </a>
+                            </td>
                             <td>
                             <a href="#" class="tm-product-delete-link">
                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
@@ -64,6 +74,11 @@
                             <td>600</td>
                             <td>24 Feb 2019</td>
                             <td>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
+                                </a>
+                            </td>
+                            <td>
                             <a href="#" class="tm-product-delete-link">
                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
                             </a>
@@ -75,6 +90,11 @@
                             <td>1,800</td>
                             <td>200</td>
                             <td>22 Feb 2019</td>
+                            <td>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
+                                </a>
+                            </td>
                             <td>
                             <a href="#" class="tm-product-delete-link">
                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
@@ -88,6 +108,11 @@
                             <td>1,000</td>
                             <td>20 Feb 2019</td>
                             <td>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
+                                </a>
+                            </td>
+                            <td>
                             <a href="#" class="tm-product-delete-link">
                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
                             </a>
@@ -99,6 +124,11 @@
                             <td>500</td>
                             <td>100</td>
                             <td>10 Feb 2019</td>
+                            <td>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
+                                </a>
+                            </td>
                             <td>
                             <a href="#" class="tm-product-delete-link">
                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
@@ -112,6 +142,11 @@
                             <td>600</td>
                             <td>08 Feb 2019</td>
                             <td>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
+                                </a>
+                            </td>
+                            <td>
                             <a href="#" class="tm-product-delete-link">
                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
                             </a>
@@ -123,6 +158,11 @@
                             <td>1,200</td>
                             <td>800</td>
                             <td>24 Jan 2019</td>
+                            <td>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
+                                </a>
+                            </td>
                             <td>
                             <a href="#" class="tm-product-delete-link">
                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
@@ -136,6 +176,11 @@
                             <td>400</td>
                             <td>22 Jan 2019</td>
                             <td>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
+                                </a>
+                            </td>
+                            <td>
                             <a href="#" class="tm-product-delete-link">
                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
                             </a>
@@ -147,6 +192,11 @@
                             <td>2,000</td>
                             <td>400</td>
                             <td>21 Jan 2019</td>
+                            <td>
+                                <a href="#" class="tm-product-edit-link">
+                                    <i class="far fa-edit tm-product-edit-icon"></i>
+                                </a>
+                            </td>
                             <td>
                             <a href="#" class="tm-product-delete-link">
                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
