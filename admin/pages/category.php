@@ -16,8 +16,9 @@
                 <table class="table table-hover tm-table-small tm-product-table">
                     <thead>
                         <tr>
-                            <th scope="col">&nbsp;</th>
+                            <th scope="col">CATEGORY IMAGE</th>
                             <th scope="col">CATEGORY NAME</th>
+                            <th scope="col">CATEGORY Description</th>
                             <th scope="col">PRODUCTS</th>
                             <th scope="col">CREATION DATE</th>
                             <th scope="col">EDIT</th>
@@ -26,8 +27,9 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row"><input type="checkbox" /></th>
+                            <th><img src="assets/img" alt="" height="100px" width="100px"></th>
                             <td class="tm-product-name">Lorem Ipsum Product 1</td>
+                            <td>Lorem Ipsum Product 1</td>
                             <td>1,450</td>
                             <td>28 March 2019</td>
                             <td>
@@ -44,11 +46,6 @@
                     </tbody>
                 </table>
             </div>
-            <!-- table container -->
-            <a href="index.php?page=add-category" class="btn btn-primary btn-block text-uppercase mb-3">Add new Category</a>
-            <button class="btn btn-primary btn-block text-uppercase">
-                Delete selected Categorys
-            </button>
             </div>
         </div>
     </div>
