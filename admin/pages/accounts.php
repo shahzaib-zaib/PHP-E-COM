@@ -1,3 +1,9 @@
+<?php 
+    include "assets/include/config.php";
+    if($_SESSION["user_role"] == '0'){
+        header("Location: {$hostname}/admin/index.php?page=home");
+    }
+?>
 <div class="container mt-5">
     <div class="row tm-content-row">
       <div class="col-lg-9">
@@ -23,44 +29,58 @@
         </div>
         </div>
     </div>
+      <?php
+          include "assets/include/config.php";
+          
+
+          $sql = "SELECT * FROM user ";
+          $result = mysqli_query($con, $sql) or die ("Query Faild.");
+          if(mysqli_num_rows($result) > 0){
+
+        
+    ?>
     <!-- row -->
     <div class="row tm-content-row">
       <?php while($row = mysqli_fetch_assoc($result)) { ?>
-      <div class="tm-block-col tm-col-avatar">
-        <div class="tm-bg-primary-dark tm-block tm-block-avatar">
-          <div class="row">
-            <div class="form-group col-lg-6">
-            <h2 class="tm-block-title"><?php echo $row['username']; ?></h2>
-            </div>
-            <div class="form-group col-lg-6" style="color: #840606; text-align: right; font-weight: 700 !important;">
-              <h6><?php 
-                              
-                    if($row['role'] == 1){
-                        echo "Admin";
-                    }else{
-                        echo "Normal";
-                    }
+        <div class="tm-block-col tm-col-avatar">
+          <div class="tm-bg-primary-dark tm-block tm-block-avatar">
+            <div class="row">
+              <div class="form-group col-lg-6">
+              <h2 class="tm-block-title"><?php echo $row['Username']; ?></h2>
+              </div>
+              <div class="form-group col-lg-6" style="color: #840606; text-align: right; font-weight: 700 !important;">
+                <h6><?php 
+                                
+                      if($row['Role'] == 1){
+                          echo "Admin";
+                      }elseif($row['Role'] == 2){
+                          echo "Editor";
+                      }else {
+                        echo "Seller";
+                      }
 
-                  ?>
-              </h6>
+                    ?>
+                </h6>
+              </div>
             </div>
-          </div>
-          <div class="tm-avatar-container">
-            <img src="assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
-            <a href="#" class="tm-avatar-delete-link">
-              <i class="far fa-trash-alt tm-product-delete-icon"></i>
-            </a>
-          </div>
-          <div class="row">
-            <div class="form-group col-lg-6">
-              <a href='index.php?page=update-user?id=<?php echo $row["user_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Update Account </a>
+            <div class="tm-avatar-container">
+              <img src="assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
+              <a href="#" class="tm-avatar-delete-link">
+                <i class="far fa-trash-alt tm-product-delete-icon"></i>
+              </a>
             </div>
-            <div class="form-group col-lg-6">
-              <a href="" class="btn btn-primary btn-block text-uppercase" > Delete Account </a>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <a href='index.php?page=update-user?id=<?php echo $row["user_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Update Account </a>
+              </div>
+              <div class="form-group col-lg-6">
+                <a href='index.php?page=delete-user?=<?php echo $row["user_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Delete Account </a>
+              </div>
             </div>
+            
           </div>
         </div>
-      </div>
       <?php } ?>
     </div>
+    <?php } ?>
 </div>

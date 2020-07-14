@@ -51,7 +51,7 @@
                         $username = mysqli_real_escape_string($con, $_POST['username']);
                         $password = md5($_POST['password']);
 
-                    $sql = "SELECT admin_id, username, role FROM admin WHERE username = '{$username}' AND password = '{$password}'";
+                    $sql = "SELECT User_id, Username, Role FROM user WHERE username = '{$username}' AND password = '{$password}'";
                     $result = mysqli_query($con, $sql) or die("Query Failed");
 
                     if(mysqli_num_rows($result) > 0){
@@ -61,7 +61,7 @@
                             $_SESSION["admin_id"] = $row['admin_id'];
                             $_SESSION["user_role"] = $row['role'];
 
-                            header("Location: {$hostname}/admin/index.php");
+                            header("Location: {$hostname}/admin/index.php?page=home");
 
                         }
                     }else{
