@@ -28,41 +28,47 @@
             </div>
             <div class="row mt-2">
               <div class="col-12">
-                <form action="index.html" method="post" class="tm-login-form">
+                <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" class="tm-login-form">
                   <div class="form-group">
                     <label for="username">Username</label>
-                    <input
-                      name="username"
-                      type="text"
-                      class="form-control validate"
-                      id="username"
-                      value=""
-                      required
-                    />
+                    <input name="username" type="text" class="form-control validate" id="username" value="" required />
                   </div>
                   <div class="form-group mt-3">
                     <label for="password">Password</label>
-                    <input
-                      name="password"
-                      type="password"
-                      class="form-control validate"
-                      id="password"
-                      value=""
-                      required
-                    />
+                    <input name="password" type="password" class="form-control validate" id="password" value="" required />
                   </div>
                   <div class="form-group mt-4">
-                    <button
-                      type="submit"
-                      class="btn btn-primary btn-block text-uppercase"
-                    >
-                      Login
-                    </button>
+                    <button type="submit" name="login" class="btn btn-primary btn-block text-uppercase"> Login </button>
                   </div>
                   <button class="mt-5 btn btn-primary btn-block text-uppercase">
                     Forgot your password?
                   </button>
                 </form>
+
+                <?php
+                    if(isset($_POST['login'])){
+                        include "assets/include/config.php";
+                        $username = mysqli_real_escape_string($con, $_POST['username']);
+                        $password = md5($_POST['password']);
+
+                    $sql = "SELECT admin_id, username, role FROM admin WHERE username = '{$username}' AND password = '{$password}'";
+                    $result = mysqli_query($con, $sql) or die("Query Failed");
+
+                    if(mysqli_num_rows($result) > 0){
+                        while($row = mysqli_fetch_assoc($result)){
+                            session_start();
+                            $_SESSION["username"] = $row['username'];
+                            $_SESSION["admin_id"] = $row['admin_id'];
+                            $_SESSION["user_role"] = $row['role'];
+
+                            header("Location: {$hostname}/admin/index.php");
+
+                        }
+                    }else{
+                        echo '<div class="alert-dander">Username and Password are not match</div>';
+                    }
+                    }
+                ?>
               </div>
             </div>
           </div>
