@@ -1,8 +1,4 @@
-<?php 
-    if($_SESSION["user_role"] == '0'){
-        header("Location: {$hostname}/admin/index.php?page=home");
-    }
-?>
+
 <div class="container mt-5">
     <div class="row tm-content-row">
       <div class="col-lg-9">
@@ -31,8 +27,7 @@
       <?php
           include "assets/include/config.php";
           
-
-          $sql = "SELECT * FROM user ";
+          $sql = "SELECT * FROM user";
           $result = mysqli_query($con, $sql) or die ("Query Faild.");
           if(mysqli_num_rows($result) > 0){
 

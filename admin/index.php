@@ -21,7 +21,10 @@
         'accounts'          => 'Accounts',
         'add-product'       => 'Add Product',
         'edit-product'      => 'Edit Product',
+        'add-category'      => 'Add Category',
+        'edit-category'     => 'Edit Category',
         'products'          => 'Products',
+        'category'          => 'Category',
         'add-user'          => 'Add User',
         'update-user'       => 'Update User',
 

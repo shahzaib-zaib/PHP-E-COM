@@ -1,12 +1,4 @@
-<?php
 
-    session_start();
-
-    if(!isset($_SESSION["username"])){
-        header("Location: {$hostname}/admin/index.php?page=home");
-    }
-
-?>
 <nav class="navbar navbar-expand-xl">
     <div class="container h-100">
         <a class="navbar-brand" href="index.php?page=home">
@@ -47,13 +39,20 @@
                         Products
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?page=category">
+                        <i class="fas fa-bars"></i>
+                        Categories
+                    </a>
+                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?page=accounts">
                         <i class="far fa-user"></i>
                         Accounts
                     </a>
                 </li>
+                
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -72,7 +71,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link d-block" href="logout.php">
-                        <?php echo $_SESSION["username"]; ?>, <b>Logout</b>
+                        , <b>Logout</b>
                     </a>
                 </li>
             </ul>
