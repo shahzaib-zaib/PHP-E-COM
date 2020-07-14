@@ -62,11 +62,11 @@
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="password">Password</label>
-                  <input id="password" name="password" type="password" class="form-control validate" value="<?php echo $row['username']; ?>" required />
+                  <input id="password" name="password" type="password" class="form-control validate" />
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="password2">Re-enter Password</label>
-                  <input id="password2" name="password2" type="password" class="form-control validate" value="<?php echo $row['username']; ?>" required />
+                  <input id="password2" name="password2" type="password" class="form-control validate" />
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="phone">Phone</label>
@@ -78,11 +78,18 @@
                   <?php
 
                         if($row['role'] == 1){
-                            echo "<option value='0'>normal User</option>
-                                    <option value='1' selected>Admin</option>";
+                            echo "<option value='1' selected>Admin</option>
+                                    <option value='2'>Editor</option>
+                                    <option value='3'>Seller</option>";
+
+                        }elseif($row['role'] == 2){
+                            echo "<option value='1'>Admin</option>
+                                    <option value='2' selected>Editor</option>
+                                    <option value='3'>Seller</option>";
                         }else{
-                            echo "<option value='0' selected>normal User</option>
-                                    <option value='1'>Admin</option>";
+                            echo "<option value='1'>Admin</option>
+                                    <option value='2'>Editor</option>
+                                    <option value='3' selected>Seller</option>";
                         }
 
                     ?>
@@ -91,10 +98,14 @@
                 <div class="col-12">
                   <label class="tm-hide-sm">&nbsp;</label>
                   <button type="submit" name="save" class="btn btn-primary btn-block text-uppercase" >
-                    Save Profile
+                    Update Profile
                   </button>
                 </div>
               </form>
+                <?php
+                        }
+                    }
+                ?>
             </div>
         </div>
     </div>

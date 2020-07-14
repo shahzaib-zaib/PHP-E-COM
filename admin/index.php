@@ -23,6 +23,8 @@
         'edit-product'      => 'Edit Product',
         'products'          => 'Products',
         'add-user'          => 'Add User',
+        'update-user'       => 'Update User',
+
 
 
 
