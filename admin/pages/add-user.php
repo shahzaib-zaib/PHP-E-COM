@@ -47,10 +47,10 @@
                     <option value="3">Seller</option>
                   </select>
                 </div>
-                <div class="form-group col-lg-6">
+                <div class="col-12">
                   <label class="tm-hide-sm">&nbsp;</label>
                   <button type="submit" class="btn btn-primary btn-block text-uppercase" >
-                    Update Profile
+                    Save Profile
                   </button>
                 </div>
               </form>
