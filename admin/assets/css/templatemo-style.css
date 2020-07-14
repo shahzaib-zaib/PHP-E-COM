@@ -330,7 +330,7 @@ thead {
 }
 .btn {
   border-radius: 0;
-  padding: 13px 28px;
+  padding: 13px 10px;
   transition: all 0.2s ease;
   max-width: 100%;
 }
