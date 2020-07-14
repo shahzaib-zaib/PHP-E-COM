@@ -55,6 +55,15 @@
                   <input id="phone" name="phone" type="tel" class="form-control validate" />
                 </div>
                 <div class="form-group col-lg-6">
+                  <label for="phone">Account Role</label>
+                  <select class="custom-select">
+                    <option value="0">Select account</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Editor</option>
+                    <option value="3">Seller</option>
+                  </select>
+                </div>
+                <div class="form-group col-lg-6">
                   <label class="tm-hide-sm">&nbsp;</label>
                   <button type="submit" class="btn btn-primary btn-block text-uppercase" >
                     Update Your Profile
