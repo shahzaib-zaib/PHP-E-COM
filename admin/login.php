@@ -51,15 +51,15 @@
                         $username = mysqli_real_escape_string($con, $_POST['username']);
                         $password = md5($_POST['password']);
 
-                    $sql = "SELECT User_id, Username, Role FROM user WHERE username = '{$username}' AND password = '{$password}'";
+                    $sql = "SELECT User_id, Username, Role FROM user WHERE Username = '{$username}' AND Password = '{$password}'";
                     $result = mysqli_query($con, $sql) or die("Query Failed");
 
                     if(mysqli_num_rows($result) > 0){
                         while($row = mysqli_fetch_assoc($result)){
                             session_start();
-                            $_SESSION["username"] = $row['username'];
-                            $_SESSION["admin_id"] = $row['admin_id'];
-                            $_SESSION["user_role"] = $row['role'];
+                            $_SESSION["username"] = $row['Username'];
+                            $_SESSION["admin_id"] = $row['User_id'];
+                            $_SESSION["user_role"] = $row['Role'];
 
                             header("Location: {$hostname}/admin/index.php?page=home");
 

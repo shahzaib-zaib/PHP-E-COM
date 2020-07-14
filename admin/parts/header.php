@@ -1,3 +1,12 @@
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION["username"])){
+        header("Location: {$hostname}/admin/index.php?page=home");
+    }
+
+?>
 <nav class="navbar navbar-expand-xl">
     <div class="container h-100">
         <a class="navbar-brand" href="index.php?page=home">
@@ -62,8 +71,8 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link d-block" href="login.php">
-                        Admin, <b>Logout</b>
+                    <a class="nav-link d-block" href="logout.php">
+                        <?php echo $_SESSION["username"]; ?>, <b>Logout</b>
                     </a>
                 </li>
             </ul>
