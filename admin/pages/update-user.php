@@ -5,23 +5,15 @@
 
         $username = mysqli_real_escape_string($con,$_POST['username']);
         $email = mysqli_real_escape_string($con,$_POST['email']);
-        $password = mysqli_real_escape_string($con,md5($_POST['password']));
+        //$password = mysqli_real_escape_string($con,md5($_POST['password']));
         $phone = mysqli_real_escape_string($con,$_POST['phone']);
         $role = mysqli_real_escape_string($con,$_POST['role']);
 
-    $sql = "SELECT Username FROM user WHERE username = '{$username}'";
-    $result = mysqli_query($con,$sql) or die("Query Failed");
+        $sql = "UPDATE user SET username = '{$username}', Email = '{$emai}', Phone = '{$phone}', Role = '{$role}' WHERE user_id = '{$userid}'";
 
-    if(mysqli_num_rows($result) > 0){
-        echo "<p style='color:red;text-align:center;margin: 10px 0;'>Username already Exists</p>";
-    }else{
-        $sql1 = "INSERT INTO user (Username, Email, Password, Phone, Role)
-        VALUES('{$username}','{$email}','{$password}','{$phone}','{$role}')";
-
-    if(mysqli_query($con,$sql1)){
-        header("location: {$hostname}/admin/index.php?page=accounts");
-    }
-    }
+        if(mysqli_query($con,$sql)){
+            header("location:index.php?page=accounts");
+        }
 
     }
 
@@ -45,6 +37,16 @@
         <div class="tm-block-col tm-col-account-settings">
             <div class="tm-bg-primary-dark tm-block tm-block-settings">
               <h2 class="tm-block-title">Account Settings</h2>
+              <?php
+
+                include "assets/include/config.php";
+                $user_id = $_GET['id'];
+                $sql = "SELECT * FROM user WHERE user_id = {$user_id}";
+                $result = mysqli_query($con, $sql) or die ("Query Faild.");
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_assoc($result)){
+
+                ?>
               <form action="<?php $_SERVER['PHP_SELF']; ?>" method ="POST" class="tm-signup-form row">
                 <div class="form-group col-lg-6">
                   <label for="name">Account Name</label>
@@ -53,14 +55,6 @@
                 <div class="form-group col-lg-6">
                   <label for="email">Account Email</label>
                   <input id="email" name="email" type="email" class="form-control validate" />
-                </div>
-                <div class="form-group col-lg-6">
-                  <label for="password">Password</label>
-                  <input id="password" name="password" type="password" class="form-control validate" />
-                </div>
-                <div class="form-group col-lg-6">
-                  <label for="password2">Re-enter Password</label>
-                  <input id="password2" name="password2" type="password" class="form-control validate" />
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="phone">Phone</label>
@@ -77,7 +71,7 @@
                 </div>
                 <div class="col-12">
                   <label class="tm-hide-sm">&nbsp;</label>
-                  <button type="submit" name="save" class="btn btn-primary btn-block text-uppercase" >
+                  <button type="submit" name="submit" class="btn btn-primary btn-block text-uppercase" >
                     Save Profile
                   </button>
                 </div>
