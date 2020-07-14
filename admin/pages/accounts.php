@@ -1,5 +1,15 @@
 <div class="container mt-5">
     <div class="row tm-content-row">
+      <div class="col-lg-9">
+        
+      </div>
+      <div class="col-lg-3 mb-5">
+        <a href="index.php?page=add-account" class="btn btn-primary btn-block text-uppercase" >
+          Add Account
+        </a>
+      </div>
+    </div>
+    <div class="row tm-content-row">
         <div class="col-12 tm-block-col">
         <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
             <h2 class="tm-block-title">List of Accounts</h2>
