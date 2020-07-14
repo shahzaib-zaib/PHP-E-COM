@@ -4,7 +4,7 @@
         
       </div>
       <div class="col-lg-3 mb-5">
-        <a href="index.php?page=add-account" class="btn btn-primary btn-block text-uppercase" >
+        <a href="index.php?page=add-user" class="btn btn-primary btn-block text-uppercase" >
           Add Account
         </a>
       </div>

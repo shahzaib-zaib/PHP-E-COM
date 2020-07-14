@@ -1,3 +1,32 @@
+<?php include "assets/include/header.php"; 
+    
+
+    if(isset($_POST['save'])){
+        include "config.php";
+
+        $fname = mysqli_real_escape_string($con,$_POST['fname']);
+        $lname = mysqli_real_escape_string($con,$_POST['lname']);
+        $user = mysqli_real_escape_string($con,$_POST['user']);
+        $password = mysqli_real_escape_string($con,md5($_POST['password']));
+        $role = mysqli_real_escape_string($con,$_POST['role']);
+
+    $sql = "SELECT username FROM user WHERE username = '{$user}'";
+    $result = mysqli_query($con,$sql) or die("Query Failed");
+
+    if(mysqli_num_rows($result) > 0){
+        echo "<p style='color:red;text-align:center;margin: 10px 0;'>Username already Exists</p>";
+    }else{
+        $sql1 = "INSERT INTO user (first_name, last_name, username, password, role)
+        VALUES('{$fname}','{$lname}','{$user}','{$password}','{$role}')";
+
+    if(mysqli_query($con,$sql1)){
+        header("location:users.php");
+    }
+    }
+
+    }
+
+?>
 <div class="container mt-5">
     <div class="row tm-content-row">
         <div class="tm-block-col tm-col-avatar">
@@ -17,7 +46,7 @@
         <div class="tm-block-col tm-col-account-settings">
             <div class="tm-bg-primary-dark tm-block tm-block-settings">
               <h2 class="tm-block-title">Account Settings</h2>
-              <form action="" class="tm-signup-form row">
+              <form action="<?php $_SERVER['PHP_SELF']; ?>" class="tm-signup-form row">
                 <div class="form-group col-lg-6">
                   <label for="name">Account Name</label>
                   <input id="name" name="name" type="text" class="form-control validate" />

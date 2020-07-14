@@ -22,6 +22,7 @@
         'add-product'       => 'Add Product',
         'edit-product'      => 'Edit Product',
         'products'          => 'Products',
+        'add-user'          => 'Add User',
 
 
 
