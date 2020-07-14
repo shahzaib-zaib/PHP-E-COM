@@ -20,7 +20,7 @@
             <div class="tm-bg-primary-dark tm-block tm-block-avatar">
               <h2 class="tm-block-title">Change Avatar</h2>
               <div class="tm-avatar-container">
-                <img src="img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
+                <img src="assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
                 <a href="#" class="tm-avatar-delete-link">
                   <i class="far fa-trash-alt tm-product-delete-icon"></i>
                 </a>
@@ -66,12 +66,13 @@
                 <div class="form-group col-lg-6">
                   <label class="tm-hide-sm">&nbsp;</label>
                   <button type="submit" class="btn btn-primary btn-block text-uppercase" >
-                    Update Your Profile
+                    Update Profile
                   </button>
                 </div>
-                <div class="col-12">
+                <div class="form-group col-lg-6">
+                  <label class="tm-hide-sm">&nbsp;</label>
                   <button type="submit" class="btn btn-primary btn-block text-uppercase" >
-                    Delete Your Account
+                    Delete Account
                   </button>
                 </div>
               </form>
