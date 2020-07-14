@@ -1,5 +1,15 @@
 <div class="container mt-5">
     <div class="row tm-content-row">
+      <div class="col-lg-9">
+        
+      </div>
+      <div class="col-lg-3 mb-5">
+        <a href="index.php?page=add-category" class="btn btn-primary btn-block text-uppercase" >
+          Add Category
+        </a>
+      </div>
+    </div>
+    <div class="row tm-content-row">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 tm-block-col">
             <div class="tm-bg-primary-dark tm-block tm-block-products">
             <div class="tm-product-table-container">
