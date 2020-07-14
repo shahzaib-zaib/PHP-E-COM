@@ -46,24 +46,30 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php 
+
+                            while($row = mysqli_fetch_assoc($result)){
+
+                        ?>
                         <tr>
-                            <th><img src="assets/img" alt="" height="100px" width="100px"></th>
-                            <td class="tm-product-name">Lorem Ipsum Product 1</td>
-                            <td>Lorem Ipsum Product 1</td>
-                            <td>1,450</td>
-                            <td>28 March 2019</td>
+                            <th><img src="assets/img<?php echo $row['category_img']; ?>" alt="" height="100px" width="100px"></th>
+                            <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
+                            <td><?php echo $row['category_desc']; ?></td>
+                            <td><?php echo $row['product']; ?></td>
+                            <td><?php echo $row['creation_date']; ?></td>
                             <td>
-                                <a href="#" class="tm-product-edit-link">
+                                <a href="index.php?page=edit-category?id=<?php echo $row["category_id"] ?>" class="tm-product-edit-link">
                                     <i class="far fa-edit tm-product-edit-icon"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="#" class="tm-product-delete-link">
+                                <a href="index.php?page=delete-category?id=<?php echo $row["category_id"] ?>" class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
                             </td>
                         </tr>
                     </tbody>
+                    <?php } ?>
                 </table>
                 <?php
 
