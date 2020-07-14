@@ -18,7 +18,7 @@
                         <tr>
                             <th scope="col">CATEGORY IMAGE</th>
                             <th scope="col">CATEGORY NAME</th>
-                            <th scope="col">CATEGORY Description</th>
+                            <th scope="col">CATEGORY DESCRIPTION</th>
                             <th scope="col">PRODUCTS</th>
                             <th scope="col">CREATION DATE</th>
                             <th scope="col">EDIT</th>
