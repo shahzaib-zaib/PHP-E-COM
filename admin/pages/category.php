@@ -13,6 +13,26 @@
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 tm-block-col">
             <div class="tm-bg-primary-dark tm-block tm-block-products">
             <div class="tm-product-table-container">
+            <?php
+
+                include "assets/include/config.php";
+
+                $limit = 3;
+
+
+                if(isset($_GET['page'])){
+                    $page = $_GET['page'];
+                }else{
+                    $page = 1;
+                }
+                $offset = ($page - 1) * $limit;
+
+                $sql = "SELECT * FROM category ORDER BY category_id DESC LIMIT {$offset}, {$limit}";
+                $result = mysqli_query($con, $sql) or die ("Query Faild.");
+
+                if(mysqli_num_rows($result) > 0){
+
+            ?>
                 <table class="table table-hover tm-table-small tm-product-table">
                     <thead>
                         <tr>
