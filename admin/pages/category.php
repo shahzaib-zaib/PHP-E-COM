@@ -17,17 +17,7 @@
 
                 include "assets/include/config.php";
 
-                $limit = 10;
-
-
-                if(isset($_GET['page'])){
-                    $page = $_GET['page'];
-                }else{
-                    $page = 1;
-                }
-                $offset = ($page - 1) * $limit;
-
-                $sql = "SELECT * FROM category ORDER BY category_id DESC LIMIT {$offset}, {$limit}";
+                $sql = "SELECT * FROM category";
                 $result = mysqli_query($con, $sql) or die ("Query Faild.");
 
                 if(mysqli_num_rows($result) > 0){
@@ -73,35 +63,6 @@
                 </table>
                 <?php
 
-                    }
-                    
-                    $sql1 = "SELECT * FROM category";
-                    $result1 = mysqli_query($con, $sql1) or die ("Query Failed");
-
-                    if(mysqli_num_rows($result1) > 0){
-                        $total_record = mysqli_num_rows($result1);
-                        
-                        $total_pages = ceil($total_record / $limit);
-
-                        echo "<ul class='pagination admin-pagination'>";
-                        if($page > 1){
-                            echo '<li><a href="category.php?page='.($page - 1).'">Prev</a></li>';
-                        }
-                        
-                        for($i = 1; $i <= $total_pages; $i++){
-                            if ($i == $page) {
-                                $active = "active";
-                            } else {
-                                $active = "";
-                            }
-                            
-                            echo '<li class="'.$active.'"><a href="category.php?page='. $i .'">'. $i .'</a></li>';
-                        }
-                        if($total_pages > $page){
-                            echo '<li><a href="category.php?page='.($page + 1).'">Next</a></li>';
-                        }
-                        
-                        echo "</ul>";
                     }
 
                 ?>
