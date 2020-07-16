@@ -1,33 +1,32 @@
 <?php
 
-    if(isset($_POST['submit'])){
-        include "assets/include/config.php";
+include "config.php";
 
-        $categoryid = mysqli_real_escape_string($con,$_POST['$cat_id']);
-        $categoryname = mysqli_real_escape_string($con,$_POST['category_name']);
-        $categoryDesc = mysqli_real_escape_string($con,$_POST['category_desc']);
+$post_id = $_GET['id'];
+$sql = "SELECT post.post_id, post.title, post.description,post.post_img,
+category.category_name, post.category FROM post 
+LEFT JOIN category ON post.category = category.category_id
+LEFT JOIN user ON post.author = user.user_id
+WHERE post.post_id = {$post_id}";
 
-        $sql = "UPDATE category SET category_name = '{$catname}' WHERE category_id = '{$categoryid}'";
-
-        if(mysqli_query($con, $sql)){
-            header("location:category.php");
-        }
-    }
-
+$result = mysqli_query($con, $sql) or die ("Query Faild.");
+if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)) {
 
 ?>
+
 <div class="container tm-mt-big tm-mb-big">
   <div class="row">
     <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
       <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
         <div class="row">
           <div class="col-12">
-            <h2 class="tm-block-title d-inline-block">Add Product</h2>
+            <h2 class="tm-block-title d-inline-block">Edit Category</h2>
           </div>
         </div>
         <div class="row tm-edit-product-row">
           <div class="col-xl-6 col-lg-6 col-md-12">
-            <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
+            <form action="index.php?page=save-edit-category" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
               <div class="form-group mb-3">
                 <input id="name" name="cat_id" type="hidden" class="form-control validate" value="<?php echo $row['category_id']; ?>" required />
               </div>

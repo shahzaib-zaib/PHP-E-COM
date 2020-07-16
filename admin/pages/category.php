@@ -17,7 +17,7 @@
 
                 include "assets/include/config.php";
 
-                $sql = "SELECT * FROM category";
+                $sql = "SELECT * FROM category ORDER BY category_id DESC";
                 $result = mysqli_query($con, $sql) or die ("Query Faild.");
 
                 if(mysqli_num_rows($result) > 0){
