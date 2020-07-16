@@ -1,17 +1,17 @@
 <?php
 
-include "config.php";
+  include "assets/include/config.php";
 
-$post_id = $_GET['id'];
-$sql = "SELECT post.post_id, post.title, post.description,post.post_img,
-category.category_name, post.category FROM post 
-LEFT JOIN category ON post.category = category.category_id
-LEFT JOIN user ON post.author = user.user_id
-WHERE post.post_id = {$post_id}";
+  $category_id = $_GET['id'];
+  $sql = "SELECT post.post_id, post.title, post.description,post.post_img,
+  category.category_name, post.category FROM post 
+  LEFT JOIN category ON post.category = category.category_id
+  LEFT JOIN user ON post.author = user.user_id
+  WHERE post.post_id = {$category_id}";
 
-$result = mysqli_query($con, $sql) or die ("Query Faild.");
-if(mysqli_num_rows($result) > 0){
-    while($row = mysqli_fetch_assoc($result)) {
+  $result = mysqli_query($con, $sql) or die ("Query Faild.");
+  if(mysqli_num_rows($result) > 0){
+      while($row = mysqli_fetch_assoc($result)) {
 
 ?>
 
