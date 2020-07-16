@@ -1,20 +1,3 @@
-<?php
-
-  include "assets/include/config.php";
-
-  $category_id = $_GET['id'];
-  $sql = "SELECT post.post_id, post.title, post.description,post.post_img,
-  category.category_name, post.category FROM post 
-  LEFT JOIN category ON post.category = category.category_id
-  LEFT JOIN user ON post.author = user.user_id
-  WHERE post.post_id = {$category_id}";
-
-  $result = mysqli_query($con, $sql) or die ("Query Faild.");
-  if(mysqli_num_rows($result) > 0){
-      while($row = mysqli_fetch_assoc($result)) {
-
-?>
-
 <div class="container tm-mt-big tm-mb-big">
   <div class="row">
     <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
@@ -26,6 +9,16 @@
         </div>
         <div class="row tm-edit-product-row">
           <div class="col-xl-6 col-lg-6 col-md-12">
+          <?php
+
+                include "assets/include/config.php";
+                $category_id = $_GET['id'];
+                $sql = "SELECT * FROM category WHERE category_id = {$category_id}";
+                $result = mysqli_query($con, $sql) or die ("Query Faild.");
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_assoc($result)){
+
+            ?>
             <form action="index.php?page=save-edit-category" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
               <div class="form-group mb-3">
                 <input id="name" name="cat_id" type="hidden" class="form-control validate" value="<?php echo $row['category_id']; ?>" required />
@@ -53,6 +46,10 @@
             <button type="submit" name="submit" class="btn btn-primary btn-block text-uppercase">Update Product</button>
           </div>
         </form>
+        <?php
+                }
+            }
+        ?>
         </div>
       </div>
     </div>
