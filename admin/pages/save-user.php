@@ -41,8 +41,8 @@
     if(mysqli_num_rows($result) > 0){
         echo "<p style='color:red;text-align:center;margin: 10px 0;'>Account name already Exists</p>";
     }else{
-        $sql1 = "INSERT INTO user (Username, Email, Password, Phone, Role)
-        VALUES('{$username}','{$email}','{$password}','{$phone}','{$role}')";
+        $sql1 = "INSERT INTO user (Username, Email, Password, Phone, Role, User_img)
+        VALUES('{$username}','{$email}','{$password}','{$phone}','{$role}','{$file_name}')";
 
     if(mysqli_query($con, $sql)){
         header("location: {$hostname}/admin/pages/category.php");

@@ -11,9 +11,10 @@
                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
               </a>
             </div>
-            <button class="btn btn-primary btn-block text-uppercase">
-              Add New Photo
-            </button>
+            <div class="custom-file mt-3 mb-3">
+              <input id="fileInput" type="file" name="fileToUpload" style="display:none;" />
+              <input type="button" type="file" name="fileToUpload" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
+            </div>
           </div>
       </div>
       <div class="tm-block-col tm-col-account-settings">
