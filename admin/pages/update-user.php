@@ -10,7 +10,7 @@
         while($row = mysqli_fetch_assoc($result)){
 
   ?>
-  <form action="save-user.php" method ="POST" enctype="multipart/form-data">
+  <form action="save-update-user.php" method ="POST" enctype="multipart/form-data">
     <div class="row tm-content-row">
       <div class="tm-block-col tm-col-avatar">
           <div class="tm-bg-primary-dark tm-block tm-block-avatar">
