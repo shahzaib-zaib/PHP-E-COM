@@ -1,5 +1,5 @@
 <?php    
-
+    include "../parts/header.php"
     if(isset($_POST['save'])){
         include "assets/include/config.php";
 
@@ -19,7 +19,7 @@
         VALUES('{$username}','{$email}','{$password}','{$phone}','{$role}')";
 
     if(mysqli_query($con,$sql1)){
-        header("location: {$hostname}/admin/index.php?page=accounts");
+        header("location: {$hostname}/admin/pages/accounts.php");
     }
     }
 
@@ -32,7 +32,7 @@
             <div class="tm-bg-primary-dark tm-block tm-block-avatar">
               <h2 class="tm-block-title">New Avatar</h2>
               <div class="tm-avatar-container">
-                <img src="assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
+                <img src="../assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
                 <a href="#" class="tm-avatar-delete-link">
                   <i class="far fa-trash-alt tm-product-delete-icon"></i>
                 </a>
@@ -86,3 +86,4 @@
         </div>
     </div>
 </div>
+<?php include "../parts/footer.php" ?>

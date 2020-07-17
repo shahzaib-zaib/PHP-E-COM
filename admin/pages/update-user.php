@@ -1,5 +1,5 @@
 <?php    
-
+    include "../parts/header.php"
     if(isset($_POST['save'])){
         include "assets/include/config.php";
 
@@ -110,3 +110,4 @@
         </div>
     </div>
 </div>
+<?php include "../parts/footer.php" ?>

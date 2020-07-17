@@ -1,10 +1,11 @@
+<?php include "../parts/header.php" ?>
 <div class="container mt-5">
     <div class="row tm-content-row">
       <div class="col-lg-9">
         
       </div>
       <div class="col-lg-3 mb-5">
-        <a href="index.php?page=add-category" class="btn btn-primary btn-block text-uppercase" >
+        <a href="add-category.php" class="btn btn-primary btn-block text-uppercase" >
           Add Category
         </a>
       </div>
@@ -42,18 +43,18 @@
 
                         ?>
                         <tr>
-                            <th><img src="assets/img<?php echo $row['category_img']; ?>" alt="" height="100px" width="100px"></th>
+                            <th><img src="../assets/img<?php echo $row['category_img']; ?>" alt="" height="100px" width="100px"></th>
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td><?php echo $row['category_desc']; ?></td>
                             <td><?php echo $row['product']; ?></td>
                             <td><?php echo $row['creation_date']; ?></td>
                             <td>
-                                <a href="index.php?page=edit-category?id=<?php echo $row["category_id"] ?>" class="tm-product-edit-link">
+                                <a href="edit-category.php?id=<?php echo $row["category_id"] ?>" class="tm-product-edit-link">
                                     <i class="far fa-edit tm-product-edit-icon"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="index.php?page=delete-category?id=<?php echo $row["category_id"] ?>" class="tm-product-delete-link">
+                                <a href="delete-category.php?id=<?php echo $row["category_id"] ?>" class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
                             </td>
@@ -71,3 +72,4 @@
         </div>
     </div>
 </div>
+<?php include "../parts/footer.php" ?>

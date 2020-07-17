@@ -1,3 +1,4 @@
+<?php include "../parts/header.php" ?>
 <div class="container tm-mt-big tm-mb-big">
   <div class="row">
     <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
@@ -19,7 +20,7 @@
                     while($row = mysqli_fetch_assoc($result)){
 
             ?>
-            <form action="index.php?page=save-edit-category" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
+            <form action="save-edit-category.php" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
               <div class="form-group mb-3">
                 <input id="name" name="cat_id" type="hidden" class="form-control validate" value="<?php echo $row['category_id']; ?>" required />
               </div>
@@ -34,7 +35,7 @@
           </div>
           <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
             <div class="tm-product-img-dummy mx-auto">
-                <img  src="assets/img/<?php echo $row['category_img']; ?>" height="240px">
+                <img  src="../assets/img/<?php echo $row['category_img']; ?>" height="240px">
                 <input type="hidden" name="old_image" value="<?php echo $row['category_img']; ?>">
             </div>
             <div class="custom-file mt-3 mb-3">
@@ -55,3 +56,4 @@
     </div>
   </div>
 </div>
+<?php include "../parts/footer.php" ?>

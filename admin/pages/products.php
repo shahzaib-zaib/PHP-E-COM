@@ -1,3 +1,4 @@
+<?php include "../parts/header.php" ?>
 <div class="container mt-5">
     <div class="row tm-content-row">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 tm-block-col">
@@ -207,7 +208,7 @@
                 </table>
             </div>
             <!-- table container -->
-            <a href="index.php?page=add-product" class="btn btn-primary btn-block text-uppercase mb-3">Add new product</a>
+            <a href="add-product.php" class="btn btn-primary btn-block text-uppercase mb-3">Add new product</a>
             <button class="btn btn-primary btn-block text-uppercase">
                 Delete selected products
             </button>
@@ -215,3 +216,4 @@
         </div>
     </div>
 </div>
+<?php include "../parts/footer.php" ?>

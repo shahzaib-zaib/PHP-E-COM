@@ -1,11 +1,11 @@
-
+<?php include "../parts/header.php" ?>
 <div class="container mt-5">
     <div class="row tm-content-row">
       <div class="col-lg-9">
         
       </div>
       <div class="col-lg-3 mb-5">
-        <a href="index.php?page=add-user" class="btn btn-primary btn-block text-uppercase" >
+        <a href="add-user.php" class="btn btn-primary btn-block text-uppercase" >
           Add Account
         </a>
       </div>
@@ -65,10 +65,10 @@
             </div>
             <div class="row">
               <div class="form-group col-lg-6">
-                <a href='index.php?page=update-user?id=<?php echo $row["user_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Update Account </a>
+                <a href='update-user.php?id=<?php echo $row["user_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Update Account </a>
               </div>
               <div class="form-group col-lg-6">
-                <a href='index.php?page=delete-user?=<?php echo $row["user_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Delete Account </a>
+                <a href='delete-user.php?id=<?php echo $row["user_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Delete Account </a>
               </div>
             </div>
             
@@ -78,3 +78,4 @@
     </div>
     <?php } ?>
 </div>
+<?php include "../parts/footer.php" ?>

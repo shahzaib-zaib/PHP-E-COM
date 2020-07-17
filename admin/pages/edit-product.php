@@ -1,3 +1,4 @@
+<?php include "../parts/header.php" ?>
 <div class="container tm-mt-big tm-mb-big">
     <div class="row">
         <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
@@ -40,7 +41,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
                         <div class="tm-product-img-edit mx-auto">
-                            <img src="img/product-image.jpg" alt="Product image" class="img-fluid d-block mx-auto">
+                            <img src="../assets/img/product-image.jpg" alt="Product image" class="img-fluid d-block mx-auto">
                             <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();"></i>
                         </div>
                         <div class="custom-file mt-3 mb-3">
@@ -57,3 +58,4 @@
         </div>
     </div>
 </div>
+<?php include "../parts/footer.php" ?>
