@@ -1,31 +1,4 @@
-<?php    
-    include "../parts/header.php";
-    if(isset($_POST['save'])){
-        include "assets/include/config.php";
-
-        $username = mysqli_real_escape_string($con,$_POST['username']);
-        $email = mysqli_real_escape_string($con,$_POST['email']);
-        $password = mysqli_real_escape_string($con,md5($_POST['password']));
-        $phone = mysqli_real_escape_string($con,$_POST['phone']);
-        $role = mysqli_real_escape_string($con,$_POST['role']);
-
-    $sql = "SELECT Username FROM user WHERE username = '{$username}'";
-    $result = mysqli_query($con,$sql) or die("Query Failed");
-
-    if(mysqli_num_rows($result) > 0){
-        echo "<p style='color:red;text-align:center;margin: 10px 0;'>Username already Exists</p>";
-    }else{
-        $sql1 = "INSERT INTO user (Username, Email, Password, Phone, Role)
-        VALUES('{$username}','{$email}','{$password}','{$phone}','{$role}')";
-
-    if(mysqli_query($con,$sql1)){
-        header("location: {$hostname}/admin/pages/accounts.php");
-    }
-    }
-
-    }
-
-?>
+<?php include "../parts/header.php"; ?>
 <div class="container mt-5">
   <form action="save-user.php" method ="POST" >
     <div class="row tm-content-row">
