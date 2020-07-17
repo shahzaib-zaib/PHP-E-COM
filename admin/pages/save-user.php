@@ -35,7 +35,7 @@
         $phone = mysqli_real_escape_string($con,$_POST['phone']);
         $role = mysqli_real_escape_string($con,$_POST['role']);
 
-    $sql = "SELECT Username FROM user WHERE Username = '{$username}'";
+    $sql = "SELECT username FROM user WHERE username = '{$username}'";
     $result = mysqli_query($con,$sql) or die("Query Failed");
 
     if(mysqli_num_rows($result) > 0){
@@ -45,7 +45,7 @@
         VALUES('{$username}','{$email}','{$password}','{$phone}','{$role}','{$file_name}')";
 
     if(mysqli_query($con, $sql)){
-        header("location: {$hostname}/admin/pages/category.php");
+        header("location: {$hostname}/admin/pages/accounts.php");
     }else{
         echo "<div class='alert alert-danger'>Query Failed</div>";
     }

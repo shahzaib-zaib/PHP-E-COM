@@ -1,6 +1,6 @@
 <?php include "../parts/header.php"; ?>
 <div class="container mt-5">
-  <form action="save-user.php" method ="POST" >
+  <form action="save-user.php" method ="POST" enctype="multipart/form-data">
     <div class="row tm-content-row">
       <div class="tm-block-col tm-col-avatar">
           <div class="tm-bg-primary-dark tm-block tm-block-avatar">
