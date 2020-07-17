@@ -1,6 +1,21 @@
 <?php include "../parts/header.php" ?>
 <div class="container mt-5">
     <div class="row tm-content-row">
+      <div class="col-lg-4">
+        <a href="add-category.php" class="btn btn-primary btn-block text-uppercase" >
+          DELETE SELECTED PRODUCTS
+        </a>
+      </div>
+      <div class="col-lg-4">
+        
+      </div>
+      <div class="col-lg-4 mb-5">
+        <a href="add-category.php" class="btn btn-primary btn-block text-uppercase" >
+          ADD PRODUCT
+        </a>
+      </div>
+    </div>
+    <div class="row tm-content-row">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 tm-block-col">
             <div class="tm-bg-primary-dark tm-block tm-block-products">
             <div class="tm-product-table-container">
@@ -208,10 +223,6 @@
                 </table>
             </div>
             <!-- table container -->
-            <a href="add-product.php" class="btn btn-primary btn-block text-uppercase mb-3">Add new product</a>
-            <button class="btn btn-primary btn-block text-uppercase">
-                Delete selected products
-            </button>
             </div>
         </div>
     </div>
