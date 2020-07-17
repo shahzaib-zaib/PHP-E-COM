@@ -15,42 +15,68 @@
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
 </head>
 <body>
-    
-    
+    <div class="container tm-mt-big">
+      <div class="row">
+        <div class="col-12 mx-auto tm-login-col">
+          <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h2 class="tm-block-title mb-4">Welcome to Dashboard, Login</h2>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-12">
+                <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" class="tm-login-form">
+                  <div class="form-group">
+                    <label for="username">Username</label>
+                    <input name="username" type="text" class="form-control validate" id="username" value="" required />
+                  </div>
+                  <div class="form-group mt-3">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" class="form-control validate" id="password" value="" required />
+                  </div>
+                  <div class="form-group mt-4">
+                    <button type="submit" name="login" class="btn btn-primary btn-block text-uppercase"> Login </button>
+                  </div>
+                  <button class="mt-5 btn btn-primary btn-block text-uppercase">
+                    Forgot your password?
+                  </button>
+                </form>
 
+                <?php
+                    if(isset($_POST['login'])){
+                        include "assets/include/config.php";
+                        $username = mysqli_real_escape_string($con, $_POST['username']);
+                        $password = md5($_POST['password']);
+
+                    $sql = "SELECT User_id, Username, Role FROM user WHERE Username = '{$username}' AND Password = '{$password}'";
+                    $result = mysqli_query($con, $sql) or die("Query Failed");
+
+                    if(mysqli_num_rows($result) > 0){
+                        while($row = mysqli_fetch_assoc($result)){
+                            session_start();
+                            $_SESSION["username"] = $row['Username'];
+                            $_SESSION["admin_id"] = $row['User_id'];
+                            $_SESSION["user_role"] = $row['Role'];
+
+                            header("Location: {$hostname}/admin/pages/dashboard.php");
+
+                        }
+                    }else{
+                        echo '<div class="alert-dander">Username and Password are not match</div>';
+                    }
+                    }
+                ?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="assets/js/moment.min.js"></script>
-    <!-- https://momentjs.com/ -->
-    <script src="assets/js/Chart.min.js"></script>
-    <!-- http://www.chartjs.org/docs/latest/ -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
-    <script src="assets/js/tooplate-scripts.js"></script>
-    <script>
-        Chart.defaults.global.defaultFontColor = 'white';
-        let ctxLine,
-            ctxBar,
-            ctxPie,
-            optionsLine,
-            optionsBar,
-            optionsPie,
-            configLine,
-            configBar,
-            configPie,
-            lineChart;
-        barChart, pieChart;
-        // DOM is ready
-        $(function () {
-            drawLineChart(); // Line Chart
-            drawBarChart(); // Bar Chart
-            drawPieChart(); // Pie Chart
-
-            $(window).resize(function () {
-                updateLineChart();
-                updateBarChart();                
-            });
-        })
-    </script>
 </body>
 </html>

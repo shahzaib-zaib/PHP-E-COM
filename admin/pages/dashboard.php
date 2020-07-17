@@ -1,3 +1,4 @@
+<?php include "../parts/header.php" ?>
 <div class="container">
     <div class="row">
         <div class="col">
@@ -259,3 +260,4 @@
         </div>
     </div>
 </div>
+<?php include "../parts/footer.php" ?>
