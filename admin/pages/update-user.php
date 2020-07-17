@@ -1,7 +1,8 @@
 <?php    
-    include "../parts/header.php"
+    include "../parts/header.php";
+
     if(isset($_POST['save'])){
-        include "assets/include/config.php";
+        include "../assets/include/config.php";
 
         $username = mysqli_real_escape_string($con,$_POST['username']);
         $email = mysqli_real_escape_string($con,$_POST['email']);
@@ -12,7 +13,7 @@
         $sql = "UPDATE user SET username = '{$username}', Email = '{$emai}', Phone = '{$phone}', Role = '{$role}' WHERE user_id = '{$userid}'";
 
         if(mysqli_query($con,$sql)){
-            header("location:index.php?page=accounts");
+            header("location: {$hostname}/admin/pages/accounts.php");
         }
 
     }
@@ -24,7 +25,7 @@
             <div class="tm-bg-primary-dark tm-block tm-block-avatar">
               <h2 class="tm-block-title">User Avatar</h2>
               <div class="tm-avatar-container">
-                <img src="assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
+                <img src="../assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
                 <a href="#" class="tm-avatar-delete-link">
                   <i class="far fa-trash-alt tm-product-delete-icon"></i>
                 </a>
@@ -39,7 +40,7 @@
               <h2 class="tm-block-title">Account Settings</h2>
               <?php
 
-                include "assets/include/config.php";
+                include "../assets/include/config.php";
                 $user_id = $_GET['id'];
                 $sql = "SELECT * FROM user WHERE User_id = {$user_id}";
                 $result = mysqli_query($con, $sql) or die ("Query Faild.");

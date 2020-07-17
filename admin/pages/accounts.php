@@ -25,9 +25,9 @@
         </div>
     </div>
       <?php
-          include "assets/include/config.php";
+          include "../assets/include/config.php";
           
-          $sql = "SELECT * FROM user";
+          $sql = "SELECT * FROM user ORDER BY User_id DESC";
           $result = mysqli_query($con, $sql) or die ("Query Faild.");
           if(mysqli_num_rows($result) > 0){
 
@@ -58,17 +58,17 @@
               </div>
             </div>
             <div class="tm-avatar-container">
-              <img src="assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
+              <img src="../assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
               <a href="#" class="tm-avatar-delete-link">
                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
               </a>
             </div>
             <div class="row">
               <div class="form-group col-lg-6">
-                <a href='update-user.php?id=<?php echo $row["user_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Update Account </a>
+                <a href='update-user.php?id=<?php echo $row["User_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Update Account </a>
               </div>
               <div class="form-group col-lg-6">
-                <a href='delete-user.php?id=<?php echo $row["user_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Delete Account </a>
+                <a href='delete-user.php?id=<?php echo $row["User_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Delete Account </a>
               </div>
             </div>
             
