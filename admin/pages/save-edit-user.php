@@ -31,7 +31,7 @@
         }
     }
 
-    $sql = "UPDATE user SET Username = '{$_POST['username']}',Email='{$_POST['email']}',Role='{role}',User_img='{$file_name}',Phone='{phone}'
+    $sql = "UPDATE user SET Username = '{$_POST['username']}',Email='{$_POST['email']}',Role='{$_POST['role']}',User_img='{$file_name}',Phone='{$_POST['phone']}'
     WHERE User_id = {$_POST['user_id']}";
 
     $result = mysqli_query($con,$sql);

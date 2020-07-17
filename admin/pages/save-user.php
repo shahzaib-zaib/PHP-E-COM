@@ -8,8 +8,7 @@
         $file_size = $_FILES['fileToUpload']['size'];
         $file_tmp = $_FILES['fileToUpload']['tmp_name'];
         $file_type = $_FILES['fileToUpload']['type'];
-        $exp = explode('.', $file_name);
-        $file_ext = end($exp);
+        $file_ext = end(explode('.', $file_name));
         $extensions = array("jpeg","jpg","png");
 
         if(in_array($file_ext,$extensions) === false)
@@ -35,14 +34,14 @@
         $phone = mysqli_real_escape_string($con,$_POST['phone']);
         $role = mysqli_real_escape_string($con,$_POST['role']);
 
-    $sql = "SELECT username FROM user WHERE username = '{$username}'";
+    $sql = "SELECT Username FROM user WHERE Username = '{$username}'";
     $result = mysqli_query($con,$sql) or die("Query Failed");
 
     if(mysqli_num_rows($result) > 0){
         echo "<p style='color:red;text-align:center;margin: 10px 0;'>Account name already Exists</p>";
     }else{
-        $sql1 = "INSERT INTO user (Username, Email, Password, Phone, Role, User_img)
-        VALUES('{$username}','{$email}','{$password}','{$phone}','{$role}','{$file_name}')";
+        $sql1 = "INSERT INTO user(Username, Email, Password, Phone, Role, User_img)
+        VALUES('{$username}','{$email}','{$password}','{$phone}', '{$role}','{$file_name}')";
 
     if(mysqli_query($con, $sql)){
         header("location: {$hostname}/admin/pages/accounts.php");

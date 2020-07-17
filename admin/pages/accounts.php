@@ -58,14 +58,14 @@
               </div>
             </div>
             <div class="tm-avatar-container">
-              <img src="../assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
+              <img src="../assets/img/<?php echo $row['User_img']; ?>" alt="Avatar" class="tm-avatar img-fluid mb-4" />
               <a href="#" class="tm-avatar-delete-link">
                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
               </a>
             </div>
             <div class="row">
               <div class="form-group col-lg-6">
-                <a href='update-user.php?id=<?php echo $row["User_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Update Account </a>
+                <a href='edit-user.php?id=<?php echo $row["User_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Update Account </a>
               </div>
               <div class="form-group col-lg-6">
                 <a href='delete-user.php?id=<?php echo $row["User_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Delete Account </a>

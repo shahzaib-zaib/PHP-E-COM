@@ -10,13 +10,13 @@
         while($row = mysqli_fetch_assoc($result)){
 
   ?>
-  <form action="save-update-user.php" method ="POST" enctype="multipart/form-data">
+  <form action="save-edit-user.php" method ="POST" enctype="multipart/form-data">
     <div class="row tm-content-row">
       <div class="tm-block-col tm-col-avatar">
           <div class="tm-bg-primary-dark tm-block tm-block-avatar">
             <h2 class="tm-block-title">New Avatar</h2>
             <div class="tm-avatar-container">
-              <img src="../assets/img/avatar.png" alt="Avatar" class="tm-avatar img-fluid mb-4" />
+              <img src="../assets/img/<?php echo $row['User_img']; ?>" alt="Avatar" class="tm-avatar img-fluid mb-4" />
               <a href="#" class="tm-avatar-delete-link">
                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
               </a>
