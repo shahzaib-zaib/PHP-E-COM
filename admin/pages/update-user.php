@@ -4,16 +4,19 @@
     if(isset($_POST['save'])){
         include "../assets/include/config.php";
 
+        $userid = mysqli_real_escape_string($con,$_POST['user_id']);
         $username = mysqli_real_escape_string($con,$_POST['username']);
         $email = mysqli_real_escape_string($con,$_POST['email']);
         //$password = mysqli_real_escape_string($con,md5($_POST['password']));
         $phone = mysqli_real_escape_string($con,$_POST['phone']);
         $role = mysqli_real_escape_string($con,$_POST['role']);
 
-        $sql = "UPDATE user SET username = '{$username}', Email = '{$emai}', Phone = '{$phone}', Role = '{$role}' WHERE user_id = '{$userid}'";
+        $sql = "UPDATE user SET username = '{$username}', Email = '{$email}', Phone = '{$phone}', Role = {$role} WHERE User_id = '{$userid}'";
 
         if(mysqli_query($con,$sql)){
             header("location: {$hostname}/admin/pages/accounts.php");
+        }else {
+          echo "Query Failed";
         }
 
     }
@@ -48,18 +51,15 @@
                     while($row = mysqli_fetch_assoc($result)){
 
                 ?>
-              <h2 class="tm-block-title">Account Settings</h2>
               <form action="<?php $_SERVER['PHP_SELF']; ?>" method ="POST" class="tm-signup-form row">
                 <div class="form-group col-lg-6">
-                  <input type="hidden" name="user_id" class="form-control validate" value="<?php echo $row['user_id']; ?>" />
-                </div>
-                <div class="form-group col-lg-6">
                   <label for="name">Account Name</label>
-                  <input id="name" name="username" type="text" class="form-control validate" value="<?php echo $row['username']; ?>" required />
+                  <input type="hidden" name="user_id" class="form-control validate" value="<?php echo $row['User_id']; ?>" />
+                  <input id="name" name="username" type="text" class="form-control validate" value="<?php echo $row['Username']; ?>" required />
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="email">Account Email</label>
-                  <input id="email" name="email" type="email" class="form-control validate" value="<?php echo $row['email']; ?>" required />
+                  <input id="email" name="email" type="email" class="form-control validate" value="<?php echo $row['Email']; ?>" required />
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="password">Password</label>
@@ -71,19 +71,19 @@
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="phone">Phone</label>
-                  <input id="phone" name="phone" type="tel" class="form-control validate" value="<?php echo $row['phone']; ?>" required />
+                  <input id="phone" name="phone" type="tel" class="form-control validate" value="<?php echo $row['Phone']; ?>" required />
                 </div>
                 <div class="form-group col-lg-6">
                   <label for="phone">Account Role</label>
-                  <select class="custom-select" name="role" value="<?php echo $row['role']; ?>">
+                  <select class="custom-select" name="role" value="<?php echo $row['Role']; ?>">
                   <?php
 
-                        if($row['role'] == 1){
+                        if($row['Role'] == 1){
                             echo "<option value='1' selected>Admin</option>
                                     <option value='2'>Editor</option>
                                     <option value='3'>Seller</option>";
 
-                        }elseif($row['role'] == 2){
+                        }elseif($row['Role'] == 2){
                             echo "<option value='1'>Admin</option>
                                     <option value='2' selected>Editor</option>
                                     <option value='3'>Seller</option>";

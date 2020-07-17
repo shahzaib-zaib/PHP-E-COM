@@ -1,5 +1,5 @@
 <?php
-    include "assets/include/config.php";
+    include "../assets/include/config.php";
 
     if(isset($_FILES['fileToUpload'])){
         $errors = array();
@@ -22,7 +22,7 @@
         }
         
         if(empty($errors) == true){
-            move_uploaded_file($file_tmp,"assets/img/".$file_name);
+            move_uploaded_file($file_tmp,"../assets/img/".$file_name);
         }else{
             print_r($errors);
             die();
@@ -43,7 +43,7 @@
             VALUES('{$categoryName}', '{$categoryDesc}', '{$date}', '{$file_name}')";
 
     if(mysqli_query($con, $sql)){
-        header("location: {$hostname}/admin/index.php?page=category");
+        header("location: {$hostname}/admin/pages/category.php");
     }else{
         echo "<div class='alert alert-danger'>Query Failed</div>";
     }
