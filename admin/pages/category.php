@@ -16,7 +16,7 @@
             <div class="tm-product-table-container">
             <?php
 
-                include "assets/include/config.php";
+                include "../assets/include/config.php";
 
                 $sql = "SELECT * FROM category ORDER BY category_id DESC";
                 $result = mysqli_query($con, $sql) or die ("Query Faild.");

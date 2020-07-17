@@ -12,9 +12,12 @@
           <div class="col-xl-6 col-lg-6 col-md-12">
           <?php
 
-                include "assets/include/config.php";
+                include "../assets/include/config.php";
+
                 $category_id = $_GET['id'];
-                $sql = "SELECT * FROM category WHERE category_id = {$category_id}";
+                $sql = "SELECT category.category_id, category.category_name, category.category_desc, category.category_img
+                 FROM category WHERE category_id = {$category_id}";
+
                 $result = mysqli_query($con, $sql) or die ("Query Faild.");
                 if(mysqli_num_rows($result) > 0){
                     while($row = mysqli_fetch_assoc($result)){

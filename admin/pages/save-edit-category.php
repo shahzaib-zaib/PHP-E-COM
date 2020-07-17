@@ -1,6 +1,6 @@
 <?php
 
-    include "assets/include/config.php";
+    include "../assets/include/config.php";
 
     if(empty($_FILES['new-image']['name'])){
         $file_name = $_POST['old_image'];
@@ -24,20 +24,20 @@
         }
         
         if(empty($errors) == true){
-            move_uploaded_file($file_tmp,"assets/img/".$file_name);
+            move_uploaded_file($file_tmp,"../assets/img/".$file_name);
         }else{
             print_r($errors);
             die();
         }
     }
 
-    $sql = "UPDATE category SET category_name='{$_POST['category_name']}',category_desc='{$_POST['category_desc']}',category_img='{$file_name}'
-    WHERE category_id={$_POST['category_id']}";
+    $sql = "UPDATE category SET category_name = '{$_POST['category_name']}',category_desc='{$_POST['category_desc']}',category_img='{$file_name}'
+    WHERE category_id = {$_POST['cat_id']}";
 
     $result = mysqli_query($con,$sql);
 
     if($result){
-        header("location: {$hostname}/admin/index.php?page=category");
+        header("location: {$hostname}/admin/pages/category.php");
     }else{
         echo "Query Failed";
     }
