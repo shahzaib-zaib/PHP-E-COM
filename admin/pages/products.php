@@ -1,15 +1,10 @@
 <?php include "../parts/header.php" ?>
 <div class="container mt-5">
     <div class="row tm-content-row">
-      <div class="col-lg-4">
-        <a href="add-category.php" class="btn btn-primary btn-block text-uppercase" >
-          DELETE SELECTED PRODUCTS
-        </a>
-      </div>
-      <div class="col-lg-4">
+      <div class="col-lg-9">
         
       </div>
-      <div class="col-lg-4 mb-5">
+      <div class="col-lg-3 mb-5">
         <a href="add-category.php" class="btn btn-primary btn-block text-uppercase" >
           ADD PRODUCT
         </a>

@@ -42,8 +42,8 @@
                 <input type="hidden" name="old_image" value="<?php echo $row['category_img']; ?>">
             </div>
             <div class="custom-file mt-3 mb-3">
-              <input id="fileInput" type="file" name="fileToUpload" style="display:none;" />
-              <input type="button" type="file" name="fileToUpload" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
+              <input id="fileInput" type="file" name="new-image" style="display:none;" />
+              <input type="button" type="hidden" name="old_image" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
             </div>
           </div>
           <div class="col-12">
