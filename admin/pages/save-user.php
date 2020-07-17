@@ -8,7 +8,8 @@
         $file_size = $_FILES['fileToUpload']['size'];
         $file_tmp = $_FILES['fileToUpload']['tmp_name'];
         $file_type = $_FILES['fileToUpload']['type'];
-        $file_ext = end(explode('.', $file_name));
+        $exp = explode('.', $file_name);
+        $file_ext = end($exp);
         $extensions = array("jpeg","jpg","png");
 
         if(in_array($file_ext,$extensions) === false)
@@ -28,10 +29,10 @@
         }
     }
 
-        $username = mysqli_real_escape_string($con,$_POST['username']);
-        $email = mysqli_real_escape_string($con,$_POST['email']);
-        $password = mysqli_real_escape_string($con,md5($_POST['password']));
-        $phone = mysqli_real_escape_string($con,$_POST['phone']);
+        $username = mysqli_real_escape_string($con,$_POST['user_name']);
+        $email = mysqli_real_escape_string($con,$_POST['user_email']);
+        $password = mysqli_real_escape_string($con,md5($_POST['user_password']));
+        $phone = mysqli_real_escape_string($con,$_POST['user_phone']);
         $role = mysqli_real_escape_string($con,$_POST['role']);
 
     $sql = "SELECT Username FROM user WHERE Username = '{$username}'";
@@ -43,7 +44,7 @@
         $sql1 = "INSERT INTO user(Username, Email, Password, Phone, Role, User_img)
         VALUES('{$username}','{$email}','{$password}','{$phone}', '{$role}','{$file_name}')";
 
-    if(mysqli_query($con, $sql)){
+    if(mysqli_query($con, $sql1)){
         header("location: {$hostname}/admin/pages/accounts.php");
     }else{
         echo "<div class='alert alert-danger'>Query Failed</div>";
