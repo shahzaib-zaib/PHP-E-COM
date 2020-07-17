@@ -22,8 +22,8 @@
               </a>
             </div>
             <div class="custom-file mt-3 mb-3">
-              <input id="fileInput" type="file" name="fileToUpload" style="display:none;" />
-              <input type="button" type="file" name="fileToUpload" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
+              <input id="fileInput" type="file" name="new-image" style="display:none;" />
+              <input type="button" type="hidden" name="old_image" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
             </div>
           </div>
       </div>
@@ -34,23 +34,23 @@
               <div class="form-group col-lg-6">
                 <label for="name">Account Name</label>
                 <input type="hidden" name="user_id" class="form-control validate" value="<?php echo $row['User_id']; ?>" />
-                <input id="name" name="username" type="text" class="form-control validate"value="<?php echo $row['Username']; ?>" required />
+                <input id="name" name="user_name" type="text" class="form-control validate"value="<?php echo $row['Username']; ?>" required />
               </div>
               <div class="form-group col-lg-6">
                 <label for="email">Account Email</label>
-                <input id="email" name="email" type="email" class="form-control validate" value="<?php echo $row['Email']; ?>" required />
+                <input id="email" name="user_email" type="email" class="form-control validate" value="<?php echo $row['Email']; ?>" required />
               </div>
               <div class="form-group col-lg-6">
                 <label for="password">Password</label>
-                <input id="password" name="password" type="password" class="form-control validate" />
+                <input id="password" name="user_password" type="password" class="form-control validate" />
               </div>
               <div class="form-group col-lg-6">
                 <label for="password2">Re-enter Password</label>
-                <input id="password2" name="password2" type="password" class="form-control validate" />
+                <input id="password2" name="user_password2" type="password" class="form-control validate" />
               </div>
               <div class="form-group col-lg-6">
                 <label for="phone">Phone</label>
-                <input id="phone" name="phone" type="tel" class="form-control validate" value="<?php echo $row['Phone']; ?>" required />
+                <input id="phone" name="user_phone" type="tel" class="form-control validate" value="<?php echo $row['Phone']; ?>" required />
               </div>
               <div class="form-group col-lg-6">
                 <label for="phone">Account Role</label>

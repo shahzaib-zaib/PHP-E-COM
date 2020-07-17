@@ -156,7 +156,6 @@ button:focus {
   border: 0;
 }
 .tm-content-row {
-  justify-content: space-between;
   margin-left: -20px;
   margin-right: -20px;
 }
@@ -267,7 +266,7 @@ thead {
 }
 .tm-col-avatar {
   max-width: 425px;
-  width: 37%;
+  width: 33%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -343,6 +342,19 @@ thead {
   border: 2px solid #f5a623;
   font-size: 90%;
   font-weight: 600;
+}
+.btn-primary2 {
+  color: #fff;
+  background-color: #f5a623;
+  border: 2px solid #f5a623;
+  font-size: 75%;
+  font-weight: 500;
+}
+.btn-primary2:active,
+.btn-primary2:hover {
+  color: #f5a623;
+  background-color: transparent;
+  border: 2px solid #f5a623;
 }
 .btn-primary:active,
 .btn-primary:hover {

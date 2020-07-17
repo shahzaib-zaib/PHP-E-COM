@@ -65,10 +65,10 @@
             </div>
             <div class="row">
               <div class="form-group col-lg-6">
-                <a href='edit-user.php?id=<?php echo $row["User_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Update Account </a>
+                <a href='edit-user.php?id=<?php echo $row["User_id"] ?>' class="btn btn-primary2 btn-block text-uppercase" > Update Account </a>
               </div>
               <div class="form-group col-lg-6">
-                <a href='delete-user.php?id=<?php echo $row["User_id"] ?>' class="btn btn-primary btn-block text-uppercase" > Delete Account </a>
+                <a href='delete-user.php?id=<?php echo $row["User_id"] ?>' class="btn btn-primary2 btn-block text-uppercase" > Delete Account </a>
               </div>
             </div>
             
