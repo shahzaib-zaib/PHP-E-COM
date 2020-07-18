@@ -44,7 +44,7 @@
             VALUES('{$category}', '{$subcat_name}', '{$subcat_desc}', '{$date}', '{$file_name}')";
 
     if(mysqli_query($con, $sql)){
-        header("location: {$hostname}/admin/pages/category.php");
+        header("location: {$hostname}/admin/pages/subcategory.php");
     }else{
         echo "<div class='alert alert-danger'>Query Failed</div>";
     }
