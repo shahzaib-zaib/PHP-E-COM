@@ -10,27 +10,35 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="" class="tm-edit-product-form">
+                <form action="save-product.php" class="tm-edit-product-form">
                   <div class="form-group mb-3">
                     <label for="name">Product Name</label>
-                    <input id="name" name="name" type="text" class="form-control validate" required />
+                    <input id="name" name="product_name" type="text" class="form-control validate" required />
                   </div>
                   <div class="form-group mb-3">
-                    <label for="description" >Description</label>
-                    <textarea class="form-control validate" rows="3" required ></textarea>
+                    <label for="description">Description</label>
+                    <textarea class="form-control validate" name="product_desc" rows="3" required ></textarea>
                   </div>
                   <div class="form-group mb-3">
                     <label for="category">Category</label>
-                    <select class="custom-select tm-select-accounts" id="category">
+                    <select class="custom-select tm-select-accounts" name="category" id="category">
                       <option selected>Select category</option>
-                      <option value="1">New Arrival</option>
-                      <option value="2">Most Popular</option>
-                      <option value="3">Trending</option>
+                      <?php
+                              include "../assets/include/config.php";
+                              $sql = "SELECT * FROM category";
+                              $result = mysqli_query($con,$sql) or die("Query Failed");
+
+                              if(mysqli_num_rows($result) > 0){
+                                  while($row = mysqli_fetch_assoc($result)){
+                                      echo "<option  value='{$row['category_id']}'>{$row['category_name']}</option>";
+                                  }
+                              }
+                      ?>
                     </select>
                   </div>
                   <div class="form-group mb-3">
                     <label for="category">Sub Category</label>
-                    <select class="custom-select tm-select-accounts" id="category">
+                    <select class="custom-select tm-select-accounts" name="sub_category" id="category">
                       <option selected>Select category</option>
                       <option value="1">New Arrival</option>
                       <option value="2">Most Popular</option>
@@ -40,7 +48,7 @@
                   <div class="row">
                       <div class="form-group mb-3 col-xs-12 col-sm-6">
                         <label for="category">Product Availability</label>
-                          <select class="custom-select tm-select-accounts" id="category">
+                          <select class="custom-select tm-select-accounts" name="pro_availb" id="category">
                             <option selected>Select Availability</option>
                             <option value="1">In Stock</option>
                             <option value="2">Out of Stock</option>
@@ -63,7 +71,7 @@
                 </div>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
+                <button type="submit" name="save" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
               </div>
             </form>
             </div>
