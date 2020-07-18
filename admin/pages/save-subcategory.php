@@ -34,13 +34,20 @@
     $subcat_desc = mysqli_real_escape_string($con, $_POST['subcategory_desc']);
     $date = date("d M Y");
 
+    $sql = "SELECT subcategory_name FROM subcategory WHERE subcategory_name = '{$subcat_name}'";
+    $result = mysqli_query($con,$sql) or die("Query Failed");
 
-    $sql = "INSERT INTO subcategory(categoryid, subcategory, subcategory_desc, subcategory_img)
-            VALUES({$category}, '{$subcat_name}', '{$subcat_desc}', '{$date}', '{$file_name}')";
+    if(mysqli_num_rows($result) > 0){
+        echo "<p style='color:red;text-align:center;margin: 10px 0;'>Category name already Exists</p>";
+    }else{
+        $sql = "INSERT INTO subcategory(category, subcategory_name, subcategory_desc, creationDate, subcategory_img)
+            VALUES('{$category}', '{$subcat_name}', '{$subcat_desc}', '{$date}', '{$file_name}')";
 
     if(mysqli_query($con, $sql)){
-        header("location: {$hostname}/admin/category.php");
+        header("location: {$hostname}/admin/pages/category.php");
     }else{
         echo "<div class='alert alert-danger'>Query Failed</div>";
     }
+    }
+
 ?>

@@ -15,15 +15,20 @@
             <div class="tm-bg-primary-dark tm-block tm-block-products">
             <div class="tm-product-table-container">
             <?php
+                    include "../assets/include/config.php";
 
-                include "../assets/include/config.php";
+                    
+                    $sql = "SELECT subcategory.sub_id, subcategory.subcategory_name, 
+                    subcategory.subcategory_desc, subcategory.creationDate,subcategory.subcategory_img,
+                    category.category_name,subcategory.category FROM subcategory 
+                    LEFT JOIN category ON subcategory.category = category.category_id
+                    ORDER BY subcategory.sub_id DESC";
+                    
+                    $result = mysqli_query($con, $sql) or die ("Query Faild.");
+                    if(mysqli_num_rows($result) > 0){
 
-                $sql = "SELECT * FROM subcategory ORDER BY category_id DESC";
-                $result = mysqli_query($con, $sql) or die ("Query Faild.");
-
-                if(mysqli_num_rows($result) > 0){
-
-            ?>
+                    
+                ?>
                 <table class="table table-hover tm-table-small tm-product-table">
                     <thead>
                         <tr>
@@ -31,7 +36,6 @@
                             <th scope="col">CATEGORY</th>
                             <th scope="col">SUBCATEGORY</th>
                             <th scope="col">SUBCATEGORY DESCRIPTION</th>
-                            <th scope="col">PRODUCTS</th>
                             <th scope="col">CREATION DATE</th>
                             <th scope="col">EDIT</th>
                             <th scope="col">DELETE</th>
@@ -48,8 +52,7 @@
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td class="tm-product-name"><?php echo $row['subcategory_name']; ?></td>
                             <td><?php echo $row['subcategory_desc']; ?></td>
-                            <td><?php echo $row['product']; ?></td>
-                            <td><?php echo $row['creation_date']; ?></td>
+                            <td><?php echo $row['creationDate']; ?></td>
                             <td>
                                 <a href="edit-category.php?id=<?php echo $row["category_id"] ?>" class="tm-product-edit-link">
                                     <i class="far fa-edit tm-product-edit-icon"></i>
