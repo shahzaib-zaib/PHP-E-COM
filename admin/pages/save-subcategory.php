@@ -40,11 +40,11 @@
     if(mysqli_num_rows($result) > 0){
         echo "<p style='color:red;text-align:center;margin: 10px 0;'>Category name already Exists</p>";
     }else{
-        $sql = "INSERT INTO subcategory(category, subcategory_name, subcategory_desc, creationDate, subcategory_img)
-            VALUES('{$category}', '{$subcat_name}', '{$subcat_desc}', '{$date}', '{$file_name}')";
+        $sql = "INSERT INTO subcategory(categoryid, subcategory_name, subcategory_desc, creationDate, subcategory_img)
+            VALUES({$category}, '{$subcat_name}', '{$subcat_desc}', '{$date}', '{$file_name}')";
 
     if(mysqli_query($con, $sql)){
-        header("location: {$hostname}/admin/pages/subcategory.php");
+        header("location: {$hostname}/admin/pages/sub-category.php");
     }else{
         echo "<div class='alert alert-danger'>Query Failed</div>";
     }

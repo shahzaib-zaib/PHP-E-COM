@@ -20,8 +20,8 @@
                     
                     $sql = "SELECT subcategory.sub_id, subcategory.subcategory_name, 
                     subcategory.subcategory_desc, subcategory.creationDate,subcategory.subcategory_img,
-                    category.category_name,subcategory.category FROM subcategory 
-                    LEFT JOIN category ON subcategory.category = category.category_id
+                    category.category_name,subcategory.categoryid FROM subcategory 
+                    LEFT JOIN category ON subcategory.categoryid = category.category_id
                     ORDER BY subcategory.sub_id DESC";
                     
                     $result = mysqli_query($con, $sql) or die ("Query Faild.");
