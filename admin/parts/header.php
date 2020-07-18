@@ -54,11 +54,19 @@
                             Products
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="category.php">
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-bars"></i>
-                            Categories
+                            <span>
+                                Categories <i class="fas fa-angle-down"></i>
+                            </span>
                         </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="category.php">Categories</a>
+                        <a class="dropdown-item" href="#">Sub Categories</a>
+                    </div>
                     </li>
                     
                     <li class="nav-item">
