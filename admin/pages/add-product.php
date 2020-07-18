@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function getSubcat(val) {
+      $.ajax({
+      type: "POST",
+      url: "get_subcat.php",
+      data:'cat_id='+val,
+      success: function(data){
+        $("#subcategory").html(data);
+      }
+      });
+    }
+    function selectCountry(val) {
+    $("#search-box").val(val);
+    $("#suggesstion-box").hide();
+    }
+</script>
+</head>
+<body>
 <?php include "../parts/header.php" ?>
     <div class="container tm-mt-big tm-mb-big">
       <div class="row">
@@ -21,7 +45,7 @@
                   </div>
                   <div class="form-group mb-3">
                     <label for="category">Category</label>
-                    <select class="custom-select tm-select-accounts" name="category" id="category">
+                    <select class="custom-select tm-select-accounts" name="category" onChange="getSubcat(this.value);" id="category">
                       <option selected>Select category</option>
                       <?php
                               include "../assets/include/config.php";
@@ -38,19 +62,8 @@
                   </div>
                   <div class="form-group mb-3">
                     <label for="category">Sub Category</label>
-                    <select class="custom-select tm-select-accounts" name="sub_category" id="category">
-                      <option selected>Select category</option>
-                      <?php
-                              include "../assets/include/config.php";
-                              $sql = "SELECT * FROM subcategory";
-                              $result = mysqli_query($con,$sql) or die("Query Failed");
-
-                              if(mysqli_num_rows($result) > 0){
-                                  while($row = mysqli_fetch_assoc($result)){
-                                      echo "<option  value='{$row['sub_id']}'>{$row['subcategory_name']}</option>";
-                                  }
-                              }
-                      ?>
+                    <select class="custom-select tm-select-accounts" name="sub_category" id="subcategory">
+                      
                     </select>
                   </div>
                   <div class="row">
@@ -88,3 +101,5 @@
       </div>
     </div>
     <?php include "../parts/footer.php" ?>
+</body>
+</html>
