@@ -34,7 +34,7 @@
                   </div>
               <div class="form-group mb-3">
                 <label for="category_desc" >Description</label>
-                <textarea name="category_desc" class="form-control validate" rows="5" required ></textarea>
+                <textarea name="subcategory_desc" class="form-control validate" rows="5" required ></textarea>
               </div>
           </div>
           <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
