@@ -40,9 +40,17 @@
                     <label for="category">Sub Category</label>
                     <select class="custom-select tm-select-accounts" name="sub_category" id="category">
                       <option selected>Select category</option>
-                      <option value="1">New Arrival</option>
-                      <option value="2">Most Popular</option>
-                      <option value="3">Trending</option>
+                      <?php
+                              include "../assets/include/config.php";
+                              $sql = "SELECT * FROM subcategory";
+                              $result = mysqli_query($con,$sql) or die("Query Failed");
+
+                              if(mysqli_num_rows($result) > 0){
+                                  while($row = mysqli_fetch_assoc($result)){
+                                      echo "<option  value='{$row['sub_id']}'>{$row['subcategory_name']}</option>";
+                                  }
+                              }
+                      ?>
                     </select>
                   </div>
                   <div class="row">
