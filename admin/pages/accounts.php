@@ -42,7 +42,7 @@
               <div class="form-group col-lg-9">
               <h2 class="tm-block-title"><?php echo $row['Username']; ?></h2>
               </div>
-              <div class="form-group col-lg-3" style="color: #840606; text-align: right; font-weight: 700 !important;">
+              <div class="form-group col-lg-3" style="color: #fff; text-align: right; font-weight: 700 !important;">
                 <h6><?php 
                                 
                       if($row['Role'] == 1){
