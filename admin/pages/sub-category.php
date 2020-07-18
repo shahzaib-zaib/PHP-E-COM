@@ -6,7 +6,7 @@
       </div>
       <div class="col-lg-3 mb-5">
         <a href="add-subcategory.php" class="btn btn-primary btn-block text-uppercase" >
-          Add Category
+          Add Subcategory
         </a>
       </div>
     </div>
@@ -18,7 +18,7 @@
 
                 include "../assets/include/config.php";
 
-                $sql = "SELECT * FROM category ORDER BY category_id DESC";
+                $sql = "SELECT * FROM subcategory ORDER BY category_id DESC";
                 $result = mysqli_query($con, $sql) or die ("Query Faild.");
 
                 if(mysqli_num_rows($result) > 0){
@@ -44,10 +44,10 @@
 
                         ?>
                         <tr>
-                            <th><img src="../assets/img/<?php echo $row['category_img']; ?>" alt="" height="70px" width="70px"></th>
+                            <th><img src="../assets/img/<?php echo $row['subcategory_img']; ?>" alt="" height="70px" width="70px"></th>
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
-                            <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
-                            <td><?php echo $row['category_desc']; ?></td>
+                            <td class="tm-product-name"><?php echo $row['subcategory_name']; ?></td>
+                            <td><?php echo $row['subcategory_desc']; ?></td>
                             <td><?php echo $row['product']; ?></td>
                             <td><?php echo $row['creation_date']; ?></td>
                             <td>

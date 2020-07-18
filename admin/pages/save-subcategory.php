@@ -29,24 +29,18 @@
         }
     }
 
-    $categoryName = mysqli_real_escape_string($con, $_POST['category_name']);
-    $categoryDesc = mysqli_real_escape_string($con, $_POST['category_desc']);
+    $category = mysqli_real_escape_string($con, $_POST['category']);
+    $subcat_name = mysqli_real_escape_string($con, $_POST['subcategory_name']);
+    $subcat_desc = mysqli_real_escape_string($con, $_POST['subcategory_desc']);
     $date = date("d M Y");
 
-    $sql = "SELECT category_name FROM category WHERE category_name = '{$categoryName}'";
-    $result = mysqli_query($con,$sql) or die("Query Failed");
 
-    if(mysqli_num_rows($result) > 0){
-        echo "<p style='color:red;text-align:center;margin: 10px 0;'>Category name already Exists</p>";
-    }else{
-        $sql = "INSERT INTO category(category_name, category_desc, creation_date, category_img)
-            VALUES('{$categoryName}', '{$categoryDesc}', '{$date}', '{$file_name}')";
+    $sql = "INSERT INTO subcategory(category, subcategory, subcategory_desc, subcategory_img)
+            VALUES({$category}, '{$subcat_name}', '{$subcat_desc}', '{$date}', '{$file_name}')";
 
     if(mysqli_query($con, $sql)){
-        header("location: {$hostname}/admin/pages/category.php");
+        header("location: {$hostname}/admin/category.php");
     }else{
         echo "<div class='alert alert-danger'>Query Failed</div>";
     }
-    }
-    
 ?>
