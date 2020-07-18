@@ -65,7 +65,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="category.php">Categories</a>
-                        <a class="dropdown-item" href="#">Sub Categories</a>
+                        <a class="dropdown-item" href="sub-category.php">Sub Categories</a>
                     </div>
                     </li>
                     

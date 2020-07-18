@@ -29,7 +29,8 @@
                         <tr>
                             <th scope="col">IMAGE</th>
                             <th scope="col">CATEGORY</th>
-                            <th scope="col">CATEGORY DESCRIPTION</th>
+                            <th scope="col">SUBCATEGORY</th>
+                            <th scope="col">SUBCATEGORY DESCRIPTION</th>
                             <th scope="col">PRODUCTS</th>
                             <th scope="col">CREATION DATE</th>
                             <th scope="col">EDIT</th>
@@ -44,6 +45,7 @@
                         ?>
                         <tr>
                             <th><img src="../assets/img/<?php echo $row['category_img']; ?>" alt="" height="70px" width="70px"></th>
+                            <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td><?php echo $row['category_desc']; ?></td>
                             <td><?php echo $row['product']; ?></td>
