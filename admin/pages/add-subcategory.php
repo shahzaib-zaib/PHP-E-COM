@@ -12,7 +12,7 @@
           <div class="col-xl-6 col-lg-6 col-md-12">
             <form action="save-subcategory.php" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
                 <div class="form-group mb-3">
-                    <label for="category">Category</label>
+                  <label for="category">Category</label>
                     <select class="custom-select tm-select-accounts" name="category" id="category">
                       <option selected>Select category</option>
                       <?php
@@ -27,29 +27,29 @@
                               }
                       ?>
                     </select>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="name">Subcategory Name</label>
-                    <input id="name" name="subcategory_name" type="text" class="form-control validate" required />
                   </div>
-              <div class="form-group mb-3">
-                <label for="category_desc" >Description</label>
-                <textarea name="subcategory_desc" class="form-control validate" rows="5" required ></textarea>
-              </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-            <div class="tm-product-img-dummy mx-auto">
-              <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();" ></i>
-            </div>
-            <div class="custom-file mt-3 mb-3">
-              <input id="fileInput" type="file" name="fileToUpload" style="display:none;" />
-              <input type="button" type="file" name="fileToUpload" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
-            </div>
-          </div>
-          <div class="col-12">
-            <button type="submit" name="save" class="btn btn-primary btn-block text-uppercase">Add Category Now</button>
-          </div>
-        </form>
+                  <div class="form-group mb-3">
+                      <label for="name">Subcategory Name</label>
+                      <input id="name" name="subcategory_name" type="text" class="form-control validate" required />
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="category_desc" >Description</label>
+                    <textarea name="subcategory_desc" class="form-control validate" rows="5" required ></textarea>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                  <div class="tm-product-img-dummy mx-auto">
+                    <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();" ></i>
+                  </div>
+                  <div class="custom-file mt-3 mb-3">
+                    <input id="fileInput" type="file" name="fileToUpload" style="display:none;" />
+                    <input type="button" type="file" name="fileToUpload" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" name="save" class="btn btn-primary btn-block text-uppercase">Add Category Now</button>
+                </div>
+            </form>
         </div>
       </div>
     </div>

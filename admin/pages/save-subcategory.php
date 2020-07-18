@@ -35,7 +35,7 @@
     $date = date("d M Y");
 
 
-    $sql = "INSERT INTO subcategory(category, subcategory, subcategory_desc, subcategory_img)
+    $sql = "INSERT INTO subcategory(categoryid, subcategory, subcategory_desc, subcategory_img)
             VALUES({$category}, '{$subcat_name}', '{$subcat_desc}', '{$date}', '{$file_name}')";
 
     if(mysqli_query($con, $sql)){
