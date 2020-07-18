@@ -28,10 +28,23 @@
                       <option value="3">Trending</option>
                     </select>
                   </div>
+                  <div class="form-group mb-3">
+                    <label for="category">Sub Category</label>
+                    <select class="custom-select tm-select-accounts" id="category">
+                      <option selected>Select category</option>
+                      <option value="1">New Arrival</option>
+                      <option value="2">Most Popular</option>
+                      <option value="3">Trending</option>
+                    </select>
+                  </div>
                   <div class="row">
                       <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label for="expire_date">Expire Date</label>
-                          <input id="expire_date" name="expire_date" type="text" class="form-control validate" data-large-mode="true"/>
+                        <label for="category">Product Availability</label>
+                          <select class="custom-select tm-select-accounts" id="category">
+                            <option selected>Select Availability</option>
+                            <option value="1">In Stock</option>
+                            <option value="2">Out of Stock</option>
+                          </select>
                         </div>
                         <div class="form-group mb-3 col-xs-12 col-sm-6">
                           <label for="stock">Units In Stock</label>

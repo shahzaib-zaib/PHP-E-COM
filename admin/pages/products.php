@@ -30,6 +30,7 @@
                             <th scope="col">PRODUCT IMAGE</th>
                             <th scope="col">PRODUCT NAME</th>
                             <th scope="col">CATEGORY</th>
+                            <th scope="col">SUB CATEGORY</th>
                             <th scope="col">IN STOCK</th>
                             <th scope="col">CREATION DATE</th>
                             <th scope="col">EDIT</th>
@@ -45,6 +46,7 @@
                         <tr>
                             <th><img src="../assets/img/<?php echo $row['category_img']; ?>" alt="" height="70px" width="70px"></th>
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
+                            <td><?php echo $row['product']; ?></td>
                             <td><?php echo $row['product']; ?></td>
                             <td>550</td>
                             <td><?php echo $row['creation_date']; ?></td>
