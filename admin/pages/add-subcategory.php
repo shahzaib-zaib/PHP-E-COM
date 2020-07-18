@@ -11,10 +11,27 @@
         <div class="row tm-edit-product-row">
           <div class="col-xl-6 col-lg-6 col-md-12">
             <form action="save-subcategory.php" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
-              <div class="form-group mb-3">
-                <label for="name" >Category Name </label>
-                <input id="name" name="category_name" type="text" class="form-control validate" required />
-              </div>
+                <div class="form-group mb-3">
+                    <label for="category">Category</label>
+                    <select class="custom-select tm-select-accounts" name="category" id="category">
+                      <option selected>Select category</option>
+                      <?php
+                              include "../assets/include/config.php";
+                              $sql = "SELECT * FROM category";
+                              $result = mysqli_query($con,$sql) or die("Query Failed");
+
+                              if(mysqli_num_rows($result) > 0){
+                                  while($row = mysqli_fetch_assoc($result)){
+                                      echo "<option  value='{$row['category_id']}'>{$row['category_name']}</option>";
+                                  }
+                              }
+                      ?>
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="name">Subcategory Name</label>
+                    <input id="name" name="subcategory_name" type="text" class="form-control validate" required />
+                  </div>
               <div class="form-group mb-3">
                 <label for="category_desc" >Description</label>
                 <textarea name="category_desc" class="form-control validate" rows="5" required ></textarea>

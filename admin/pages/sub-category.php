@@ -5,7 +5,7 @@
         
       </div>
       <div class="col-lg-3 mb-5">
-        <a href="add-category.php" class="btn btn-primary btn-block text-uppercase" >
+        <a href="add-subcategory.php" class="btn btn-primary btn-block text-uppercase" >
           Add Category
         </a>
       </div>
