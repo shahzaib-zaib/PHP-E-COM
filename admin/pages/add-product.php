@@ -15,10 +15,6 @@
       }
       });
     }
-    function selectCountry(val) {
-    $("#search-box").val(val);
-    $("#suggesstion-box").hide();
-    }
 </script>
 </head>
 <body>
