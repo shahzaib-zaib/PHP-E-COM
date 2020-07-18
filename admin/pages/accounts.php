@@ -1,4 +1,4 @@
-<?php include "../parts/header.php" ?>
+<?php include "../parts/header.php";?>
 <div class="container mt-5">
     <div class="row tm-content-row">
       <div class="col-lg-9">

@@ -1,3 +1,11 @@
+<?php
+    include "../assets/include/config.php";
+    session_start();
+    if(!isset($_SESSION["username"])){
+        header("Location: {$hostname}/admin/");
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +76,11 @@
                         <a class="dropdown-item" href="sub-category.php">Sub Categories</a>
                     </div>
                     </li>
-                    
+                    <?php
+                        if($_SESSION["user_role"] == '1'){
+                            
+                        
+                    ?>
                     <li class="nav-item">
                         <a class="nav-link" href="accounts.php">
                             <i class="far fa-user"></i>
@@ -90,11 +102,14 @@
                             <a class="dropdown-item" href="#">Customize</a>
                         </div>
                     </li>
+                    <?php
+                        }
+                    ?>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link d-block" href="logout.php">
-                            , <b>Logout</b>
+                            Hello <?php echo $_SESSION["username"]; ?>, <b>Logout</b>
                         </a>
                     </li>
                 </ul>
