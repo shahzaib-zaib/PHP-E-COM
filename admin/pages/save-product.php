@@ -29,8 +29,15 @@
         }
     }
 
-    $categoryName = mysqli_real_escape_string($con, $_POST['category_name']);
-    $categoryDesc = mysqli_real_escape_string($con, $_POST['category_desc']);
+    $productName = mysqli_real_escape_string($con, $_POST['product_name']);
+    $productBrand = mysqli_real_escape_string($con, $_POST['product_brand']);
+    $productDesc = mysqli_real_escape_string($con, $_POST['product_desc']);
+    $productPrice = mysqli_real_escape_string($con, $_POST['product_price']);
+    $salePrice = mysqli_real_escape_string($con, $_POST['sale_price']);
+    $category = mysqli_real_escape_string($con, $_POST['category']);
+    $subCategory = mysqli_real_escape_string($con, $_POST['sub_category']);
+    $proAvailb = mysqli_real_escape_string($con, $_POST['pro_availb']);
+    $stock = mysqli_real_escape_string($con, $_POST['stock']);
     $date = date("d M Y");
 
     $sql = "SELECT category_name FROM category WHERE category_name = '{$categoryName}'";

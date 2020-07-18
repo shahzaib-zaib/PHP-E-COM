@@ -36,8 +36,22 @@
                     <input id="name" name="product_name" type="text" class="form-control validate" required />
                   </div>
                   <div class="form-group mb-3">
+                    <label for="name">Product Brand</label>
+                    <input id="name" name="product_brand" type="text" class="form-control validate" required />
+                  </div>
+                  <div class="form-group mb-3">
                     <label for="description">Description</label>
                     <textarea class="form-control validate" name="product_desc" rows="3" required ></textarea>
+                  </div>
+                  <div class="row">
+                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+                      <label for="stock">Product Price</label>
+                      <input id="stock" name="product_price" type="text" class="form-control validate" required/>
+                    </div>
+                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+                      <label for="stock">Sale Price</label>
+                      <input id="stock" name="sale_price" type="text" class="form-control validate" required/>
+                    </div>
                   </div>
                   <div class="form-group mb-3">
                     <label for="category">Category</label>
@@ -63,18 +77,18 @@
                     </select>
                   </div>
                   <div class="row">
-                      <div class="form-group mb-3 col-xs-12 col-sm-6">
-                        <label for="category">Product Availability</label>
-                          <select class="custom-select tm-select-accounts" name="pro_availb" id="category">
-                            <option selected>Select Availability</option>
-                            <option value="1">In Stock</option>
-                            <option value="2">Out of Stock</option>
-                          </select>
-                        </div>
-                        <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label for="stock">Units In Stock</label>
-                          <input id="stock" name="stock" type="text" class="form-control validate" required/>
-                        </div>
+                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+                      <label for="category">Product Availability</label>
+                      <select class="custom-select tm-select-accounts" name="pro_availb" id="category">
+                        <option selected>Select Availability</option>
+                        <option value="1">In Stock</option>
+                        <option value="2">Out of Stock</option>
+                      </select>
+                    </div>
+                    <div class="form-group mb-3 col-xs-12 col-sm-6">
+                      <label for="stock">Units In Stock</label>
+                      <input id="stock" name="stock" type="text" class="form-control validate" required/>
+                    </div>
                   </div>
                   
               </div>
