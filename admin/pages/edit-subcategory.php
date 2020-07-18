@@ -14,13 +14,17 @@
 
                 include "../assets/include/config.php";
 
-                $subcat_id = $_GET['id'];
+                $sub_id = $_GET['id'];
 
-                $sql = "SELECT * FROM subcategory  WHERE sub_id = {$subcat_id}";
-
-                $result = mysqli_query($con, $sql) or die ("Query Faild.");
-                if(mysqli_num_rows($result) > 0){
-                    while($row = mysqli_fetch_assoc($result)){
+                    $sql = "SELECT subcategory.sub_id, subcategory.subcategory_name, 
+                    subcategory.subcategory_desc,subcategory.subcategory_img,
+                    category.category_name,subcategory.category FROM subcategory 
+                    LEFT JOIN category ON subcategory.category = category.category_id
+                    WHERE subcategory.sub_id = {$sub_id}";
+                    
+                    $result = mysqli_query($con, $sql) or die ("Query Faild.");
+                    if(mysqli_num_rows($result) > 0){
+                        while($row = mysqli_fetch_assoc($result)) {
 
             ?>
             <form action="save-subcategory.php" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
@@ -73,6 +77,7 @@
             </form>
             <?php
                     }
+
                 }else{
                     echo "Result Not Found";
                 }
