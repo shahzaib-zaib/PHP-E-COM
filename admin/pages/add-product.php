@@ -90,7 +90,10 @@
                       <input id="stock" name="stock" type="text" class="form-control validate" required/>
                     </div>
                   </div>
-                  
+                  <div class="form-group mb-3">
+                    <label for="name">Product Shipping Charge</label>
+                    <input id="name" name="shipping_charges" type="text" class="form-control validate" required />
+                  </div>
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
                 <div class="tm-product-img-dummy mx-auto">

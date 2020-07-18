@@ -38,19 +38,20 @@
     $subCategory = mysqli_real_escape_string($con, $_POST['sub_category']);
     $proAvailb = mysqli_real_escape_string($con, $_POST['pro_availb']);
     $stock = mysqli_real_escape_string($con, $_POST['stock']);
+    $shippingCharges = mysqli_real_escape_string($con, $_POST['shipping_charges']);
     $date = date("d M Y");
 
-    $sql = "SELECT category_name FROM category WHERE category_name = '{$categoryName}'";
+    $sql = "SELECT product_name FROM products WHERE product_name = '{$productName}'";
     $result = mysqli_query($con,$sql) or die("Query Failed");
 
     if(mysqli_num_rows($result) > 0){
-        echo "<p style='color:red;text-align:center;margin: 10px 0;'>Category name already Exists</p>";
+        echo "<p style='color:red;text-align:center;margin: 10px 0;'>Product name already Exists</p>";
     }else{
-        $sql = "INSERT INTO category(category_name, category_desc, creation_date, category_img)
-            VALUES('{$categoryName}', '{$categoryDesc}', '{$date}', '{$file_name}')";
+        $sql = "INSERT INTO products(product_name, product_company, product_desc, product_price,product_price_before_discount,category,sub_category,product_availability,product_stock,posting_date,product_image1,)
+            VALUES('{$productName}', '{$productBrand}', '{$productDesc}', '{$productPrice}', '{$salePrice}', '{$category}', '{$subCategory}', '{$proAvailb}', '{$stock}', '{$shippingCharges}', '{$date}','{$file_name}')";
 
     if(mysqli_query($con, $sql)){
-        header("location: {$hostname}/admin/pages/category.php");
+        header("location: {$hostname}/admin/pages/products.php");
     }else{
         echo "<div class='alert alert-danger'>Query Failed</div>";
     }
