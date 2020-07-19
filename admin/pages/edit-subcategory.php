@@ -14,17 +14,17 @@
 
                 include "../assets/include/config.php";
 
-                $sub_id = $_GET['id'];
+                  $subcat_id = $_GET['cid'];
 
-                    $sql = "SELECT subcategory.sub_id, subcategory.subcategory_name, 
-                    subcategory.subcategory_desc,subcategory.subcategory_img,
-                    category.category_name,subcategory.category FROM subcategory 
-                    LEFT JOIN category ON subcategory.category = category.category_id
-                    WHERE subcategory.sub_id = {$sub_id}";
-                    
-                    $result = mysqli_query($con, $sql) or die ("Query Faild.");
-                    if(mysqli_num_rows($result) > 0){
-                        while($row = mysqli_fetch_assoc($result)) {
+                  $sql = "SELECT subcategory.sub_id, subcategory.subcategory_name,
+                  subcategory.subcategory_desc,subcategory.creationDate,subcategory.subcategory_img,
+                  category.category_name,subcategory.categoryid FROM subcategory 
+                  LEFT JOIN category ON subcategory.categoryid = category.category_id
+                  WHERE subcategory.sub_id = {$subcat_id}";
+                  
+                  $result = mysqli_query($con, $sql) or die ("Query Faild.");
+                  if(mysqli_num_rows($result) > 0){
+                      while($row = mysqli_fetch_assoc($result)) {
 
             ?>
             <form action="save-subcategory.php" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
@@ -33,21 +33,21 @@
                     <select class="custom-select tm-select-accounts" name="category" id="category">
                       <option selected>Select category</option>
                       <?php
-                              include "../assets/include/config.php";
-                              $sql = "SELECT * FROM category";
-                              $result = mysqli_query($con,$sql) or die("Query Failed");
+                          include "../assets/include/config.php";
+                          $sql1 = "SELECT * FROM category";
+                          $result1 = mysqli_query($con,$sql1) or die("Query Failed");
 
-                              if(mysqli_num_rows($result) > 0){
-                                  while($row = mysqli_fetch_assoc($result)){
-                                    if ($row['category']  == $row1['category_id']) {
-                                        $selected = "selected";
-                                    } else {
-                                        $selected = "";
-                                    }
-                                    
-                                      echo "<option  value='{$row['category_id']}'>{$row['category_name']}</option>";
+                          if(mysqli_num_rows($result1) > 0){
+                              while($row1 = mysqli_fetch_assoc($result1)){
+                                  if ($row['category']  == $row1['category_id']) {
+                                      $selected = "selected";
+                                  } else {
+                                      $selected = "";
                                   }
+                                  
+                                  echo "<option {$selected} value='{$row1['category_id']}'>{$row1['category_name']}</option>";
                               }
+                          }
                       ?>
                     </select>
                   </div>
@@ -58,7 +58,7 @@
                   </div>
                   <div class="form-group mb-3">
                     <label for="category_desc" >Description</label>
-                    <textarea name="subcategory_desc" class="form-control validate" rows="5" value="<?php echo $row['subcategory_desc']; ?>" required ></textarea>
+                    <textarea name="subcategory_desc" class="form-control validate" rows="5" required ><?php echo $row['subcategory_desc']; ?></textarea>
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
@@ -67,7 +67,7 @@
                 <input type="hidden" name="old_image" value="<?php echo $row['subcategory_img']; ?>">
                   </div>
                   <div class="custom-file mt-3 mb-3">
-                    <input id="fileInput" type="file" name="image" style="display:none;" />
+                    <input id="fileInput" type="file" name="new-image" style="display:none;" />
                     <input type="button" type="hidden" name="old_image" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
                   </div>
                 </div>

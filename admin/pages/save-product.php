@@ -42,13 +42,13 @@
     $date = date("d M Y");
 
     $sql = "SELECT product_name FROM products WHERE product_name = '{$productName}'";
-    $result = mysqli_query($con,$sql) or die("Query Failed");
+    $result = mysqli_query($con,$sql) or die("Query Failed : Product Name");
 
     if(mysqli_num_rows($result) > 0){
         echo "<p style='color:red;text-align:center;margin: 10px 0;'>Product name already Exists</p>";
     }else{
-        $sql = "INSERT INTO products(product_name, product_company, product_desc, product_price,sale_price,category,sub_category,product_availability,product_stock,posting_date,product_image1)
-            VALUES('{$productName}', '{$productBrand}', '{$productDesc}', '{$productPrice}', '{$salePrice}', '{$category}', '{$subCategory}', '{$proAvailb}', '{$stock}', '{$shippingCharges}', '{$date}','{$file_name}')";
+        $sql = "INSERT INTO products(product_name, product_company, product_description, product_price, sale_price, category, sub_category, product_availability, product_stock, posting_date, product_image1)
+            VALUES('{$productName}', '{$productBrand}', '{$productDesc}', {$productPrice}, {$salePrice}, {$category}, {$subCategory}, '{$proAvailb}', {$stock}, {$shippingCharges}, '{$date}','{$file_name}')";
 
     if(mysqli_query($con, $sql)){
         header("location: {$hostname}/admin/pages/products.php");
