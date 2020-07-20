@@ -4,7 +4,7 @@
     if(!empty($_POST["cat_id"])){
         $id = intval($_POST['cat_id']);
         $sql = "SELECT * FROM subcategory WHERE categoryid = $id";
-        $query=mysqli_query($con, $sql);
+        $query = mysqli_query($con, $sql);
 
 ?>
     <option value="">Select Subcategory</option>
@@ -15,7 +15,7 @@
         
 ?>
 
-    <option value="<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['subcategory_name']); ?></option>
+    <option value="<?php echo htmlentities($row['sub_id']); ?>"><?php echo htmlentities($row['subcategory_name']); ?></option>
 
 <?php
     }

@@ -72,7 +72,7 @@
                   </div>
                   <div class="form-group mb-3">
                     <label for="category">Sub Category</label>
-                    <select class="custom-select tm-select-accounts" name="sub_category" id="subcategory">
+                    <select class="custom-select tm-select-accounts" name="subcategory" id="subcategory">
                       
                     </select>
                   </div>
