@@ -13,9 +13,9 @@
     $proAvailb = mysqli_real_escape_string($con, $_POST['pro_availb']);
     $stock = mysqli_real_escape_string($con, $_POST['stock']);
     $shippingCharges = mysqli_real_escape_string($con, $_POST['shipping_charges']);
-    $productimage1=$_FILES["productimage1"]["name"];
-    $productimage2=$_FILES["productimage2"]["name"];
-    $productimage3=$_FILES["productimage3"]["name"];
+    $productimage1 = $_FILES["productimage1"]["name"];
+    $productimage2 = $_FILES["productimage2"]["name"];
+    $productimage3 = $_FILES["productimage3"]["name"];
 
     //for getting product id
     $query=mysqli_query($con,"select max(product_id) as pid from products");
@@ -27,12 +27,12 @@
       mkdir("../assets/img/".$productid);
     }
 
-    move_uploaded_file($_FILES["productimage1"]["tmp_name"],"productimages/$productid/".$_FILES["productimage1"]["name"]);
-    move_uploaded_file($_FILES["productimage2"]["tmp_name"],"productimages/$productid/".$_FILES["productimage2"]["name"]);
-    move_uploaded_file($_FILES["productimage3"]["tmp_name"],"productimages/$productid/".$_FILES["productimage3"]["name"]);
+    move_uploaded_file($_FILES["productimage1"]["tmp_name"],"../assets/img/$productid/".$_FILES["productimage1"]["name"]);
+    move_uploaded_file($_FILES["productimage2"]["tmp_name"],"../assets/img/$productid/".$_FILES["productimage2"]["name"]);
+    move_uploaded_file($_FILES["productimage3"]["tmp_name"],"../assets/img/$productid/".$_FILES["productimage3"]["name"]);
 
-    $sql1 = "INSERT INTO products(category,sub_category,product_name,product_company,product_price,sale_price,product_description,product_image1,shipping_charge,product_availability,posting_date,product_stock)
-               VALUES('$category', '$subcat', '$productname', '$productcompany', '$productprice', '$productpricebd', '$productdescription', '$productscharge', '$productavailability', '$stock','$productimage1')";
+    $sql1 = "INSERT INTO products(category,sub_category,product_name,product_company,product_price,sale_price,product_description,product_image1,shipping_charge,product_availability,product_stock,product_image2,product_image3)
+               VALUES('$category', '$subCategory', '$productName', '$productBrand', '$productPrice', '$salePrice', '$productDesc', '$productimage1', '$shippingCharges', '$proAvailb', '$stock','$productimage2','$productimage3')";
       
       if(mysqli_query($con, $sql1)){
         header("location: {$hostname}/admin/pages/products.php");
@@ -76,7 +76,7 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="save-product.php" method="post" class="tm-edit-product-form" enctype="multipart/form-data">
+                <form action="" method="post" class="tm-edit-product-form" enctype="multipart/form-data">
                   <div class="form-group mb-3">
                     <label for="name">Product Name</label>
                     <input id="name" name="product_name" type="text" class="form-control validate" required />
@@ -150,18 +150,18 @@
                   <input type="button" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 1" onclick="document.getElementById('fileInput').click();" />
                 </div>
                 <div class="tm-product-img-dummy mx-auto">
-                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();" ></i>
+                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput2').click();" ></i>
                 </div>
                 <div class="custom-file mt-2 mb-5">
-                  <input id="fileInput" type="file" name="productimage2" style="display:none;" />
-                  <input type="button" name="productimage2" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 2" onclick="document.getElementById('fileInput').click();" />
+                  <input id="fileInput2" type="file" name="productimage2" style="display:none;" />
+                  <input type="button" name="productimage2" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 2" onclick="document.getElementById('fileInput2').click();" />
                 </div>
                 <div class="tm-product-img-dummy mx-auto">
-                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();" ></i>
+                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput3').click();" ></i>
                 </div>
                 <div class="custom-file mt-2 mb-5">
-                  <input id="fileInput" type="file" name="productimage3" style="display:none;" />
-                  <input type="button" name="productimage3" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 3" onclick="document.getElementById('fileInput').click();" />
+                  <input id="fileInput3" type="file" name="productimage3" style="display:none;" />
+                  <input type="button" name="productimage3" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 3" onclick="document.getElementById('fileInput3').click();" />
                 </div>
               </div>
               <div class="col-12">
