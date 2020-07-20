@@ -16,20 +16,29 @@
     $productimage1=$_FILES["productimage1"]["name"];
     $productimage2=$_FILES["productimage2"]["name"];
     $productimage3=$_FILES["productimage3"]["name"];
-  //for getting product id
-  $query=mysqli_query($con,"select max(id) as pid from products");
-    $result=mysqli_fetch_array($query);
-    $productid=$result['pid']+1;
-    $dir="productimages/$productid";
+
+    //for getting product id
+    $query=mysqli_query($con,"select max(product_id) as pid from products");
+
+    $result = mysqli_fetch_array($query);
+    $productid = $result['pid']+1;
+    $dir = "../assets/img/$productid";
   if(!is_dir($dir)){
-      mkdir("productimages/".$productid);
+      mkdir("../assets/img/".$productid);
     }
 
     move_uploaded_file($_FILES["productimage1"]["tmp_name"],"productimages/$productid/".$_FILES["productimage1"]["name"]);
     move_uploaded_file($_FILES["productimage2"]["tmp_name"],"productimages/$productid/".$_FILES["productimage2"]["name"]);
     move_uploaded_file($_FILES["productimage3"]["tmp_name"],"productimages/$productid/".$_FILES["productimage3"]["name"]);
-  $sql=mysqli_query($con,"insert into products(category,subCategory,productName,productCompany,productPrice,productDescription,shippingCharge,productAvailability,productImage1,productImage2,productImage3,productPriceBeforeDiscount) values('$category','$subcat','$productname','$productcompany','$productprice','$productdescription','$productscharge','$productavailability','$productimage1','$productimage2','$productimage3','$productpricebd')");
-  $_SESSION['msg']="Product Inserted Successfully !!";
+
+    $sql1 = "INSERT INTO products(category,sub_category,product_name,product_company,product_price,sale_price,product_description,product_image1,shipping_charge,product_availability,posting_date,product_stock)
+               VALUES('$category', '$subcat', '$productname', '$productcompany', '$productprice', '$productpricebd', '$productdescription', '$productscharge', '$productavailability', '$stock','$productimage1')";
+      
+      if(mysqli_query($con, $sql1)){
+        header("location: {$hostname}/admin/pages/products.php");
+      }else{
+          echo "<div class='alert alert-danger'>Query Failed</div>";
+      }
 
   }
 
