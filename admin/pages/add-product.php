@@ -30,7 +30,7 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="save-product.php" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
+                <form action="save-product.php" method="post" class="tm-edit-product-form" enctype="multipart/form-data">
                   <div class="form-group mb-3">
                     <label for="name">Product Name</label>
                     <input id="name" name="product_name" type="text" class="form-control validate" required />
@@ -81,8 +81,8 @@
                       <label for="category">Product Availability</label>
                       <select class="custom-select tm-select-accounts" name="pro_availb" id="category">
                         <option selected>Select Availability</option>
-                        <option value="1">In Stock</option>
-                        <option value="2">Out of Stock</option>
+                        <option value="In Stock">In Stock</option>
+                        <option value="Out of Stock">Out of Stock</option>
                       </select>
                     </div>
                     <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -101,21 +101,21 @@
                 </div>
                 <div class="custom-file mt-2 mb-5">
                   <input id="fileInput" type="file" name="productimage1" style="display:none;" />
-                  <input type="button" type="file" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 1" onclick="document.getElementById('fileInput').click();" />
+                  <input type="button" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 1" onclick="document.getElementById('fileInput').click();" />
                 </div>
                 <div class="tm-product-img-dummy mx-auto">
                   <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();" ></i>
                 </div>
                 <div class="custom-file mt-2 mb-5">
-                  <input id="fileInput" type="file" name="productimage1" style="display:none;" />
-                  <input type="button" type="file" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 2" onclick="document.getElementById('fileInput').click();" />
+                  <input id="fileInput" type="file" name="productimage2" style="display:none;" />
+                  <input type="button" name="productimage2" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 2" onclick="document.getElementById('fileInput').click();" />
                 </div>
                 <div class="tm-product-img-dummy mx-auto">
                   <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();" ></i>
                 </div>
                 <div class="custom-file mt-2 mb-5">
-                  <input id="fileInput" type="file" name="productimage1" style="display:none;" />
-                  <input type="button" type="file" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 3" onclick="document.getElementById('fileInput').click();" />
+                  <input id="fileInput" type="file" name="productimage3" style="display:none;" />
+                  <input type="button" name="productimage3" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 3" onclick="document.getElementById('fileInput').click();" />
                 </div>
               </div>
               <div class="col-12">
