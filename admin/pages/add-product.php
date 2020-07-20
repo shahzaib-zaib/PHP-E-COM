@@ -2,16 +2,17 @@
   
   if(isset($_POST['submit'])){
     include "../assets/include/config.php";
-    
-    $category=$_POST['category'];
-    $subcat=$_POST['subcategory'];
-    $productname=$_POST['productName'];
-    $productcompany=$_POST['productCompany'];
-    $productprice=$_POST['productprice'];
-    $productpricebd=$_POST['productpricebd'];
-    $productdescription=$_POST['productDescription'];
-    $productscharge=$_POST['productShippingcharge'];
-    $productavailability=$_POST['productAvailability'];
+
+    $productName = mysqli_real_escape_string($con, $_POST['product_name']);
+    $productBrand = mysqli_real_escape_string($con, $_POST['product_brand']);
+    $productDesc = mysqli_real_escape_string($con, $_POST['product_desc']);
+    $productPrice = mysqli_real_escape_string($con, $_POST['product_price']);
+    $salePrice = mysqli_real_escape_string($con, $_POST['sale_price']);
+    $category = mysqli_real_escape_string($con, $_POST['category']);
+    $subCategory = mysqli_real_escape_string($con, $_POST['sub_category']);
+    $proAvailb = mysqli_real_escape_string($con, $_POST['pro_availb']);
+    $stock = mysqli_real_escape_string($con, $_POST['stock']);
+    $shippingCharges = mysqli_real_escape_string($con, $_POST['shipping_charges']);
     $productimage1=$_FILES["productimage1"]["name"];
     $productimage2=$_FILES["productimage2"]["name"];
     $productimage3=$_FILES["productimage3"]["name"];
