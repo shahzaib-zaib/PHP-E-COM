@@ -1,41 +1,3 @@
-<?php
-    
-  if(isset($_POST['submit'])){
-    include "../assets/include/config.php";
-      $category=$_POST['category'];
-      $subcat=$_POST['sub_category'];
-      $productname=$_POST['product_name'];
-      $productcompany=$_POST['product_brand'];
-      $productprice=$_POST['product_price'];
-      $productpricebd=$_POST['sale_price'];
-      $productdescription=$_POST['product_desc'];
-      $productscharge=$_POST['shipping_charges'];
-      $productavailability=$_POST['pro_availb'];
-      $productimage1=$_FILES["productimage1"]["name"];
-      
-    //for getting product id
-    $query=mysqli_query($con,"select max(product_id) as pid from products");
-      $result=mysqli_fetch_array($query);
-      $productid=$result['pid']+1;
-      $dir="../assets/img//$productid";
-    if(!is_dir($dir)){
-        mkdir("../assets/img//".$productid);
-      }
-
-      move_uploaded_file($_FILES["productimage1"]["tmp_name"],"../assets/img//$productid/".$_FILES["productimage1"]["name"]);
-      $sql1 = "INSERT INTO products(category,subCategory,productName,productCompany,productPrice,productDescription,shippingCharge,productAvailability,productImage1,productPriceBeforeDiscount)
-               VALUES('$category','$subcat','$productname','$productcompany','$productprice','$productdescription','$productscharge','$productavailability','$productimage1','$productpricebd')";
-      
-      if(mysqli_query($con, $sql1)){
-        header("location: {$hostname}/admin/pages/products.php");
-      }else{
-          echo "<div class='alert alert-danger'>Query Failed</div>";
-      }
-
-}
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +30,7 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
+                <form action="save-product.php" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
                   <div class="form-group mb-3">
                     <label for="name">Product Name</label>
                     <input id="name" name="product_name" type="text" class="form-control validate" required />
@@ -137,9 +99,23 @@
                 <div class="tm-product-img-dummy mx-auto">
                   <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();" ></i>
                 </div>
-                <div class="custom-file mt-3 mb-3">
+                <div class="custom-file mt-2 mb-5">
                   <input id="fileInput" type="file" name="productimage1" style="display:none;" />
-                  <input type="button" type="file" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
+                  <input type="button" type="file" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 1" onclick="document.getElementById('fileInput').click();" />
+                </div>
+                <div class="tm-product-img-dummy mx-auto">
+                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();" ></i>
+                </div>
+                <div class="custom-file mt-2 mb-5">
+                  <input id="fileInput" type="file" name="productimage1" style="display:none;" />
+                  <input type="button" type="file" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 2" onclick="document.getElementById('fileInput').click();" />
+                </div>
+                <div class="tm-product-img-dummy mx-auto">
+                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();" ></i>
+                </div>
+                <div class="custom-file mt-2 mb-5">
+                  <input id="fileInput" type="file" name="productimage1" style="display:none;" />
+                  <input type="button" type="file" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 3" onclick="document.getElementById('fileInput').click();" />
                 </div>
               </div>
               <div class="col-12">
