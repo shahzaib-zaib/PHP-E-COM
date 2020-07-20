@@ -18,7 +18,14 @@
 
                 include "../assets/include/config.php";
 
-                $sql = "SELECT * FROM category ORDER BY category_id DESC";
+               
+
+                $sql = "SELECT products.product_id,products.product_name,products.product_company,
+                products.product_stock, products.posting_date, category.category_name,
+                subcategory.subcategory_name FROM products JOIN category ON category.category_id = products.category JOIN
+                subcategory ON sucategory.sub_id = products.sub_category
+                ORDER BY products.product_id DESC";
+
                 $result = mysqli_query($con, $sql) or die ("Query Faild.");
 
                 if(mysqli_num_rows($result) > 0){
@@ -31,8 +38,9 @@
                             <th scope="col">PRODUCT NAME</th>
                             <th scope="col">CATEGORY</th>
                             <th scope="col">SUB CATEGORY</th>
+                            <th scope="col">BRAND</th>
                             <th scope="col">IN STOCK</th>
-                            <th scope="col">CREATION DATE</th>
+                            <th scope="col">POSTING DATE</th>
                             <th scope="col">EDIT</th>
                             <th scope="col">DELETE</th>
                         </tr>
@@ -44,19 +52,20 @@
 
                         ?>
                         <tr>
-                            <th><img src="../assets/img/<?php echo $row['category_img']; ?>" alt="" height="70px" width="70px"></th>
-                            <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
+                            <th><img src="../assets/img/<?php echo $row['product_image1']; ?>" alt="" height="70px" width="70px"></th>
+                            <td class="tm-product-name"><?php echo $row['product_name']; ?></td>
                             <td><?php echo $row['product']; ?></td>
                             <td><?php echo $row['product']; ?></td>
-                            <td>550</td>
-                            <td><?php echo $row['creation_date']; ?></td>
+                            <td><?php echo $row['product']; ?></td>
+                            <td><?php echo $row['product_company']; ?></td>
+                            <td><?php echo $row['posting_date']; ?></td>
                             <td>
-                                <a href="edit-category.php?id=<?php echo $row["category_id"] ?>" class="tm-product-edit-link">
+                                <a href="edit-category.php?pid=<?php echo $row["product_id"] ?>" class="tm-product-edit-link">
                                     <i class="far fa-edit tm-product-edit-icon"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="delete-category.php?id=<?php echo $row["category_id"] ?>" class="tm-product-delete-link">
+                                <a href="delete-category.php?pid=<?php echo $row["product_id"] ?>" class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
                             </td>
