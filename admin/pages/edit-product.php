@@ -33,11 +33,12 @@
               <?php
 
                 $pro_id = $_GET['pid'];
-                $sql = "SELECT products.*,category.category_name,subcategory.subcategory_name 
-                from products join category on category.category_id = products.category join 
-                subcategory on subcategory.sub_id = products.sub_category
-                WHERE products.product_id = {$pro_id}";
         
+                $sql = "SELECT products.*, category.category_name as catname, category.category_id as cid, 
+                subcategory.subcategory_name as subcatname, subcategory.sub_id as subcatid from products 
+                join category on category.category_id = products.category join subcategory on 
+                subcategory.sub_id = products.sub_category where products.product_id = '{$pro_id}'";
+
                 $result = mysqli_query($con, $sql) or die ("Query Faild.");
                 if(mysqli_num_rows($result) > 0){
                     while($row = mysqli_fetch_assoc($result)) {
@@ -92,7 +93,7 @@
                   <div class="form-group mb-3">
                     <label for="category">Sub Category</label>
                     <select class="custom-select tm-select-accounts" name="sub_category" id="subcategory">
-                      
+                      <option value="<?php echo htmlentities($row['subcatid']);?>"><?php echo htmlentities($row['subcatname']);?></option>
                     </select>
                   </div>
                   <div class="row">
