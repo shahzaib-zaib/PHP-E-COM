@@ -43,10 +43,10 @@
                 if(mysqli_num_rows($result) > 0){
                     while($row = mysqli_fetch_assoc($result)) {
               ?>
-                <form action="save-product.php" method="post" class="tm-edit-product-form" enctype="multipart/form-data">
+                <form action="save-edit-product.php" method="post" class="tm-edit-product-form" enctype="multipart/form-data">
                   <div class="form-group mb-3">
                     <label for="name">Product Name</label>
-                    <input id="name" name="" type="hidden" class="form-control validate" value="<?php echo $row['product_id']; ?>" required />
+                    <input id="name" name="pro_id" type="hidden" class="form-control validate" value="<?php echo $row['product_id']; ?>" required />
                     <input id="name" name="product_name" type="text" class="form-control validate" value="<?php echo $row['product_name']; ?>" required />
                   </div>
                   <div class="form-group mb-3">
@@ -142,7 +142,7 @@
                 </div>
               </div>
               <div class="col-12">
-                <button type="submit" name="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
+                <button type="submit" name="submit" class="btn btn-primary btn-block text-uppercase">Update Product</button>
               </div>
             </form>
             <?php
