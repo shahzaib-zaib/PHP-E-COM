@@ -21,11 +21,12 @@
     $query=mysqli_query($con,"select max(product_id) as pid from products");
 
     $result = mysqli_fetch_array($query);
-    $productid = $result['pid']+1;
-    $dir = "../assets/img/$productid";
-  if(!is_dir($dir)){
-      mkdir("../assets/img/".$productid);
-    }
+    
+  //   $productid = $result['pid']+1;
+  //   $dir = "../assets/img/$productid";
+  // if(!is_dir($dir)){
+  //     mkdir("../assets/img/".$productid);
+  //   }
 
     move_uploaded_file($_FILES["productimage1"]["tmp_name"],"../assets/img/$productid/".$_FILES["productimage1"]["name"]);
     move_uploaded_file($_FILES["productimage2"]["tmp_name"],"../assets/img/$productid/".$_FILES["productimage2"]["name"]);

@@ -17,14 +17,10 @@
             <?php
 
                 include "../assets/include/config.php";
-
-               
-
-                $sql = "SELECT products.product_id,products.product_name,products.product_company,
-                products.product_stock, products.posting_date, category.category_name,
-                subcategory.subcategory_name FROM products JOIN category ON category.category_id = products.category JOIN
-                subcategory ON sucategory.sub_id = products.sub_category
-                ORDER BY products.product_id DESC";
+                
+                $sql = "SELECT products.*,category.category_name,subcategory.subcategory_name 
+                from products join category on category.category_id = products.category join 
+                subcategory on subcategory.sub_id = products.sub_category";
 
                 $result = mysqli_query($con, $sql) or die ("Query Faild.");
 
@@ -54,10 +50,10 @@
                         <tr>
                             <th><img src="../assets/img/<?php echo $row['product_image1']; ?>" alt="" height="70px" width="70px"></th>
                             <td class="tm-product-name"><?php echo $row['product_name']; ?></td>
-                            <td><?php echo $row['product']; ?></td>
-                            <td><?php echo $row['product']; ?></td>
-                            <td><?php echo $row['product']; ?></td>
+                            <td><?php echo $row['category_name']; ?></td>
+                            <td><?php echo $row['subcategory_name']; ?></td>
                             <td><?php echo $row['product_company']; ?></td>
+                            <td><?php echo $row['product_stock']; ?></td>
                             <td><?php echo $row['posting_date']; ?></td>
                             <td>
                                 <a href="edit-category.php?pid=<?php echo $row["product_id"] ?>" class="tm-product-edit-link">
