@@ -45,24 +45,25 @@
                 <form action="save-product.php" method="post" class="tm-edit-product-form" enctype="multipart/form-data">
                   <div class="form-group mb-3">
                     <label for="name">Product Name</label>
-                    <input id="name" name="product_name" type="text" class="form-control validate" required />
+                    <input id="name" name="" type="hidden" class="form-control validate" value="<?php echo $row['product_id']; ?>" required />
+                    <input id="name" name="product_name" type="text" class="form-control validate" value="<?php echo $row['product_name']; ?>" required />
                   </div>
                   <div class="form-group mb-3">
                     <label for="name">Product Brand</label>
-                    <input id="name" name="product_brand" type="text" class="form-control validate" required />
+                    <input id="name" name="product_brand" type="text" class="form-control validate" value="<?php echo $row['product_company']; ?>" required />
                   </div>
                   <div class="form-group mb-3">
                     <label for="description">Description</label>
-                    <textarea class="form-control validate" name="product_desc" rows="3" required ></textarea>
+                    <textarea class="form-control validate" name="product_desc" rows="3" required ><?php echo $row['product_description']; ?></textarea>
                   </div>
                   <div class="row">
                     <div class="form-group mb-3 col-xs-12 col-sm-6">
                       <label for="stock">Product Price</label>
-                      <input id="stock" name="product_price" type="text" class="form-control validate" required/>
+                      <input id="stock" name="product_price" type="text" class="form-control validate" value="<?php echo $row['product_price']; ?>" required/>
                     </div>
                     <div class="form-group mb-3 col-xs-12 col-sm-6">
                       <label for="stock">Sale Price</label>
-                      <input id="stock" name="sale_price" type="text" class="form-control validate" required/>
+                      <input id="stock" name="sale_price" type="text" class="form-control validate" value="<?php echo $row['sale_price']; ?>" required/>
                     </div>
                   </div>
                   <div class="form-group mb-3">
@@ -70,15 +71,21 @@
                     <select class="custom-select tm-select-accounts" name="category" onChange="getSubcat(this.value);" id="category">
                       <option selected>Select category</option>
                       <?php
-                              include "../assets/include/config.php";
-                              $sql = "SELECT * FROM category";
-                              $result = mysqli_query($con,$sql) or die("Query Failed");
+                          include "../assets/include/config.php";
+                          $sql1 = "SELECT * FROM category";
+                          $result1 = mysqli_query($con,$sql1) or die("Query Failed");
 
-                              if(mysqli_num_rows($result) > 0){
-                                  while($row = mysqli_fetch_assoc($result)){
-                                      echo "<option  value='{$row['category_id']}'>{$row['category_name']}</option>";
+                          if(mysqli_num_rows($result1) > 0){
+                              while($row1 = mysqli_fetch_assoc($result1)){
+                                  if ($row['category']  == $row1['category_id']) {
+                                      $selected = "selected";
+                                  } else {
+                                      $selected = "";
                                   }
+                                  
+                                  echo "<option {$selected} value='{$row1['category_id']}'>{$row1['category_name']}</option>";
                               }
+                          }
                       ?>
                     </select>
                   </div>
@@ -99,35 +106,38 @@
                     </div>
                     <div class="form-group mb-3 col-xs-12 col-sm-6">
                       <label for="stock">Units In Stock</label>
-                      <input id="stock" name="stock" type="text" class="form-control validate" required/>
+                      <input id="stock" name="stock" type="text" class="form-control validate" value="<?php echo $row['product_stock']; ?>" required/>
                     </div>
                   </div>
                   <div class="form-group mb-3">
                     <label for="name">Product Shipping Charge</label>
-                    <input id="name" name="shipping_charges" type="text" class="form-control validate" required />
+                    <input id="name" name="shipping_charges" type="text" class="form-control validate" value="<?php echo $row['shipping_charge']; ?>" required />
                   </div>
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
                 <div class="tm-product-img-dummy mx-auto">
-                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput').click();" ></i>
+                  <img  src="../assets/img/<?php echo $row['product_image1']; ?>" height="240px">
+                  <input type="hidden" name="old_image" value="<?php echo $row['product_image1']; ?>">
                 </div>
                 <div class="custom-file mt-2 mb-5">
-                  <input id="fileInput" type="file" name="productimage1" style="display:none;" />
-                  <input type="button" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 1" onclick="document.getElementById('fileInput').click();" />
+                  <input id="fileInput" type="file" name="new-image" style="display:none;" />
+                  <input type="button" name="old_image" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 1" onclick="document.getElementById('fileInput').click();" />
                 </div>
                 <div class="tm-product-img-dummy mx-auto">
-                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput2').click();" ></i>
+                  <img  src="../assets/img/<?php echo $row['product_image2']; ?>" height="240px">
+                  <input type="hidden" name="old_image" value="<?php echo $row['product_image2']; ?>">
                 </div>
                 <div class="custom-file mt-2 mb-5">
-                  <input id="fileInput2" type="file" name="productimage2" style="display:none;" />
-                  <input type="button" name="productimage2" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 2" onclick="document.getElementById('fileInput2').click();" />
+                  <input id="fileInput2" type="file" name="new-image" style="display:none;" />
+                  <input type="button" name="old_image" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 2" onclick="document.getElementById('fileInput2').click();" />
                 </div>
                 <div class="tm-product-img-dummy mx-auto">
-                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput3').click();" ></i>
+                  <img  src="../assets/img/<?php echo $row['product_image3']; ?>" height="240px">
+                  <input type="hidden" name="old_image" value="<?php echo $row['product_image3']; ?>">
                 </div>
                 <div class="custom-file mt-2 mb-5">
-                  <input id="fileInput3" type="file" name="productimage3" style="display:none;" />
-                  <input type="button" name="productimage3" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 3" onclick="document.getElementById('fileInput3').click();" />
+                  <input id="fileInput3" type="file" name="new-image" style="display:none;" />
+                  <input type="button" name="old_image" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 3" onclick="document.getElementById('fileInput3').click();" />
                 </div>
               </div>
               <div class="col-12">

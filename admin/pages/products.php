@@ -20,7 +20,8 @@
                 
                 $sql = "SELECT products.*,category.category_name,subcategory.subcategory_name 
                 from products join category on category.category_id = products.category join 
-                subcategory on subcategory.sub_id = products.sub_category";
+                subcategory on subcategory.sub_id = products.sub_category
+                ORDER BY product_id DESC";
 
                 $result = mysqli_query($con, $sql) or die ("Query Faild.");
 
