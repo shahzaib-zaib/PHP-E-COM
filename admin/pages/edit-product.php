@@ -30,6 +30,18 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
+              <?php
+
+                $pro_id = $_GET['pid'];
+                $sql = "SELECT products.*,category.category_name,subcategory.subcategory_name 
+                from products join category on category.category_id = products.category join 
+                subcategory on subcategory.sub_id = products.sub_category
+                WHERE products.product_id = {$pro_id}";
+        
+                $result = mysqli_query($con, $sql) or die ("Query Faild.");
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_assoc($result)) {
+              ?>
                 <form action="save-product.php" method="post" class="tm-edit-product-form" enctype="multipart/form-data">
                   <div class="form-group mb-3">
                     <label for="name">Product Name</label>
@@ -122,6 +134,12 @@
                 <button type="submit" name="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
               </div>
             </form>
+            <?php
+                }
+                  }else{
+                      echo "Result Not Found";
+                  }
+            ?>
             </div>
           </div>
         </div>

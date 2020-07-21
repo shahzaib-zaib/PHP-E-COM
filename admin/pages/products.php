@@ -56,12 +56,12 @@
                             <td><?php echo $row['product_stock']; ?></td>
                             <td><?php echo $row['posting_date']; ?></td>
                             <td>
-                                <a href="edit-category.php?pid=<?php echo $row["product_id"] ?>" class="tm-product-edit-link">
+                                <a href="edit-product.php?pid=<?php echo $row["product_id"] ?>" class="tm-product-edit-link">
                                     <i class="far fa-edit tm-product-edit-icon"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="delete-category.php?pid=<?php echo $row["product_id"] ?>" class="tm-product-delete-link">
+                                <a href="delete-product.php?pid=<?php echo $row["product_id"] ?>" class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
                             </td>
