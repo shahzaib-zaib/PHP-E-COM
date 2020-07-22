@@ -27,7 +27,7 @@
                       while($row = mysqli_fetch_assoc($result)) {
 
             ?>
-            <form action="save-subcategory.php" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
+            <form action="save-edit-subcategory.php" method="POST" class="tm-edit-product-form" enctype="multipart/form-data">
                 <div class="form-group mb-3">
                   <label for="category">Category</label>
                     <select class="custom-select tm-select-accounts" name="category" id="category">

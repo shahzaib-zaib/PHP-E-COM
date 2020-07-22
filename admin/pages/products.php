@@ -49,7 +49,7 @@
 
                         ?>
                         <tr>
-                            <th><img src="../assets/img/<?php echo $row['product_image1']; ?>" alt="" height="70px" width="70px"></th>
+                            <th><img src="../assets/img/<?php echo $row['product_image1']; ?>" alt="" height="70px" width="auto"></th>
                             <td class="tm-product-name"><?php echo $row['product_name']; ?></td>
                             <td><?php echo $row['category_name']; ?></td>
                             <td><?php echo $row['subcategory_name']; ?></td>

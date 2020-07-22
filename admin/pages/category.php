@@ -43,7 +43,7 @@
 
                         ?>
                         <tr>
-                            <th><img src="../assets/img/<?php echo $row['category_img']; ?>" alt="" height="70px" width="70px"></th>
+                            <th><img src="../assets/img/<?php echo $row['category_img']; ?>" alt="" height="70px" width="auto"></th>
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td><?php echo $row['category_desc']; ?></td>
                             <td><?php echo $row['product']; ?></td>

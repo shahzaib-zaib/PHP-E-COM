@@ -48,7 +48,7 @@
 
                         ?>
                         <tr>
-                            <th><img src="../assets/img/<?php echo $row['subcategory_img']; ?>" alt="" height="70px" width="70px"></th>
+                            <th><img src="../assets/img/<?php echo $row['subcategory_img']; ?>" alt="" height="70px" width="auto"></th>
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td class="tm-product-name"><?php echo $row['subcategory_name']; ?></td>
                             <td><?php echo $row['subcategory_desc']; ?></td>
