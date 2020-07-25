@@ -20,7 +20,7 @@
 			<div class="navbar-collapse collapse animate-dropdown">
 
 				<div class="container">
-					<a href="index.php" class="navbar-brand"><img src="assets/images/logo2.png" class="logo" alt=""></a>
+					<a href="index.php?page=home" class="navbar-brand"><img src="assets/images/logo2.png" class="logo" alt=""></a>
 					
 					<ul class="nav navbar-nav">
 						<li class="dropdown bewear-dropdown yamm-fw">
@@ -61,7 +61,7 @@
 							</div><!-- /.dropdown-menu -->
 						</li><!-- /.searchbox -->
 							
-						<li><a href="#"><i class="icon icon-user"></i></a></li>
+						<li><a href="index.php?page=my-account"><i class="icon icon-user"></i></a></li>
 						<li><a id="menu-toggle" class="navbar-toggle shopping-cart-toggle" data-toggle="offcanvas" data-target="#shopping-cart-summary" href="#"><i class="icon icon-shopbag"></i><span class="item-count">5</span></a></li>
 					</ul>
 				</div>

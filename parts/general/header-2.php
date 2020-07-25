@@ -4,7 +4,7 @@
 			<div class="container">
 				<!-- ============================================================= LOGO MOBILE ============================================================= -->
 						
-				<a class="navbar-brand" href="home.html"><img src="assets/images/logo.png" class="logo" alt=""></a>
+				<a class="navbar-brand" href="index.php?page=home"><img src="assets/images/logo.png" class="logo" alt=""></a>
 						
 				<!-- ============================================================= LOGO MOBILE : END ============================================================= -->
 						
@@ -19,7 +19,7 @@
 		<div class="yamm">
 			<div class="navbar-collapse collapse animate-dropdown">
 				<div class="container">
-					<a href="#" class="navbar-brand"><img src="assets/images/logo.png" class="logo" alt=""></a>
+					<a href="index.php?page=home" class="navbar-brand"><img src="assets/images/logo.png" class="logo" alt=""></a>
 					<ul class="nav navbar-nav">
 						<li class="dropdown bewear-dropdown yamm-fw">
 							<a href="index.php?page=home" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>Ladies </span></a>
@@ -49,7 +49,7 @@
 						</li>
 
 						<li class="dropdown bewear-dropdown">
-							<a href="index.php?page=home" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>About</span></a>
+							<a href="index.php?page=about" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>About</span></a>
 							<?php require ROOT . '/parts/navigation/page-list.php'; ?>
 						</li>
 					</ul>
@@ -63,7 +63,7 @@
 							</div><!-- /.dropdown-menu -->
 						</li><!-- /.searchbox -->
 						
-						<li><a href="#"><i class="icon icon-user"></i></a></li>
+						<li><a href="index.php?page=my-account"><i class="icon icon-user"></i></a></li>
 						<li><a id="menu-toggle" class="navbar-toggle shopping-cart-toggle" data-toggle="offcanvas" data-target="#shopping-cart-summary" href="#"><i class="icon icon-shopbag"></i><span class="item-count">5</span></a></li>
 					</ul>
 				</div>

@@ -37,6 +37,7 @@ $pages = array(
     'product-simple'    => 'Product Simple',
     'single-look-2'     => 'Single Look v2',
     'single-look'       => 'Single Look v1',
+    'my-account'        => 'My Account',
 );
 ?>
 <!DOCTYPE html>
