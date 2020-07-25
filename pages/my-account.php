@@ -1,40 +1,41 @@
 <?php
-   
+    session_start();
+    error_reporting(0);
 
-    include "include/config.php";
+    include "../include/config.php";
 
-    if(strlen($_SESSION['login'])==0){   
+    if(strlen($_SESSION['login']) == 0){   
 
         header("Location: {$hostname}/index.php?page=login.php");
     }
     else{
         if(isset($_POST['update']))
         {
-            $name=$_POST['name'];
-            $contactno=$_POST['contactno'];
-            $query=mysqli_query($con,"update users set name='$name',contactno='$contactno' where id='".$_SESSION['id']."'");
+            $name = $_POST['name'];
+            $contactno = $_POST['contactno'];
+            $query = mysqli_query($con,"update users set name='$name',contactno='$contactno' where id='".$_SESSION['id']."'");
             if($query)
             {
-    echo "<script>alert('Your info has been updated');</script>";
+    			echo "<script>alert('Your info has been updated');</script>";
             }
         }
 
 
-    date_default_timezone_set('Asia/Kolkata');// change according timezone
+    date_default_timezone_set('Asia/Karachi');// change according timezone
     $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 
     if(isset($_POST['submit']))
     {
-    $sql=mysqli_query($con,"SELECT password FROM  users where password='".md5($_POST['cpass'])."' && id='".$_SESSION['id']."'");
-    $num=mysqli_fetch_array($sql);
-    if($num>0)
-    {
-    $con=mysqli_query($con,"update students set password='".md5($_POST['newpass'])."', updationDate='$currentTime' where id='".$_SESSION['id']."'");
-    echo "<script>alert('Password Changed Successfully !!');</script>";
+    $sql = mysqli_query($con,"SELECT password FROM  users where password='".md5($_POST['cpass'])."' && id='".$_SESSION['id']."'");
+	$num = mysqli_fetch_array($sql);
+	
+    if($num>0){
+
+    	$con = mysqli_query($con,"update students set password='".md5($_POST['newpass'])."', updationDate='$currentTime' where id='".$_SESSION['id']."'");
+    	echo "<script>alert('Password Changed Successfully !!');</script>";
     }
-    else
-    {
+    else{
         echo "<script>alert('Current Password not match !!');</script>";
     }
     }
@@ -71,17 +72,6 @@ return false;
 return true;
 }
 </script>
-
-<div class="breadcrumb">
-	<div class="container">
-		<div class="breadcrumb-inner">
-			<ul class="list-inline list-unstyled">
-				<li><a href="#">Home</a></li>
-				<li class='active'>Checkout</li>
-			</ul>
-		</div><!-- /.breadcrumb-inner -->
-	</div><!-- /.container -->
-</div><!-- /.breadcrumb -->
 
 <div class="body-content outer-top-bd">
 	<div class="container">
@@ -187,7 +177,7 @@ while($row=mysqli_fetch_array($query))
 					</div><!-- /.checkout-steps -->
 				</div>
 			<?php include('includes/myaccount-sidebar.php');?>
-			</div><!-- /.row -->
+			</div><!-- /.row -->s
 		</div><!-- /.checkout-box -->
 	<?php include('includes/brands-slider.php');?>
 

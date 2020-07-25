@@ -2,7 +2,7 @@
     session_start();
     error_reporting(0);
 
-    include "../include/config.php";
+    include "config.php";
 
     // Code user Registration
     if(isset($_POST['submit'])){
