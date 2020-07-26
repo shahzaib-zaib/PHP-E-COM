@@ -38,7 +38,7 @@
           </div>
           <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
             <div class="tm-product-img-dummy mx-auto">
-                <img  src="../assets/img/<?php echo $row['category_img']; ?>" height="240px">
+                <img  src="../assets/img/categories/<?php echo $row['category_img']; ?>" height="240px">
                 <input type="hidden" name="old_image" value="<?php echo $row['category_img']; ?>">
             </div>
             <div class="custom-file mt-3 mb-3">

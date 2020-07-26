@@ -17,7 +17,7 @@
                   $subcat_id = $_GET['cid'];
 
                   $sql = "SELECT subcategory.sub_id, subcategory.subcategory_name,
-                  subcategory.subcategory_desc,subcategory.creationDate,subcategory.subcategory_img,
+                  subcategory.subcategory_desc,subcategory.subcategory_img,
                   category.category_name,subcategory.categoryid FROM subcategory 
                   LEFT JOIN category ON subcategory.categoryid = category.category_id
                   WHERE subcategory.sub_id = {$subcat_id}";
@@ -35,7 +35,7 @@
                       <?php
                           include "../assets/include/config.php";
                           $sql1 = "SELECT * FROM category";
-                          $result1 = mysqli_query($con,$sql1) or die("Query Failed");
+                          $result1 = mysqli_query($con, $sql1) or die("Query Failed");
 
                           if(mysqli_num_rows($result1) > 0){
                               while($row1 = mysqli_fetch_assoc($result1)){
@@ -50,21 +50,21 @@
                           }
                       ?>
                     </select>
-                    <input type="hidden" name="old_category" value="<?php echo $row['categoryid']; ?>" id="">
+                    <input type="hidden" name="old_category" value="<?php echo $row['category']; ?>" id="">
                   </div>
                   <div class="form-group mb-3">
                       <label for="name">Subcategory Name</label>
                       <input id="name" name="sub_id" type="hidden" class="form-control validate" value="<?php echo $row['sub_id']; ?>" required />
-                      <input id="name" name="subcategory_name" type="text" class="form-control validate" value="<?php echo $row['subcategory_name']; ?>" required />
+                      <input id="name" name="subcat_name" type="text" class="form-control validate" value="<?php echo $row['subcategory_name']; ?>" required />
                   </div>
                   <div class="form-group mb-3">
                     <label for="category_desc" >Description</label>
-                    <textarea name="subcategory_desc" class="form-control validate" rows="5" required ><?php echo $row['subcategory_desc']; ?></textarea>
+                    <textarea name="subcat_desc" class="form-control validate" rows="5" required ><?php echo $row['subcategory_desc']; ?></textarea>
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
                   <div class="tm-product-img-dummy mx-auto">
-                  <img  src="../assets/img/<?php echo $row['subcategory_img']; ?>" height="240px">
+                  <img  src="../assets/img/subcategories/<?php echo $row['subcategory_img']; ?>" height="240px">
                 <input type="hidden" name="old_image" value="<?php echo $row['subcategory_img']; ?>">
                   </div>
                   <div class="custom-file mt-3 mb-3">

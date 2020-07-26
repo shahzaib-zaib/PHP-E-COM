@@ -22,7 +22,7 @@
         }
 
         $new_name = time() . "-" . basename($file_name);
-        $target = "../assets/img/" . $new_name;
+        $target = "../assets/img/categories/" . $new_name;
         
         if(empty($errors) == true){
             move_uploaded_file($file_tmp, $target);

@@ -8,7 +8,7 @@
     $result = mysqli_query($con, $sql1) or die("Query Failed : Select");
     $row = mysqli_fetch_assoc($result);
 
-    unlink("../assets/img/".$row['category_img']);
+    unlink("../assets/img/categories/".$row['category_img']);
 
 
     $sql = "DELETE FROM category WHERE category_id = {$category_id}";

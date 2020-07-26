@@ -3,7 +3,7 @@
     include "../assets/include/config.php";
 
     if(empty($_FILES['new-image']['name'])){
-        $new_name = $_POST['old_image'];
+        $image_name = $_POST['old_image'];
     }else{
         $errors = array();
 
@@ -27,7 +27,7 @@
         }
 
         $new_name = time() . "-" . basename($file_name);
-        $target = "upload/" . $new_name;
+        $target = "../assets/img/subcategories/" . $new_name;
         $image_name = $new_name;
         
         if(empty($errors) == true){
@@ -38,12 +38,12 @@
         }
     }
 
-    $sql = "UPDATE subcategory SET subcategory_name = '{$_POST['subcategory_name']}',subcategory_desc='{$_POST['subcategory_desc']}',subcategory_img='{$image_name}'
+    $sql = "UPDATE subcategory SET categoryid = '{$_POST['category']}', subcategory_name = '{$_POST['subcat_name']}', subcategory_desc='{$_POST['subcat_desc']}',subcategory_img='{$image_name}'
     WHERE sub_id = {$_POST['sub_id']};";
 
-    if($_POST['old_category'] != $_POST['categoryid']){
+    if($_POST['old_category'] != $_POST['category']){
         $sql .= "UPDATE category SET subcategory = subcategory - 1 WHERE category_id = {$_POST['old_category']};";
-        $sql .= "UPDATE category SET subcategory = subcategory + 1 WHERE category_id = {$_POST['categoryid']};";
+        $sql .= "UPDATE category SET subcategory = subcategory + 1 WHERE category_id = {$_POST['category']};";
 
     }
 

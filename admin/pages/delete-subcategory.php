@@ -9,7 +9,7 @@
     $result = mysqli_query($con, $sql1) or die("Query Failed : Select");
     $row = mysqli_fetch_assoc($result);
 
-    unlink("../assets/img/".$row['subcategory_img']);
+    unlink("../assets/img/subcategories/".$row['subcategory_img']);
 
 
     $sql = "DELETE FROM subcategory WHERE sub_id = {$subcat_id};";

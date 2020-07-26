@@ -20,7 +20,7 @@
         }
 
         $new_name = time() . "-" . basename($file_name);
-        $target = "../assets/img/" . $new_name;
+        $target = "../assets/img/categories/" . $new_name;
         $image_name = $new_name;
 
         if($file_size > 2097152){

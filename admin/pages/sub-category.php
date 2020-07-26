@@ -19,7 +19,7 @@
 
                     
                     $sql = "SELECT subcategory.sub_id, subcategory.subcategory_name, subcategory.products,
-                    subcategory.subcategory_desc, subcategory.creationDate,subcategory.subcategory_img,
+                    subcategory.subcategory_desc, subcategory.upload_date,subcategory.subcategory_img,
                     category.category_name,subcategory.categoryid FROM subcategory 
                     LEFT JOIN category ON subcategory.categoryid = category.category_id
                     ORDER BY subcategory.sub_id DESC";
@@ -37,7 +37,7 @@
                             <th scope="col">SUBCATEGORY</th>
                             <th scope="col">DESCRIPTION</th>
                             <th scope="col">PRODUCTS</th>
-                            <th scope="col">CREATION DATE</th>
+                            <th scope="col">DATE</th>
                             <th scope="col">EDIT</th>
                             <th scope="col">DELETE</th>
                         </tr>
@@ -49,12 +49,12 @@
 
                         ?>
                         <tr>
-                            <th><img src="../assets/img/<?php echo $row['subcategory_img']; ?>" alt="" height="70px" width="auto"></th>
+                            <th><img src="../assets/img/subcategories/<?php echo $row['subcategory_img']; ?>" alt="" height="70px" width="auto"></th>
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td class="tm-product-name"><?php echo $row['subcategory_name']; ?></td>
                             <td><?php echo $row['subcategory_desc']; ?></td>
                             <td><?php echo $row['products']; ?></td>
-                            <td><?php echo $row['creationDate']; ?></td>
+                            <td><?php echo $row['upload_date']; ?></td>
                             <td>
                                 <a href="edit-subcategory.php?cid=<?php echo $row["sub_id"]; ?>" class="tm-product-edit-link">
                                     <i class="far fa-edit tm-product-edit-icon"></i>
