@@ -33,9 +33,11 @@
     move_uploaded_file($_FILES["productimage3"]["tmp_name"],"../assets/img/".$_FILES["productimage3"]["name"]);
 
     $sql1 = "INSERT INTO products(category,sub_category,product_name,product_company,product_price,sale_price,product_description,product_image1,shipping_charge,product_availability,product_stock,product_image2,product_image3)
-               VALUES('$category', '$subCategory', '$productName', '$productBrand', '$productPrice', '$salePrice', '$productDesc', '$productimage1', '$shippingCharges', '$proAvailb', '$stock','$productimage2','$productimage3')";
+               VALUES('$category', '$subCategory', '$productName', '$productBrand', '$productPrice', '$salePrice', '$productDesc', '$productimage1', '$shippingCharges', '$proAvailb', '$stock','$productimage2','$productimage3');";
+
+    $sql .= "UPDATE subcategory SET products = products + 1 WHERE sub_id = {$subCategory}";
       
-      if(mysqli_query($con, $sql1)){
+      if(mysqli_multi_query($con, $sql1)){
         header("location: {$hostname}/admin/pages/products.php");
       }else{
           echo "<div class='alert alert-danger'>Query Failed</div>";

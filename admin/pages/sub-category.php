@@ -18,7 +18,7 @@
                     include "../assets/include/config.php";
 
                     
-                    $sql = "SELECT subcategory.sub_id, subcategory.subcategory_name, 
+                    $sql = "SELECT subcategory.sub_id, subcategory.subcategory_name, subcategory.products,
                     subcategory.subcategory_desc, subcategory.creationDate,subcategory.subcategory_img,
                     category.category_name,subcategory.categoryid FROM subcategory 
                     LEFT JOIN category ON subcategory.categoryid = category.category_id
@@ -61,7 +61,7 @@
                                 </a>
                             </td>
                             <td>
-                                <a href='delete-subcategory.php?cid=<?php echo $row["sub_id"]; ?> &catid=<?php echo $row["categoryid"]; ?>' class="tm-product-delete-link">
+                                <a href='delete-subcategory.php?cid=<?php echo $row["sub_id"]; ?> & catid=<?php echo $row["categoryid"]; ?>' class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
                             </td>

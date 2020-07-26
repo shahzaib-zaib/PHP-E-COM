@@ -62,7 +62,7 @@
                                 </a>
                             </td>
                             <td>
-                                <a href="delete-product.php?pid=<?php echo $row["product_id"] ?>" class="tm-product-delete-link">
+                                <a href='delete-product.php?pid=<?php echo $row["product_id"] ?> & scatid=<?php echo $row["sub_category"]; ?>' class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
                             </td>
