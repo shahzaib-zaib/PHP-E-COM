@@ -31,7 +31,7 @@
                             <th scope="col">CATEGORY</th>
                             <th scope="col">CATEGORY DESCRIPTION</th>
                             <th scope="col">SUB CATEGORY</th>
-                            <th scope="col">CREATION DATE</th>
+                            <th scope="col">DATE</th>
                             <th scope="col">EDIT</th>
                             <th scope="col">DELETE</th>
                         </tr>
@@ -47,7 +47,7 @@
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td><?php echo $row['category_desc']; ?></td>
                             <td><?php echo $row['subCategory']; ?></td>
-                            <td><?php echo $row['creation_date']; ?></td>
+                            <td><?php echo $row['upload_date']; ?></td>
                             <td>
                                 <a href="edit-category.php?id=<?php echo $row["category_id"] ?>" class="tm-product-edit-link">
                                     <i class="far fa-edit tm-product-edit-icon"></i>

@@ -20,9 +20,12 @@
         if($file_size > 2097152){
             $errors[] = "File size must be 2mb or lower.";
         }
+
+        $new_name = time() . "-" . basename($file_name);
+        $target = "../assets/img/user/" . $new_name;
         
         if(empty($errors) == true){
-            move_uploaded_file($file_tmp,"../assets/img/".$file_name);
+            move_uploaded_file($file_tmp, $target);
         }else{
             print_r($errors);
             die();
@@ -42,7 +45,7 @@
         echo "<p style='color:red;text-align:center;margin: 10px 0;'>Account name already Exists</p>";
     }else{
         $sql1 = "INSERT INTO user(Username, Email, Password, Phone, Role, User_img)
-        VALUES('{$username}','{$email}','{$password}','{$phone}', '{$role}','{$file_name}')";
+        VALUES('{$username}','{$email}','{$password}','{$phone}', '{$role}','{$new_name}')";
 
     if(mysqli_query($con, $sql1)){
         header("location: {$hostname}/admin/pages/accounts.php");

@@ -9,7 +9,7 @@
     $productPrice = mysqli_real_escape_string($con, $_POST['product_price']);
     $salePrice = mysqli_real_escape_string($con, $_POST['sale_price']);
     $category = mysqli_real_escape_string($con, $_POST['category']);
-    $subCategory = mysqli_real_escape_string($con, $_POST['cat_id']);
+    $subCategory = mysqli_real_escape_string($con, $_POST['subcategory']);
     $proAvailb = mysqli_real_escape_string($con, $_POST['pro_availb']);
     $stock = mysqli_real_escape_string($con, $_POST['stock']);
     $shippingCharges = mysqli_real_escape_string($con, $_POST['shipping_charges']);

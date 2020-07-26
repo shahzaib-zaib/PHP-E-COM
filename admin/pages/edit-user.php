@@ -16,7 +16,8 @@
           <div class="tm-bg-primary-dark tm-block tm-block-avatar">
             <h2 class="tm-block-title">New Avatar</h2>
             <div class="tm-avatar-container">
-              <img src="../assets/img/<?php echo $row['User_img']; ?>" alt="Avatar" class="tm-avatar img-fluid mb-4" />
+              <img src="../assets/img/user/<?php echo $row['User_img']; ?>" alt="Avatar" class="tm-avatar img-fluid mb-4" />
+              <input type="hidden" name="old_image" value="<?php echo $row['User_img']; ?>">
               <a href="#" class="tm-avatar-delete-link">
                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
               </a>

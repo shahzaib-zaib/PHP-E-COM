@@ -8,7 +8,7 @@
             <h2 class="tm-block-title d-inline-block">Edit Category</h2>
           </div>
         </div>
-        <div class="row tm-edit-product-row">
+        <div class="row tm-edit-product-row"> 
           <div class="col-xl-6 col-lg-6 col-md-12">
           <?php
 

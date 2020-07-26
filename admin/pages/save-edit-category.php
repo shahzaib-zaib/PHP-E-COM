@@ -3,7 +3,7 @@
     include "../assets/include/config.php";
 
     if(empty($_FILES['new-image']['name'])){
-        $file_name = $_POST['old_image'];
+        $image_name = $_POST['old_image'];
     }else{
         $errors = array();
 

@@ -34,6 +34,7 @@
 
     $categoryName = mysqli_real_escape_string($con, $_POST['category_name']);
     $categoryDesc = mysqli_real_escape_string($con, $_POST['category_desc']);
+    $date = date("d M Y");
 
     $sql = "SELECT category_name FROM category WHERE category_name = '{$categoryName}'";
     $result = mysqli_query($con,$sql) or die("Query Failed");
@@ -41,8 +42,8 @@
     if(mysqli_num_rows($result) > 0){
         echo "<p style='color:red;text-align:center;margin: 10px 0;'>Category name already Exists</p>";
     }else{
-        $sql = "INSERT INTO category(category_name, category_desc, category_img)
-            VALUES('{$categoryName}', '{$categoryDesc}', '{$new_name}')";
+        $sql = "INSERT INTO category(category_name, category_desc,upload_date, category_img)
+            VALUES('{$categoryName}', '{$categoryDesc}', '{$date}', '{$new_name}')";
 
     if(mysqli_query($con, $sql)){
         header("location: {$hostname}/admin/pages/category.php");

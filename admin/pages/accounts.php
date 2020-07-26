@@ -58,7 +58,7 @@
               </div>
             </div>
             <div class="tm-avatar-container">
-              <img src="../assets/img/<?php echo $row['User_img']; ?>" alt="Avatar" class="tm-avatar img-fluid mb-4" />
+              <img src="../assets/img/user/<?php echo $row['User_img']; ?>" alt="Avatar" class="tm-avatar img-fluid mb-4" />
               <a href="#" class="tm-avatar-delete-link">
                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
               </a>
