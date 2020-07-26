@@ -50,7 +50,7 @@
                           }
                       ?>
                     </select>
-                    <input type="hidden" name="old_category" value="<?php echo $row['category']; ?>" id="">
+                    <input type="hidden" name="old_category" value="<?php echo $row['categoryid']; ?>" id="">
                   </div>
                   <div class="form-group mb-3">
                       <label for="name">Subcategory Name</label>
