@@ -55,11 +55,11 @@
                   <div class="form-group mb-3">
                       <label for="name">Subcategory Name</label>
                       <input id="name" name="sub_id" type="hidden" class="form-control validate" value="<?php echo $row['sub_id']; ?>" required />
-                      <input id="name" name="subcat_name" type="text" class="form-control validate" value="<?php echo $row['subcategory_name']; ?>" required />
+                      <input id="name" name="subcategory_name" type="text" class="form-control validate" value="<?php echo $row['subcategory_name']; ?>" required />
                   </div>
                   <div class="form-group mb-3">
                     <label for="category_desc" >Description</label>
-                    <textarea name="subcat_desc" class="form-control validate" rows="5" required ><?php echo $row['subcategory_desc']; ?></textarea>
+                    <textarea name="subcategory_desc" class="form-control validate" rows="5" required ><?php echo $row['subcategory_desc']; ?></textarea>
                   </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">

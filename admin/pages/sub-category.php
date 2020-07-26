@@ -52,7 +52,7 @@
                             <th><img src="../assets/img/subcategories/<?php echo $row['subcategory_img']; ?>" alt="" height="70px" width="auto"></th>
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td class="tm-product-name"><?php echo $row['subcategory_name']; ?></td>
-                            <td><?php echo $row['subcategory_desc']; ?></td>
+                            <td><?php echo substr($row['subcategory_desc'],0,30). "..."; ?></td>
                             <td><?php echo $row['products']; ?></td>
                             <td><?php echo $row['upload_date']; ?></td>
                             <td>

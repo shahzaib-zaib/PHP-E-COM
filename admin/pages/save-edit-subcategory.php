@@ -38,7 +38,7 @@
         }
     }
 
-    $sql = "UPDATE subcategory SET categoryid = '{$_POST['category']}', subcategory_name = '{$_POST['subcat_name']}', subcategory_desc='{$_POST['subcat_desc']}',subcategory_img='{$image_name}'
+    $sql = "UPDATE subcategory SET categoryid = '{$_POST['category']}', subcategory_name = '{$_POST['subcategory_name']}', subcategory_desc='{$_POST['subcategory_desc']}',subcategory_img='{$image_name}'
     WHERE sub_id = {$_POST['sub_id']};";
 
     if($_POST['old_category'] != $_POST['category']){
