@@ -35,7 +35,8 @@
                             <th scope="col">IMAGE</th>
                             <th scope="col">CATEGORY</th>
                             <th scope="col">SUBCATEGORY</th>
-                            <th scope="col">SUBCATEGORY DESCRIPTION</th>
+                            <th scope="col">DESCRIPTION</th>
+                            <th scope="col">PRODUCTS</th>
                             <th scope="col">CREATION DATE</th>
                             <th scope="col">EDIT</th>
                             <th scope="col">DELETE</th>
@@ -52,6 +53,7 @@
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td class="tm-product-name"><?php echo $row['subcategory_name']; ?></td>
                             <td><?php echo $row['subcategory_desc']; ?></td>
+                            <td><?php echo $row['products']; ?></td>
                             <td><?php echo $row['creationDate']; ?></td>
                             <td>
                                 <a href="edit-subcategory.php?cid=<?php echo $row["sub_id"]; ?>" class="tm-product-edit-link">

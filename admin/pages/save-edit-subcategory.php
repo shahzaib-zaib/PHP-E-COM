@@ -3,7 +3,7 @@
     include "../assets/include/config.php";
 
     if(empty($_FILES['new-image']['name'])){
-        $file_name = $_POST['old_image'];
+        $new_name = $_POST['old_image'];
     }else{
         $errors = array();
 
@@ -11,8 +11,7 @@
         $file_size = $_FILES['new-image']['size'];
         $file_tmp = $_FILES['new-image']['tmp_name'];
         $file_type = $_FILES['new-image']['type'];
-        $exp = explode('.', $file_name);
-        $file_ext = end($exp);
+        $file_ext = end(explode('.', $file_name));
         $extensions = array("jpeg","jpg","png");
 
         if(in_array($file_ext,$extensions) === false)
@@ -23,13 +22,16 @@
         if($file_size > 2097152){
             $errors[] = "File size must be 2mb or lower.";
         }
+        if($file_size > 2097152){
+            $errors[] = "File size must be 2mb or lower.";
+        }
 
         $new_name = time() . "-" . basename($file_name);
-        $target = "../assets/img/" . $new_name;
+        $target = "upload/" . $new_name;
         $image_name = $new_name;
         
         if(empty($errors) == true){
-            move_uploaded_file($file_tmp, $target);
+            move_uploaded_file($file_tmp,$target);
         }else{
             print_r($errors);
             die();
@@ -39,9 +41,9 @@
     $sql = "UPDATE subcategory SET subcategory_name = '{$_POST['subcategory_name']}',subcategory_desc='{$_POST['subcategory_desc']}',subcategory_img='{$image_name}'
     WHERE sub_id = {$_POST['sub_id']};";
 
-    if($_POST['old_category'] != $_POST['category']){
+    if($_POST['old_category'] != $_POST['categoryid']){
         $sql .= "UPDATE category SET subcategory = subcategory - 1 WHERE category_id = {$_POST['old_category']};";
-        $sql .= "UPDATE category SET subcategory = subcategory + 1 WHERE category_id = {$_POST['category']};";
+        $sql .= "UPDATE category SET subcategory = subcategory + 1 WHERE category_id = {$_POST['categoryid']};";
 
     }
 

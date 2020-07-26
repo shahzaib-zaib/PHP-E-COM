@@ -50,7 +50,7 @@
                           }
                       ?>
                     </select>
-                    <input type="hidden" name="old_category" value="<?php echo $row['category']; ?>" id="">
+                    <input type="hidden" name="old_category" value="<?php echo $row['categoryid']; ?>" id="">
                   </div>
                   <div class="form-group mb-3">
                       <label for="name">Subcategory Name</label>
@@ -69,7 +69,7 @@
                   </div>
                   <div class="custom-file mt-3 mb-3">
                     <input id="fileInput" type="file" name="new-image" style="display:none;" />
-                    <input type="button" type="hidden" name="old_image" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
+                    <input type="button" name="old_image" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE" onclick="document.getElementById('fileInput').click();" />
                   </div>
                 </div>
                 <div class="col-12">
