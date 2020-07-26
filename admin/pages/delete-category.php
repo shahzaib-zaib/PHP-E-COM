@@ -14,7 +14,7 @@
     $sql = "DELETE FROM category WHERE category_id = {$category_id}";
 
 
-    if(mysqli_multi_query($con, $sql)){
+    if(mysqli_query($con, $sql)){
         header("location: {$hostname}/admin/pages/category.php");
     }else{
         echo "<p style='color:red; margin: 10px 0'>Can\'t Delete the Category</p>";

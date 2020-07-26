@@ -54,12 +54,12 @@
                             <td><?php echo $row['subcategory_desc']; ?></td>
                             <td><?php echo $row['creationDate']; ?></td>
                             <td>
-                                <a href="edit-subcategory.php?cid=<?php echo $row["sub_id"] ?>" class="tm-product-edit-link">
+                                <a href="edit-subcategory.php?cid=<?php echo $row["sub_id"]; ?>" class="tm-product-edit-link">
                                     <i class="far fa-edit tm-product-edit-icon"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="delete-subcategory.php?cid=<?php echo $row["sub_id"] ?>" class="tm-product-delete-link">
+                                <a href='delete-subcategory.php?cid=<?php echo $row["sub_id"]; ?> &catid=<?php echo $row["categoryid"]; ?>' class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
                             </td>

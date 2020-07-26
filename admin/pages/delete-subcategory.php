@@ -3,6 +3,7 @@
     include "../assets/include/config.php";
 
     $subcat_id = $_GET['cid'];
+    $cat_id = $_GET['catid'];
 
     $sql1 = "SELECT * FROM subcategory WHERE sub_id = {$subcat_id}";
     $result = mysqli_query($con, $sql1) or die("Query Failed : Select");
@@ -11,7 +12,9 @@
     unlink("../assets/img/".$row['subcategory_img']);
 
 
-    $sql = "DELETE FROM subcategory WHERE sub_id = {$subcat_id}";
+    $sql = "DELETE FROM subcategory WHERE sub_id = {$subcat_id};";
+    
+    $sql .= "UPDATE category SET subcategory = subcategory - 1 WHERE category_id = {$cat_id}";
 
 
     if(mysqli_multi_query($con, $sql)){

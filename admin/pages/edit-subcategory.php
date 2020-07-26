@@ -39,7 +39,7 @@
 
                           if(mysqli_num_rows($result1) > 0){
                               while($row1 = mysqli_fetch_assoc($result1)){
-                                  if ($row['category']  == $row1['category_id']) {
+                                  if ($row['categoryid']  == $row1['category_id']) {
                                       $selected = "selected";
                                   } else {
                                       $selected = "";
@@ -50,6 +50,7 @@
                           }
                       ?>
                     </select>
+                    <input type="hidden" name="old_category" value="<?php echo $row['category']; ?>" id="">
                   </div>
                   <div class="form-group mb-3">
                       <label for="name">Subcategory Name</label>

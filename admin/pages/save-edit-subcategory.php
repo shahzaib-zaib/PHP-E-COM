@@ -37,9 +37,15 @@
     }
 
     $sql = "UPDATE subcategory SET subcategory_name = '{$_POST['subcategory_name']}',subcategory_desc='{$_POST['subcategory_desc']}',subcategory_img='{$image_name}'
-    WHERE sub_id = {$_POST['sub_id']}";
+    WHERE sub_id = {$_POST['sub_id']};";
 
-    $result = mysqli_query($con,$sql);
+    if($_POST['old_category'] != $_POST['category']){
+        $sql .= "UPDATE category SET subcategory = subcategory - 1 WHERE category_id = {$_POST['old_category']};";
+        $sql .= "UPDATE category SET subcategory = subcategory + 1 WHERE category_id = {$_POST['category']};";
+
+    }
+
+    $result = mysqli_multi_query($con,$sql);
 
     if($result){
         header("location: {$hostname}/admin/pages/sub-category.php");
