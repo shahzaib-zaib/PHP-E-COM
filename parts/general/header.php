@@ -24,7 +24,7 @@
 					
 					<ul class="nav navbar-nav">
 						<li class="dropdown bewear-dropdown yamm-fw">
-							<a href="index.php" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>Ladies </span></a>
+							<a href="index.php" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>Women </span></a>
 							<ul class="dropdown-menu bewear-dropdown-menu fadeInDown">
 								<li><?php require ROOT . '/parts/navigation/megamenu-ver1.php'; ?></li>
 							</ul>
