@@ -3,6 +3,7 @@
     include "../assets/include/config.php";
 
     $product_id = $_GET['pid'];
+    $scat_id = $_GET['scatid'];
 
     $sql1 = "SELECT * FROM products WHERE product_id = {$product_id}";
     $result = mysqli_query($con, $sql1) or die("Query Failed : Select");
@@ -13,7 +14,9 @@
     unlink("../assets/img/".$row['product_image3']);
 
 
-    $sql = "DELETE FROM Products WHERE product_id = {$product_id}";
+    $sql = "DELETE FROM Products WHERE product_id = {$product_id};";
+
+    $sql .= "UPDATE subcategory SET products = products - 1 WHERE sub_id = {$scat_id}";
 
 
     if(mysqli_multi_query($con, $sql)){
