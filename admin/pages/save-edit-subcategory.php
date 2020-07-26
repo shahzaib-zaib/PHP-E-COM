@@ -23,16 +23,20 @@
         if($file_size > 2097152){
             $errors[] = "File size must be 2mb or lower.";
         }
+
+        $new_name = time() . "-" . basename($file_name);
+        $target = "../assets/img/" . $new_name;
+        $image_name = $new_name;
         
         if(empty($errors) == true){
-            move_uploaded_file($file_tmp,"../assets/img/".$file_name);
+            move_uploaded_file($file_tmp, $target);
         }else{
             print_r($errors);
             die();
         }
     }
 
-    $sql = "UPDATE subcategory SET subcategory_name = '{$_POST['subcategory_name']}',subcategory_desc='{$_POST['subcategory_desc']}',subcategory_img='{$file_name}'
+    $sql = "UPDATE subcategory SET subcategory_name = '{$_POST['subcategory_name']}',subcategory_desc='{$_POST['subcategory_desc']}',subcategory_img='{$image_name}'
     WHERE sub_id = {$_POST['sub_id']}";
 
     $result = mysqli_query($con,$sql);

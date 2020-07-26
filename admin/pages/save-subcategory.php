@@ -17,12 +17,15 @@
             $errors[] = "This extension file not allowed, Please choose a JPG or PNG file";
         }
 
+        $new_name = time() . "-" . basename($file_name);
+        $target = "../assets/img/" . $new_name;
+
         if($file_size > 2097152){
             $errors[] = "File size must be 2mb or lower.";
         }
         
         if(empty($errors) == true){
-            move_uploaded_file($file_tmp,"../assets/img/".$file_name);
+            move_uploaded_file($file_tmp, $target);
         }else{
             print_r($errors);
             die();
@@ -40,9 +43,12 @@
         echo "<p style='color:red;text-align:center;margin: 10px 0;'>Category name already Exists</p>";
     }else{
         $sql = "INSERT INTO subcategory(categoryid, subcategory_name, subcategory_desc, subcategory_img)
-            VALUES({$category}, '{$subcat_name}', '{$subcat_desc}', '{$file_name}')";
+            VALUES({$category}, '{$subcat_name}', '{$subcat_desc}', '{$new_name}');";
 
-    if(mysqli_query($con, $sql)){
+        $sql .= "UPDATE category SET subcategory = subcategory + 1 WHERE category_id = {$category}";
+        
+
+    if(mysqli_multi_query($con, $sql)){
         header("location: {$hostname}/admin/pages/sub-category.php");
     }else{
         echo "<div class='alert alert-danger'>Query Failed</div>";

@@ -30,7 +30,7 @@
                             <th scope="col">IMAGE</th>
                             <th scope="col">CATEGORY</th>
                             <th scope="col">CATEGORY DESCRIPTION</th>
-                            <th scope="col">PRODUCTS</th>
+                            <th scope="col">SUB CATEGORY</th>
                             <th scope="col">CREATION DATE</th>
                             <th scope="col">EDIT</th>
                             <th scope="col">DELETE</th>
@@ -46,7 +46,7 @@
                             <th><img src="../assets/img/<?php echo $row['category_img']; ?>" alt="" height="70px" width="auto"></th>
                             <td class="tm-product-name"><?php echo $row['category_name']; ?></td>
                             <td><?php echo $row['category_desc']; ?></td>
-                            <td><?php echo $row['product']; ?></td>
+                            <td><?php echo $row['subCategory']; ?></td>
                             <td><?php echo $row['creation_date']; ?></td>
                             <td>
                                 <a href="edit-category.php?id=<?php echo $row["category_id"] ?>" class="tm-product-edit-link">

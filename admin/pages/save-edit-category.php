@@ -19,19 +19,23 @@
             $errors[] = "This extension file not allowed, Please choose a JPG or PNG file";
         }
 
+        $new_name = time() . "-" . basename($file_name);
+        $target = "../assets/img/" . $new_name;
+        $image_name = $new_name;
+
         if($file_size > 2097152){
             $errors[] = "File size must be 2mb or lower.";
         }
         
         if(empty($errors) == true){
-            move_uploaded_file($file_tmp,"../assets/img/".$file_name);
+            move_uploaded_file($file_tmp, $target);
         }else{
             print_r($errors);
             die();
         }
     }
 
-    $sql = "UPDATE category SET category_name = '{$_POST['category_name']}',category_desc='{$_POST['category_desc']}',category_img='{$file_name}'
+    $sql = "UPDATE category SET category_name = '{$_POST['category_name']}',category_desc='{$_POST['category_desc']}',category_img='{$image_name}'
     WHERE category_id = {$_POST['cat_id']}";
 
     $result = mysqli_query($con,$sql);

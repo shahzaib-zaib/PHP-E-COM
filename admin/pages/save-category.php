@@ -20,9 +20,12 @@
         if($file_size > 2097152){
             $errors[] = "File size must be 2mb or lower.";
         }
+
+        $new_name = time() . "-" . basename($file_name);
+        $target = "../assets/img/" . $new_name;
         
         if(empty($errors) == true){
-            move_uploaded_file($file_tmp,"../assets/img/".$file_name);
+            move_uploaded_file($file_tmp, $target);
         }else{
             print_r($errors);
             die();
@@ -39,7 +42,7 @@
         echo "<p style='color:red;text-align:center;margin: 10px 0;'>Category name already Exists</p>";
     }else{
         $sql = "INSERT INTO category(category_name, category_desc, category_img)
-            VALUES('{$categoryName}', '{$categoryDesc}', '{$file_name}')";
+            VALUES('{$categoryName}', '{$categoryDesc}', '{$new_name}')";
 
     if(mysqli_query($con, $sql)){
         header("location: {$hostname}/admin/pages/category.php");
