@@ -117,7 +117,7 @@
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
                 <div class="tm-product-img-dummy mx-auto">
-                  <img  src="../assets/img/<?php echo $row['product_image1']; ?>" height="240px">
+                  <img  src="../assets/img/products/<?php echo $row['product_image1']; ?>" height="240px">
                   <input type="hidden" name="old_image" value="<?php echo $row['product_image1']; ?>">
                 </div>
                 <div class="custom-file mt-2 mb-5">
@@ -125,7 +125,7 @@
                   <input type="button" name="old_image" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 1" onclick="document.getElementById('fileInput').click();" />
                 </div>
                 <div class="tm-product-img-dummy mx-auto">
-                  <img  src="../assets/img/<?php echo $row['product_image2']; ?>" height="240px">
+                  <img  src="../assets/img/products/<?php echo $row['product_image2']; ?>" height="240px">
                   <input type="hidden" name="old_image" value="<?php echo $row['product_image2']; ?>">
                 </div>
                 <div class="custom-file mt-2 mb-5">
@@ -133,7 +133,7 @@
                   <input type="button" name="old_image" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 2" onclick="document.getElementById('fileInput2').click();" />
                 </div>
                 <div class="tm-product-img-dummy mx-auto">
-                  <img  src="../assets/img/<?php echo $row['product_image3']; ?>" height="240px">
+                  <img  src="../assets/img/products/<?php echo $row['product_image3']; ?>" height="240px">
                   <input type="hidden" name="old_image" value="<?php echo $row['product_image3']; ?>">
                 </div>
                 <div class="custom-file mt-2 mb-5">

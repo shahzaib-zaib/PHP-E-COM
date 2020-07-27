@@ -103,14 +103,23 @@
                   <input id="fileInput" type="file" name="productimage1" style="display:none;" />
                   <input type="button" name="productimage1" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 1" onclick="document.getElementById('fileInput').click();" />
                 </div>
-                
-                
+                <div class="tm-product-img-dummy mx-auto">
+                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput2').click();" ></i>
+                </div>
                 <div class="custom-file mt-2 mb-5">
-                  <input type="file" name="image[]" id="image" multiple accept=".jpg, .jpeg, .png, .gif" />
+                  <input id="fileInput2" type="file" name="productimage2" style="display:none;" />
+                  <input type="button" name="productimage2" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 2" onclick="document.getElementById('fileInput2').click();" />
+                </div>
+                <div class="tm-product-img-dummy mx-auto">
+                  <i class="fas fa-cloud-upload-alt tm-upload-icon" onclick="document.getElementById('fileInput3').click();" ></i>
+                </div>
+                <div class="custom-file mt-2 mb-5">
+                  <input id="fileInput3" type="file" name="productimage3" style="display:none;" />
+                  <input type="button" name="productimage3" class="btn btn-primary btn-block mx-auto" value="UPLOAD PRODUCT IMAGE 3" onclick="document.getElementById('fileInput3').click();" />
                 </div>
               </div>
               <div class="col-12">
-                <button type="submit" name="submit" id="insert" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
+                <button type="submit" name="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
               </div>
             </form>
             </div>
@@ -119,31 +128,5 @@
       </div>
     </div>
     <?php include "../parts/footer.php" ?>
-
-    <script>
-      $(document).ready(function(){
-        $('#upload_multiple_images').on('submit', function(event){
-          event.preventDefault();
-          var image_name = $('#image').val();
-          if (image_name == '') {
-            alert("Please Select Image");
-            return false;
-          } else {
-            $.ajax({
-              url:"save-product.php",
-              method:"POST",
-              data: new FormData(this),
-              contentType:false,
-              cache:false,
-              processData:false,
-              success:function(data)
-              {
-                $('#image').value('');
-              }
-            });
-          }
-        });
-      });
-    </script>
 </body>
 </html>

@@ -7,9 +7,9 @@
     $productimage3 = $_FILES["productimage3"]["name"];
     
 
-    move_uploaded_file($_FILES["productimage1"]["tmp_name"],"../assets/img/".$_FILES["productimage1"]["name"]);
-    move_uploaded_file($_FILES["productimage2"]["tmp_name"],"../assets/img/".$_FILES["productimage2"]["name"]);
-    move_uploaded_file($_FILES["productimage3"]["tmp_name"],"../assets/img/".$_FILES["productimage3"]["name"]);
+    move_uploaded_file($_FILES["productimage1"]["tmp_name"],"../assets/img/products/".$_FILES["productimage1"]["name"]);
+    move_uploaded_file($_FILES["productimage2"]["tmp_name"],"../assets/img/products/".$_FILES["productimage2"]["name"]);
+    move_uploaded_file($_FILES["productimage3"]["tmp_name"],"../assets/img/products/".$_FILES["productimage3"]["name"]);
     
     $sql = "UPDATE products SET category = '{$_POST['category']}', sub_category = '{$_POST['sub_category']}', 
             product_name = '{$_POST['product_name']}', product_company = '{$_POST['product_brand']}', product_price = '{$_POST['product_price']}',
