@@ -1,3 +1,16 @@
+<?php
+
+	include "includes/config.php";
+	
+	$sql = "SELECT * FROM products";
+
+	$result = mysqli_query($con, $sql) or die ("Query Faild.");
+
+	if(mysqli_num_rows($result) > 0){
+		
+		while($row = mysqli_fetch_assoc($result)){
+
+?>
 <section class="slider">
 	<div class="row">
 		<div class="col-md-10">
@@ -66,3 +79,7 @@
 		</div>
 	</div>
 </section>
+	<?php 
+		} 
+	}
+	?>

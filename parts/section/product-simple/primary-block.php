@@ -1,3 +1,17 @@
+<?php
+
+	include "includes/config.php";
+	
+	$pro_id = $_GET['pid'];
+	$sql = "SELECT * FROM products where products.product_id = '{$pro_id}'";
+
+	$result = mysqli_query($con, $sql) or die ("Query Faild.");
+
+	if(mysqli_num_rows($result) > 0){
+		
+		while($row = mysqli_fetch_assoc($result)){
+
+?>
 <div id="single-product" class="inner-top-50">
 	<div class="container">
 		<div class="row single-product-row">
@@ -20,10 +34,10 @@
 						<a href="#reviews" class="review-link">(4 reviews)</a>
 					</div>
 
-					<h1 class="single-product-title">Converse Chuck Taylor</h1>
-					<div class="product-brand">Calvin Klein</div>
+					<h1 class="single-product-title"><?php echo $row['product_name']; ?></h1>
+					<div class="product-brand"><?php echo $row['product_company']; ?></div>
 					<div class="product-price">
-						<ins><span class="amount">$492.00</span></ins>
+						<ins><span class="amount"><?php echo $row['product_price']; ?></span></ins>
 					</div>
 					<div class="social-icons-holder">
 						<ul class="social-icon-list clearfix">
@@ -114,7 +128,7 @@
 							<div class="tab-content bewear-tab-content">
 								<div id="description" class="tab-pane fade in active">
 									<p class="text">
-										Sed quis nunc efficitur, gravida orci sed, gravida felis. Quisque non euismod felis. Suspendisse consectetur, tellus in condimentum fringilla, turpis massa facilisis augue, eget tempor nibh dui in dolor. Donec sagittis scelerisque est.</p>
+									<?php echo $row['product_description']; ?></p>
 										<ul>
 											<li>- 98% Cotton, 2% Elastane</li>
 											<li>- Zip fly and button fastening</li>
@@ -209,3 +223,7 @@
 		</div>
 	</div>
 </div>
+<?php
+		}
+	}
+?>
