@@ -1,26 +1,4 @@
-<?php
 
-	include "includes/config.php";
-	
-	if(isset($_GET['action']) && $_GET['action']=="add"){
-		$id=intval($_GET['id']);
-		if(isset($_SESSION['cart'][$id])){
-			$_SESSION['cart'][$id]['quantity']++;
-		}else{
-			$sql_p="SELECT * FROM products WHERE id={$id}";
-			$query_p=mysqli_query($con,$sql_p);
-			if(mysqli_num_rows($query_p)!=0){
-				$row_p=mysqli_fetch_array($query_p);
-				$_SESSION['cart'][$row_p['id']]=array("quantity" => 1, "price" => $row_p['productPrice']);
-						echo "<script>alert('Product has been added to the cart')</script>";
-			echo "<script type='text/javascript'> document.location ='my-cart.php'; </script>";
-			}else{
-				$message="Product ID is invalid";
-			}
-		}
-	}
-
-?>
 <div id="single-product" class="inner-top-50">
 	<div class="container">
 		<div class="row single-product-row wow fadeIn">
@@ -129,20 +107,16 @@
                     <div class="qnt-holder">
 						<form class="cart">
 							<div class="quantity-holder">
-							<?php 
-								
-								if($row['product_availability'] == 'In Stock'){
-
-							?>
+							
 								<span class="key">Qty:</span>
 								<input type="number" class="txt txt-qty" title="Qty" value="1" name="quantity" min="1" step="1">
 							</div>
-							<a href="index.php?page=checkout&action=add&id=<?php echo $row['product_id']; ?>">
-                            <button type="submit" class="btn btn-primary single-add-cart-button">Add to bag</button></a>
-							<?php } else {?>
+							
+                            <button type="submit" class="btn btn-primary single-add-cart-button">Add to bag</button>
+							
 								<div class="action" style="color:red">Out of Stock</div>
-							<?php } ?>
-						    <a href="index.php?page=checkout&pid=<?php echo htmlentities($row['product_id'])?>&&action=wishlist" title="Wishlist" class="btn add-to-wishlist">add to wishlist</a>
+							
+						    <a href="index.php?page=checkout" title="Wishlist" class="btn add-to-wishlist">add to wishlist</a>
 						</form>
 					</div>
                     <div id="product-simple-tab">
@@ -248,9 +222,9 @@
 				</div>
 			</div>
 		</div>
+		<?php
+				}
+			}
+		?>
 	</div>
 </div>
-<?php
-		}
-	}
-?>
