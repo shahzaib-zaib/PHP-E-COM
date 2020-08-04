@@ -55,6 +55,7 @@
 		    <div class="container">
 			    <div class="row">
 			    	<?php
+					
 			    		$categories = array(
 			    			array(
 			    				'id'	=> 1,
@@ -119,7 +120,9 @@
 							</div>
 						</div>
 					</div>
-		    		<?php endforeach; ?>		
+					<?php endforeach; 
+					
+				?>		
 			    </div><!--row-->
 		    </div><!--container-->
 	   </div><!--category-grid-view-->
