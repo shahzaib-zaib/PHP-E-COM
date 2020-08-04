@@ -38,7 +38,7 @@
 					<h1 class="single-product-title"><?php echo $row['product_name']; ?></h1>
 					<div class="product-brand"><?php echo $row['product_company']; ?></div>
 					<div class="product-price">
-						<ins><span class="amount">$<?php echo $row['product_price']; ?></span></ins>
+						<ins><span class="amount">Rs. <?php echo $row['product_price']; ?></span></ins>
 					</div>
                     <div class="social-icons-holder">
 						<ul class="social-icon-list clearfix">
