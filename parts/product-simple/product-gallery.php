@@ -1,3 +1,18 @@
+<?php
+
+	include "includes/config.php";
+
+	$pro_id = $_GET['pid'];
+	
+	$sql = "SELECT product_image1, product_image2, product_image3, FROM products where product_id = '{$pro_id}'";
+
+	$result = mysqli_query($con, $sql) or die ("Query Faild.");
+
+	if(mysqli_num_rows($result) > 0){
+		
+		while($row = mysqli_fetch_assoc($result)){
+
+?>
 <section class="slider wow fadeIn">
 	<div class="row">
 		<div class="col-md-10 col-xs-10">
