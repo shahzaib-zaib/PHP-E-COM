@@ -2,9 +2,7 @@
 
 	include "includes/config.php";
 	
-	$sql = "SELECT products.*,category.category_name,subcategory.subcategory_name 
-	from products join category on category.category_id = products.category join 
-	subcategory on subcategory.sub_id = products.sub_category
+	$sql = "SELECT * FROM products
 	ORDER BY product_id DESC";
 
 	$result = mysqli_query($con, $sql) or die ("Query Faild.");
@@ -25,7 +23,7 @@
 			<span>bestseller</span>
 		</div>
 		<div class="image">
-			<a href="index.php?page=product-simple?pid=<?php echo $row["product_id"] ?>"><img class="img-responsive" width="258" src="admin/assets/img/products/<?php echo $row['product_image1']; ?>" alt=""></a>
+			<a href="index.php?page=product-simple&pid=<?php echo $row["product_id"] ?>"><img class="img-responsive" width="258" src="admin/assets/img/products/<?php echo $row['product_image1']; ?>" alt=""></a>
 		</div><!-- .image -->
 		<div class="product-info m-t-20 text-center">
 			<a class="quick-view uppercase" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="icon icon-more-colors-product"></i> Quick view</a>
@@ -42,7 +40,7 @@
 			<div class="buttons-holder m-t-20">					
 				<div class="add-cart-holder">
 				<?php if($row['product_availability']=='In Stock'){?>
-					<a title="Add to cart" href="index.php?page=checkout" class="cart-button btn btn-primary">
+					<a title="Add to cart" href="index.php?page=checkout&action=add&id=<?php echo $row['product_id']; ?>" class="cart-button btn btn-primary">
 						<span>Add to bag</span>
 					</a>
 					<?php } else {?>
