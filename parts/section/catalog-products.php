@@ -25,14 +25,14 @@
 			<span>bestseller</span>
 		</div>
 		<div class="image">
-			<a href="index.php?page=product-simple&pid=<?php echo $row["product_id"] ?>"><img class="img-responsive" width="258" src="admin/assets/img/products/<?php echo $row['product_image1']; ?>" alt=""></a>
+			<a href="index.php?page=product-simple?pid=<?php echo $row["product_id"] ?>"><img class="img-responsive" width="258" src="admin/assets/img/products/<?php echo $row['product_image1']; ?>" alt=""></a>
 		</div><!-- .image -->
 		<div class="product-info m-t-20 text-center">
 			<a class="quick-view uppercase" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="icon icon-more-colors-product"></i> Quick view</a>
 			<ul class="color-picker clearfix">
 				<li class="selected"><input class="le-radio group black" type="radio" value="g1" checked="checked" name="c4" >																
 				</li>
-				<li><input class="le-radio gray" type="radio" value="g1-2" name="c4">				
+				<li><input class="le-radio gray" type="radio" value="g1-2" name="c4">
 				</li>			
 			</ul><!-- .color-picker -->
 			<h5 class="name uppercase"><a href="index.php?page=product-simple"><?php echo $row['product_name']; ?></a></h5>

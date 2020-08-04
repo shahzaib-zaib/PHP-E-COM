@@ -17,8 +17,8 @@
 			<div id="slider" class="flexslider">
 				<ul class="slides">
 					<li>
-						<a href="assets/images/products/big-image.jpg" data-title="Gallery" data-lightbox="image-1">
-						     <img src="assets/images/blank.gif" data-title="Gallery" data-lightbox="image-1" data-echo="assets/images/products/big-image.jpg" alt="" />
+						<a href="admin/assets/img/products/<?php echo $row['product_image1']; ?>" data-title="Gallery" data-lightbox="image-1">
+						     <img src="admin/assets/img/products/<?php echo $row['product_image1']; ?>" data-title="Gallery" data-lightbox="image-1" data-echo="admin/assets/img/products/<?php echo $row['product_image1']; ?>" alt="" />
 						
 						<div class="zoom-overlay"></div>
 						</a>

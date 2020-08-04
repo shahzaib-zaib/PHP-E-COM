@@ -1,8 +1,9 @@
 <?php
 
 	include "includes/config.php";
-	
+
 	$pro_id = $_GET['pid'];
+	
 	$sql = "SELECT * FROM products where products.product_id = '{$pro_id}'";
 
 	$result = mysqli_query($con, $sql) or die ("Query Faild.");
