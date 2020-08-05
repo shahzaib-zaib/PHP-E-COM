@@ -1,6 +1,21 @@
 <div id="single-product" class="inner-top-50 wow fadeIn">
 	<div class="container">
 		<div class="row single-product-row">
+			<?php
+
+				include "includes/config.php";
+
+				$pro_id = $_GET['pid'];
+
+				$sql = "SELECT * FROM products where product_id = '{$pro_id}'";
+
+				$result = mysqli_query($con, $sql) or die ("Query Faild.");
+
+				if(mysqli_num_rows($result) > 0){
+					
+					while($row = mysqli_fetch_assoc($result)){
+
+			?>
 			<div class="col-sm-6 col-lg-6 gallery-holder">
 				<div class="product-image-slider">
 					<?php require_once ROOT.'/parts/product-extended/product-gallery.php'; ?>
@@ -20,10 +35,10 @@
 						<a href="#reviews" class="review-link">(4 reviews)</a>
 					</div>
 
-					<h1 class="single-product-title">Converse Chuck Taylor</h1>
-					<div class="product-brand">Calvin Klein</div>
+					<h1 class="single-product-title"><?php echo $row['product_name']; ?></h1>
+					<div class="product-brand"><?php echo $row['product_company']; ?></div>
 					<div class="excerpt inner-vs">
-						<p>Sed quis nunc efficitur, gravida orci sed, gravida felis. Quisque non euismod felis. Suspendisse consectetur, tellus in condimentum fringilla, turpis massa facilisis augue, eget tempor nibh dui in dolor.</p>
+						<p><?php echo $row['product_description']; ?></p>
 					</div>
 					<div class="product-attributes">
 						<div class="color-holder clearfix">
@@ -87,7 +102,7 @@
 
 					<div class="add-to-bag-holder">
 						<a href="#" class="add-bag-button btn btn-block">add to bag</a>
-						<p class="single-product-price text-center">$135.00</p>
+						<p class="single-product-price text-center">Rs. <?php echo $row['product_price']; ?></p>
 					</div>
 
 					<a href="#" class="sharing-with-friends text-center">share it with your friends</a>
@@ -102,6 +117,10 @@
 					<li><a href="#"><img src="assets/images/blank.gif" data-echo="assets/images/products/relate2.jpg" alt="" ></a></li>
 				</ul>
 			</div>
+			<?php
+					}
+				}
+			?>
 		</div>
 	</div>
 </div>

@@ -28,13 +28,6 @@
 				<li><img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image1']; ?>" class="lazy-load" alt="" /></li>
 				<li><img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image2']; ?>" class="lazy-load" alt="" /></li>
 				<li><img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image3']; ?>" class="lazy-load" alt="" /></li>
-				<li><img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image1']; ?>" class="lazy-load" alt="" /></li>
-				<li><img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image2']; ?>" class="lazy-load" alt="" /></li>
-				<li><img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image3']; ?>" class="lazy-load" alt="" /></li>
-				<li><img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image1']; ?>" class="lazy-load" alt="" /></li>
-				<li><img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image2']; ?>" class="lazy-load" alt="" /></li>
-				<li><img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image3']; ?>" class="lazy-load" alt="" /></li>
-				<li><img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image1']; ?>" class="lazy-load" alt="" /></li>
 			</ul>
 		</div>
 	</div>
