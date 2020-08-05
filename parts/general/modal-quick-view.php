@@ -5,16 +5,31 @@
 			<div class="modal-body">
 				<div class="row single-product-row">
 					<div class="col-sm-6 col-lg-6 col-xs-12 gallery-holder">
+						<?php
+
+							include "includes/config.php";
+
+							$pro_id = $_GET['pid'];
+							
+							$sql = "SELECT * FROM products where product_id = '{$pro_id}'";
+
+							$result = mysqli_query($con, $sql) or die ("Query Faild.");
+
+							if(mysqli_num_rows($result) > 0){
+								
+								while($row = mysqli_fetch_assoc($result)){
+
+						?>
 						<div class="product-image-slider">
 							<div class="quick-view-slider">
 								<div class="item">
-									<img src="assets/images/blank.gif" data-echo="assets/images/products/quick-product.png" alt="" />
+									<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image1']; ?>" alt="" />
 								</div>
 								<div class="item">
-									<img src="assets/images/blank.gif" data-echo="assets/images/products/quick-product.png" alt="" />
+									<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image2']; ?>" alt="" />
 								</div>
 								<div class="item">
-									<img src="assets/images/blank.gif" data-echo="assets/images/products/quick-product.png" alt="" />
+									<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image3']; ?>" alt="" />
 								</div>
 							</div>
 						</div>
@@ -34,10 +49,10 @@
 								<a href="#reviews" class="review-link">(4 reviews)</a>
 							</div>
 
-							<h1 class="single-product-title">Converse Chuck Taylor</h1>
-							<div class="product-brand">Calvin Klein</div>
+							<h1 class="single-product-title"><?php echo $row['product_name']; ?></h1>
+							<div class="product-brand"><?php echo $row['product_company']; ?></div>
 							<div class="product-price">
-								<ins><span class="amount">$492.00</span></ins>
+								<ins><span class="amount">Rs. <?php echo $row['product_price']; ?></span></ins>
 							</div>
 
 							<div class="product-attributes">
@@ -120,7 +135,7 @@
 									<div class="tab-content bewear-tab-content">
 										<div id="modal-description" class="tab-pane fade in active">
 											<p class="text">
-												Sed quis nunc efficitur, gravida orci sed, gravida felis. Quisque non euismod felis. Suspendisse consectetur, tellus in condimentum fringilla.</p>
+											<?php echo $row['product_decription']; ?></p>
 												<ul>
 													<li>- 98% Cotton, 2% Elastane</li>
 													<li>- Zip fly and button fastening</li>
@@ -180,6 +195,11 @@
 					</div>
 					<a class="remove-icon" data-dismiss="modal" aria-label="Close"><span class="icon icon-quickview-close"></span></a>
 				</div>
+				<?php
+						}
+					}
+				?>
 			</div>
 		</div>
 	</div>
+	
