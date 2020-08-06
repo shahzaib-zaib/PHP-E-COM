@@ -53,7 +53,7 @@
 					<a title="Add to cart" href="index.php?page=checkout&action=add&id=<?php echo $row['product_id']; ?>" class="cart-button btn btn-primary">
 						<span>Add to bag</span>
 					</a>
-					<?php } else {?>
+					<?php }else{?>
 						<div class="action" style="color:red">Out of Stock</div>
 					<?php } ?>
 
