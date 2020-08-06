@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade bs-example-modal-lg quick-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade bs-example-modal-lg quick-modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">     
 			<div class="modal-body">

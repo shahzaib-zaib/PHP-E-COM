@@ -1,6 +1,16 @@
 <?php
 
 	include "includes/config.php";
+
+		$limit = 6;
+
+							
+		if(isset($_GET['page'])){
+			$page = $_GET['page'];
+		}else{
+			$page = 1;
+		}
+		$offset = ($page - 1) * $limit;
 	
 	$sql = "SELECT * FROM products
 	ORDER BY product_id DESC";
