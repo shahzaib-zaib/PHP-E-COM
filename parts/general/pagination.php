@@ -17,7 +17,7 @@
 			<div class="col-md-4 col-sm-4">
 				<?php
 					if($page > 1){
-						echo '<a href="index.php?page=shop'.($page - 1).'" class="prev"><i class="icon icon-pagination-left icon-prev"></i><span>Previous</span></a>';
+						echo '<a href="index.php?page=shop&pageid='.($page - 1).'" class="prev"><i class="icon icon-pagination-left icon-prev"></i><span>Previous</span></a>';
 					}
 				?>
 			</div><!-- /.col -->
@@ -32,7 +32,7 @@
 							$active = "";
 						}
 						
-						echo '<li class="'.$active.'"><a href="index.php?page=shop&'. $i .'">'. $i .'</a></li>';
+						echo '<li class="'.$active.'"><a href="index.php?page=shop&pageid='. $i .'">'. $i .'</a></li>';
 					}
 					
 				echo "</ul>";
@@ -43,7 +43,7 @@
 			<div class="col-md-4 col-sm-4">
 			<?php
 				if($total_pages > $page){
-					echo '<a href="index.php?page=shop&'.($page + 1).'" class="next"><span>Next</span><i class="icon icon-pagination-right icon-next"></i></a>';
+					echo '<a href="index.php?page=shop&pageid='.($page + 1).'" class="next"><span>Next</span><i class="icon icon-pagination-right icon-next"></i></a>';
 				}
 			?>
 			</div><!-- /.col -->

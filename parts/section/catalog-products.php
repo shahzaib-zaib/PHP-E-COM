@@ -5,21 +5,21 @@
 		$limit = 6;
 
 							
-		if(isset($_GET['page'])){
-			$page = $_GET['page'];
+		if(isset($_GET['pageid'])){
+			$page = $_GET['pageid'];
 		}else{
 			$page = 1;
 		}
 		$offset = ($page - 1) * $limit;
 	
-	$sql = "SELECT * FROM products
-	ORDER BY product_id DESC";
+		$sql = "SELECT * FROM products
+		ORDER BY product_id DESC LIMIT {$offset}, {$limit}";
 
-	$result = mysqli_query($con, $sql) or die ("Query Faild.");
+		$result = mysqli_query($con, $sql) or die ("Query Faild.");
 
-	if(mysqli_num_rows($result) > 0){
+		if(mysqli_num_rows($result) > 0){
 
-		while($row = mysqli_fetch_assoc($result)){
+			while($row = mysqli_fetch_assoc($result)){
 
 ?>
 <div class='col-md-6 col-sm-6 col-lg-4 col-xs-12 product-holder'>
