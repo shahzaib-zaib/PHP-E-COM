@@ -33,7 +33,6 @@ $pages = array(
     'bewear-icons'      => 'Icons',
     'lookbook-2'        => 'Lookbook v2',
     'lookbook'          => 'Lookbook v1',
-    'product-extended'  => 'Product Extended',
     'product-simple'    => 'Product Simple',
     'single-look-2'     => 'Single Look v2',
     'single-look'       => 'Single Look v1',

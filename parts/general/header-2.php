@@ -4,7 +4,7 @@
 			<div class="container">
 				<!-- ============================================================= LOGO MOBILE ============================================================= -->
 						
-				<a class="navbar-brand" href="index.php?page=home"><img src="assets/images/logo.png" class="logo" alt=""></a>
+				<a class="navbar-brand" href="index.php"><img src="assets/images/logo.png" class="logo" alt=""></a>
 						
 				<!-- ============================================================= LOGO MOBILE : END ============================================================= -->
 						
@@ -19,10 +19,10 @@
 		<div class="yamm">
 			<div class="navbar-collapse collapse animate-dropdown">
 				<div class="container">
-					<a href="index.php?page=home" class="navbar-brand"><img src="assets/images/logo.png" class="logo" alt=""></a>
+					<a href="index.php" class="navbar-brand"><img src="assets/images/logo.png" class="logo" alt=""></a>
 					<ul class="nav navbar-nav">
 						<li class="dropdown bewear-dropdown yamm-fw">
-							<a href="index.php?page=home" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>Women </span></a>
+							<a href="index.php" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>Women </span></a>
 							<ul class="dropdown-menu bewear-dropdown-menu">
 								<li class="dropdown yamm-fw">
 									<?php require ROOT . '/parts/navigation/megamenu-ver1.php'; ?>
@@ -31,7 +31,7 @@
 						</li>
 
 						<li class="dropdown bewear-dropdown yamm-fw">
-							<a href="index.php?page=home" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>Men</span></a>
+							<a href="index.php" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>Men</span></a>
 							<ul class="dropdown-menu bewear-dropdown-menu">
 								<li class="dropdown yamm-fw">
 									<?php require ROOT . '/parts/navigation/megamenu-ver2.php'; ?>
@@ -39,7 +39,7 @@
 							</ul>
 						</li>
 
-						<li class="dropdown bewear-dropdown"><a href="index.php?page=home" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>Look Book</span></a>
+						<li class="dropdown bewear-dropdown"><a href="index.php" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown"><span>Look Book</span></a>
 							<ul class="dropdown-menu bewear-dropdown-menu">
 								<li><a href="index.php?page=lookbook">Look Book 1</a></li>
 								<li><a href="index.php?page=single-look">Look Book 2</a></li>

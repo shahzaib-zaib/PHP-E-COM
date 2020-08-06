@@ -25,33 +25,19 @@
 						
 					</li>
 					<li>
-						<a href="assets/images/products/big-image.jpg" data-title="Gallery" data-lightbox="image-1">
-						<img src="assets/images/blank.gif" data-title="Gallery" data-lightbox="image-1" data-echo="assets/images/products/big-image.jpg" alt="" />
+						<a href="admin/assets/img/products/<?php echo $row['product_image2']; ?>" data-title="Gallery" data-lightbox="image-1">
+						<img src="assets/images/blank.gif" data-title="Gallery" data-lightbox="image-1" data-echo="admin/assets/img/products/<?php echo $row['product_image2']; ?>" alt="" />
 						<div class="zoom-overlay"></div>
 					</a>
 						
 					</li>
 					<li>
-						<a href="assets/images/products/big-image.jpg" data-title="Gallery" data-lightbox="image-1">
-						<img src="assets/images/blank.gif" data-title="Gallery" data-lightbox="image-1" data-echo="assets/images/products/big-image.jpg" alt="" />
+						<a href="admin/assets/img/products/<?php echo $row['product_image3']; ?>" data-title="Gallery" data-lightbox="image-1">
+						<img src="assets/images/blank.gif" data-title="Gallery" data-lightbox="image-1" data-echo="admin/assets/img/products/<?php echo $row['product_image3']; ?>" alt="" />
 						<div class="zoom-overlay"></div>
 					</a>
 					
 					</li>
-					<li>
-						<a href="assets/images/products/big-image.jpg" data-title="Gallery" data-lightbox="image-1">
-						<img src="assets/images/blank.gif" data-title="Gallery" data-lightbox="image-1" data-echo="assets/images/products/big-image.jpg" alt="" />
-						<div class="zoom-overlay"></div>
-					</a>
-						
-					</li>
-					<li>
-						<a href="assets/images/products/big-image.jpg" data-title="Gallery" data-lightbox="image-1">
-						<img src="assets/images/blank.gif" data-title="Gallery" data-lightbox="image-1" data-echo="assets/images/products/big-image.jpg" alt="" />
-						<div class="zoom-overlay"></div>
-					</a>
-					</li>
-					
 				</ul>
 			</div>
 		</div>
@@ -59,21 +45,14 @@
 			<div id="carousel" class="flexslider">
 				<ul class="slides">
 					<li>
-						<img src="assets/images/blank.gif" data-echo="assets/images/products/s1.jpg" alt=""  />
+						<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image1']; ?>" alt=""  />
 					</li>
 					<li>
-						<img src="assets/images/blank.gif" data-echo="assets/images/products/s2.jpg" alt=""   />
+						<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image1']; ?>" alt=""   />
 					</li>
 					<li>
-						<img src="assets/images/blank.gif" data-echo="assets/images/products/s3.jpg" alt=""   />
+						<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image1']; ?>" alt=""   />
 					</li>
-					<li>
-						<img src="assets/images/blank.gif" data-echo="assets/images/products/s2.jpg" alt=""   />
-					</li>
-					<li>
-						<img src="assets/images/blank.gif" data-echo="assets/images/products/s1.jpg" alt=""  />
-					</li>
-					
 				</ul>
 			</div>
 		</div>
