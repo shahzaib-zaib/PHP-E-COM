@@ -5,31 +5,16 @@
 			<div class="modal-body">
 				<div class="row single-product-row">
 					<div class="col-sm-6 col-lg-6 col-xs-12 gallery-holder">
-						<?php
-
-							include "includes/config.php";
-
-							$pro_id = $_GET['pid'];
-							
-							$sql = "SELECT * FROM products where product_id = '{$pro_id}'";
-
-							$result = mysqli_query($con, $sql) or die ("Query Faild.");
-
-							if(mysqli_num_rows($result) > 0){
-								
-								while($row = mysqli_fetch_assoc($result)){
-
-						?>
 						<div class="product-image-slider">
 							<div class="quick-view-slider">
 								<div class="item">
-									<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image1']; ?>" alt="" />
+									<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/1534967956530398200.jpg" alt="" />
 								</div>
 								<div class="item">
-									<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image2']; ?>" alt="" />
+									<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/1534967961100923664.jpg" alt="" />
 								</div>
 								<div class="item">
-									<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/<?php echo $row['product_image3']; ?>" alt="" />
+									<img src="assets/images/blank.gif" data-echo="admin/assets/img/products/1536045524650133446.jpg" alt="" />
 								</div>
 							</div>
 						</div>
@@ -49,10 +34,10 @@
 								<a href="#reviews" class="review-link">(4 reviews)</a>
 							</div>
 
-							<h1 class="single-product-title"><?php echo $row['product_name']; ?></h1>
-							<div class="product-brand"><?php echo $row['product_company']; ?></div>
+							<h1 class="single-product-title">WOMEN BLACK TOP</h1>
+							<div class="product-brand">Zara</div>
 							<div class="product-price">
-								<ins><span class="amount">Rs. <?php echo $row['product_price']; ?></span></ins>
+								<ins><span class="amount">Rs. 4000</span></ins>
 							</div>
 
 							<div class="product-attributes">
@@ -135,7 +120,7 @@
 									<div class="tab-content bewear-tab-content">
 										<div id="modal-description" class="tab-pane fade in active">
 											<p class="text">
-											<?php echo $row['product_decription']; ?></p>
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, ab ex quisquam id ea obcaecati distinctio tempore hic libero possimus, commodi molestias doloribus quos eius quibusdam nesciunt, veniam pariatur? Placeat quos, maxime minus soluta, eligendi ducimus excepturi nulla quod amet maiores nostrum, labore at sunt totam animi harum eveniet illum alias! Fuga inventore impedit enim eveniet quisquam. Ut, quo minima laborum expedita architecto placeat enim sit dolorum tempora eaque maxime praesentium maiores facere corrupti sapiente repellendus dolorem ad molestiae mollitia possimus quas alias blanditiis cum?</p>
 												<ul>
 													<li>- 98% Cotton, 2% Elastane</li>
 													<li>- Zip fly and button fastening</li>
@@ -195,10 +180,6 @@
 					</div>
 					<a class="remove-icon" data-dismiss="modal" aria-label="Close"><span class="icon icon-quickview-close"></span></a>
 				</div>
-				<?php
-						}
-					}
-				?>
 			</div>
 		</div>
 	</div>

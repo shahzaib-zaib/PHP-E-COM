@@ -1,4 +1,24 @@
+<?php
+include "includes/config.php";
+if(isset($_GET['action']) && $_GET['action']=="add"){
+	$id=intval($_GET['id']);
+	if(isset($_SESSION['cart'][$id])){
+		$_SESSION['cart'][$id]['quantity']++;
+	}else{
+		$sql_p="SELECT * FROM products WHERE product_id={$id}";
+		$query_p = mysqli_query($con,$sql_p);
+		if(mysqli_num_rows($query_p)!=0){
+			$row_p = mysqli_fetch_array($query_p);
+			$_SESSION['cart'][$row_p['id']]=array("quantity" => 1, "price" => $row_p['product_price']);
+					echo "<script>alert('Product has been added to the cart')</script>";
+		echo "<script type='text/javascript'> document.location ='index.php?page=shop'; </script>";
+		}else{
+			$message="Product ID is invalid";
+		}
+	}
+}
 
+?>
 <div id="single-product" class="inner-top-50">
 	<div class="container">
 		<div class="row single-product-row wow fadeIn">
@@ -111,10 +131,13 @@
 								<span class="key">Qty:</span>
 								<input type="number" class="txt txt-qty" title="Qty" value="1" name="quantity" min="1" step="1">
 							</div>
-							
-                            <button type="submit" class="btn btn-primary single-add-cart-button">Add to bag</button>
-							
+							<?php if($row['product_availability'] == 'In Stock'){?>
+								<a title="Add to cart" href="index.php?page=product-simple&action=add&id=<?php echo $row['product_id']; ?>" class="btn btn-primary single-add-cart-button">
+									<span>Add to bag</span>
+								</a>
+							<?php }else{?>
 								<div class="action" style="color:red">Out of Stock</div>
+							<?php } ?>
 							
 						    <a href="index.php?page=checkout" title="Wishlist" class="btn add-to-wishlist">add to wishlist</a>
 						</form>

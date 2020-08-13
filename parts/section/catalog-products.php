@@ -49,7 +49,7 @@
 			</div><!-- .product-price -->
 			<div class="buttons-holder m-t-20">					
 				<div class="add-cart-holder">
-				<?php if($row['product_availability']=='In Stock'){?>
+				<?php if($row['product_availability'] == 'In Stock'){?>
 					<a title="Add to cart" href="index.php?page=checkout&action=add&id=<?php echo $row['product_id']; ?>" class="cart-button btn btn-primary">
 						<span>Add to bag</span>
 					</a>
