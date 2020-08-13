@@ -14,7 +14,7 @@
 ?>
 <div id="shopping-cart-summary" class="navmenu-shopping-cart navmenu navmenu-default navmenu-fixed-right offcanvas">
 	<header>
-		<h3 class="section-title">Items <span class="item-count">4</span></h3>
+		<h3 class="section-title">Items <span class="item-count">5</span></h3>
 		<ul class="currency-block animate-dropdown">
             <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false"><strong>$</strong> US Dollars</a>
@@ -33,24 +33,24 @@
 		if(!empty($_SESSION['cart'])){
 	?>
 	<div class="cart-products">
-	<?php
-    	$sql = "SELECT * FROM products WHERE product_id IN(";
-		foreach($_SESSION['cart'] as $id => $value){
-		$sql .=$id. ",";
-		}
-		$sql=substr($sql,0,-1) . ") ORDER BY id ASC";
-		$query = mysqli_query($con,$sql);
-		$totalprice=0;
-		$totalqunty=0;
-		if(!empty($query)){
-		while($row = mysqli_fetch_array($query)){
-			$quantity=$_SESSION['cart'][$row['id']]['quantity'];
-			$subtotal= $_SESSION['cart'][$row['id']]['quantity']*$row['productPrice']+$row['shippingCharge'];
-			$totalprice += $subtotal;
-			$_SESSION['qnty']=$totalqunty+=$quantity;
-
-	?>
 		<div class="cart-block-list">
+			<?php
+				$sql = "SELECT * FROM products WHERE product_id IN(";
+				foreach($_SESSION['cart'] as $id => $value){
+				$sql .=$id. ",";
+				}
+				$sql=substr($sql,0,-1) . ") ORDER BY id ASC";
+				$query = mysqli_query($con,$sql);
+				$totalprice=0;
+				$totalqunty=0;
+				if(!empty($query)){
+				while($row = mysqli_fetch_array($query)){
+					$quantity=$_SESSION['cart'][$row['id']]['quantity'];
+					$subtotal= $_SESSION['cart'][$row['id']]['quantity']*$row['productPrice']+$row['shippingCharge'];
+					$totalprice += $subtotal;
+					$_SESSION['qnty']=$totalqunty+=$quantity;
+
+			?>
 			<ul>
 				<li>
 					<div class="product">
@@ -74,10 +74,8 @@
 						<a href="#" class="remove-link"></a>
 					</div>
 				</li>
-
-				
 			</ul>
-
+			<?php } }?>
 			<div class="cart-summary text-center inner-top-50">
                 <h5 class="cart-total">Your Total</h5>
                 <p class="cart-total-price">$492.00</p>
@@ -86,4 +84,14 @@
             </div>
 		</div>
 	</div>
+	<?php } else { ?>
+		<div class="cart-summary text-center inner-top-50">
+                <p class="instruction">Your Shopping Cart is Empty.</p>
+         </div>
+		<div class="cart-summary text-center inner-top-50">
+			<h5 class="cart-total">Your Total</h5>
+			<p class="cart-total-price">Rs. 00.00</p>
+			<a class="btn btn-primary btn-uppercase continue-shopping" href="index.php?page=shop">Go to Shop</a>
+        </div>
+	<?php }?>
 </div>
