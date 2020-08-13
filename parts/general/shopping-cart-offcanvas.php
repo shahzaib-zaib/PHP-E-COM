@@ -29,7 +29,27 @@
             </li>
         </ul>
 	</header>
+	<?php
+		if(!empty($_SESSION['cart'])){
+	?>
 	<div class="cart-products">
+	<?php
+    	$sql = "SELECT * FROM products WHERE product_id IN(";
+		foreach($_SESSION['cart'] as $id => $value){
+		$sql .=$id. ",";
+		}
+		$sql=substr($sql,0,-1) . ") ORDER BY id ASC";
+		$query = mysqli_query($con,$sql);
+		$totalprice=0;
+		$totalqunty=0;
+		if(!empty($query)){
+		while($row = mysqli_fetch_array($query)){
+			$quantity=$_SESSION['cart'][$row['id']]['quantity'];
+			$subtotal= $_SESSION['cart'][$row['id']]['quantity']*$row['productPrice']+$row['shippingCharge'];
+			$totalprice += $subtotal;
+			$_SESSION['qnty']=$totalqunty+=$quantity;
+
+	?>
 		<div class="cart-block-list">
 			<ul>
 				<li>
