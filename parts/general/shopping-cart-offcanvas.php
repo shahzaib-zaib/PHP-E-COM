@@ -56,17 +56,17 @@
 					<div class="product">
 						<div class='row'>
 							<div class="col-md-4 col-sm-4">
-								<a href="index.php?page=product-simple"><img src="assets/images/blank.gif" data-echo="assets/images/cart-products/01.jpg" alt=""></a>
+								<a href="index.php?page=product-simple&pid=<?php echo $row['product_id'];?>"><img src="assets/images/blank.gif" data-echo="admin/assets/producs/<?php echo $row['id'];?>/<?php echo $row['productImage1'];?>" alt=""></a>
 							</div>
 							<div class="col-md-8 col-sm-8">
 								<div class="cart-info">
 									<div class="product-name">
 										<span class="quantity-formated"><span class="quantity">1</span>x</span>
-										<a href="index.php?page=product-simple">conrtast <br> shoulder path</a>
+										<a href="index.php?page=product-simple&pid=<?php echo $row['product_id'];?>"><?php echo $row['product_name']; ?></a>
 									</div>
 
 									<div class="product-price">
-										<span class='amount'>$140</span>
+										<span class='amount'>Rs.<?php echo ($row['product_price']+$row['shipping_charge']); ?>*<?php echo $_SESSION['cart'][$row['id']]['quantity']; ?></span>
 									</div>
 								</div>
 							</div>
