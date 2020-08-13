@@ -1,4 +1,17 @@
+<?php 
 
+ if(isset($_Get['action'])){
+		if(!empty($_SESSION['cart'])){
+		foreach($_POST['quantity'] as $key => $val){
+			if($val==0){
+				unset($_SESSION['cart'][$key]);
+			}else{
+				$_SESSION['cart'][$key]['quantity']=$val;
+			}
+		}
+		}
+	}
+?>
 <div id="shopping-cart-summary" class="navmenu-shopping-cart navmenu navmenu-default navmenu-fixed-right offcanvas">
 	<header>
 		<h3 class="section-title">Items <span class="item-count">4</span></h3>
@@ -42,74 +55,7 @@
 					</div>
 				</li>
 
-				<li>
-					<div class="product">
-						<div class='row'>
-							<div class="col-md-4 col-sm-4">
-								<a href="index.php?page=product-simple"><img src="assets/images/blank.gif" data-echo="assets/images/cart-products/02.jpg" alt=""></a>
-							</div>
-							<div class="col-md-8 col-sm-8">
-								<div class="cart-info">
-									<div class="product-name">
-										<span class="quantity-formated"><span class="quantity">1</span>x</span>
-										<a href="index.php?page=product-simple">flocked print sweatshirt</a>
-									</div>
-
-									<div class="product-price">
-										<span class='amount'>$99</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a href="#" class="remove-link"></a>
-					</div>
-				</li>
-
-				<li>
-					<div class="product">
-						<div class='row'>
-							<div class="col-md-4 col-sm-4">
-								<a href="index.php?page=product-simple"><img src="assets/images/blank.gif" data-echo="assets/images/cart-products/03.jpg" alt=""></a>
-							</div>
-							<div class="col-md-8 col-sm-8">
-								<div class="cart-info">
-									<div class="product-name">
-										<span class="quantity-formated"><span class="quantity">1</span>x</span>
-										<a href="index.php?page=product-simple">curves T-shirt</a>
-									</div>
-
-									<div class="product-price">
-										<span class='amount'>$115</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a href="#" class="remove-link"></a>
-					</div>
-				</li>
-
-				<li>
-					<div class="product">
-						<div class='row'>
-							<div class="col-md-4 col-sm-4">
-								<a href="index.php?page=product-simple"><img src="assets/images/blank.gif" data-echo="assets/images/cart-products/04.jpg" alt=""></a>
-							</div>
-							<div class="col-md-8 col-sm-8">
-								<div class="cart-info">
-									<div class="product-name">
-										<span class="quantity-formated"><span class="quantity">1</span>x</span>
-										<a href="index.php?page=product-simple">simple backpack printed</a>
-									</div>
-
-									<div class="product-price">
-										<span class='amount'>$68</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a href="#" class="remove-link"></a>
-					</div>
-				</li>
+				
 			</ul>
 
 			<div class="cart-summary text-center inner-top-50">
